@@ -142,7 +142,7 @@ class mdm_fw_upgrade(object):
 				upgradeinfo.append(upgrade)
 		return upgradeinfo
 
-	def enable_lan_gateway(self):
+	"""def enable_lan_gateway(self):
 		# TODO: see if gateway is already set, if so don't set again to save on flash writes
 		# 
 		# set /config/system/internal_svcs/use_route to true and set gateway to address of the computer this script is running on
@@ -165,7 +165,7 @@ class mdm_fw_upgrade(object):
 		except Exception as e:
 			self.log("enable_lan_gateway failed: {}".format(e))
 			return False
-
+"""
 	def make_url(self, cur_url):
 		#skip http:// and then do a split on the '/' char to get the directory parts
 		parts = cur_url[7:].split('/')
@@ -455,7 +455,7 @@ class mdm_fw_upgrade(object):
 
 		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 		s.connect(("8.8.8.8", 80))
-		addr = s.getsockname()[0]
+		addr = s.getsockname()[1]
 		s.close()
 		return addr
 		"""
@@ -490,6 +490,7 @@ class mdm_fw_upgrade(object):
 		p.terminate()
 		self.log("com2")
 
+
 	def run_test(self):
 
 		#self.run_ssh()
@@ -515,11 +516,11 @@ class mdm_fw_upgrade(object):
 			self.log("Error, no modules found to test")
 			return False
 
-		res = self.enable_lan_gateway()
+		"""res = self.enable_lan_gateway()
 		if res == False:
 			self.log("Error, failed to enable lan gateway")
 			return False
-
+"""
 		res = self.modify_upgrade_url()
 		if res == False:
 			self.log("Error, failed to modify upgrade url")
