@@ -1,12 +1,13 @@
 import subprocess
 import json
+import sys
 
 def get_val(password, pth):
     get_req = 'curl -s  -u admin:{} --connect-timeout 20 -X GET http://10.31.17.1/api/{}'.format(password, pth)
     proc = subprocess.Popen(get_req.split(),stdout=subprocess.PIPE)
     resp = proc.communicate()[0]
     #communicate returns a bytes array. Need to convert to string so we can do a regular expression match
-    try:
+    """try:
         resp = resp.decode("utf-8")
     except Exception as e:
         self.log("get_val, no decode")
@@ -17,15 +18,23 @@ def get_val(password, pth):
             self.log("get_val, no json")
             return None, -1
         if json_data['success'] == False:
-            #self.log("get_val, returned false")
+            self.log("get_val, returned false")
             return None, 0
         else:
-            #self.log("get_val, returned true")
+            self.log("get_val, returned true")
             print(json_data['data'])
             return json_data['data'],1
     except:
         self.log("get_val, exception")
-        return None,-1
+        return None,-1"""
 
-pth = 'config/system/admin/upgrade_url'
-get_val('442cfedd', pth)
+
+if __name__ == "__main__":
+    admin_password = '442cfedd'
+    pth = 'config/system/firewall/remote_admin'
+    tester = get_val(admin_password, pth)
+    print(tester)
+    if tester == True:
+        print("It's True!")
+    else:
+        print("It's not true!")
