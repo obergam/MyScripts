@@ -1,0 +1,19 @@
+This collection will, with modifications, automagically enable cproot on a particular router.  Note it requires the following that you should provide:
+
+1. A signing cert, used in make_lic.py.  "my_signing_cert" is the variable name that contains a string with your signing cert
+
+2. _plt_client_key.py that includes "client_key" for PLT (get this from coconut)
+
+
+run with:
+	./enable_cproot.py <router_ip>
+
+
+It will use get_plt.py to get the default password and mac address.
+
+It will then request a new license from the license server, using the mac it
+got from secured_plt.
+
+It will then attempt to apply the license to the router, using the default
+password from plt.  failing that, it'll try with my typical default router
+password.  Obviously change this to suit your needs.
