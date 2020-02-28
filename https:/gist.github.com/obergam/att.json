@@ -1,0 +1,10 @@
+{
+	"product_name":"LM940-CP",
+	"major_version":24,
+	"minor_version":1,
+	"patch_version":544,
+	"build_version":"B004",
+	"package_version":"24.01.544-B004_ATT,4028",
+	"force_upgrade":false,
+	"url":"http://1746ac1e3e4f982e6b23-5aa8c563aaca2fd601559335cd0de9e6.r74.cf2.rackcdn.com/LM940_24.01.544-B004_ATT.mdm"
+}
