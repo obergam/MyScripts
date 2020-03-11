@@ -13,6 +13,6 @@ soup2 = BeautifulSoup(soup1.prettify(), "html.parser")
 
 title = soup2.find(id= "productTitle")
 
-converted_price = [0:5]
+converted_price = 500
 print(title.strip())
 
