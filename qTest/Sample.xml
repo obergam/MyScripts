@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite classname='TEST' pass='0' errors='0' failures='1' name='ModemDiagnostics'>
+        <testcase classname='E3000' file='carrier_testing.tests.functional_testing.FunctionalTests.APN' name='TestScenario' time='0'>
+            <properties>
+                <property name="Router" value="E3000-C18B"/>
+                <property name="Modem" value="   Internal C18B (SIM1) LM960A18-CP T-Mobile 8901260113771998967 "/>
+                <property name="Router Firmware"
+                          value="{major_version: 7, minor_version: 2, patch_version: 40, build_date: Mon Jul 27 16:33:55 UTC 2020, build_version: 54f4b25, build_type: RELEASE, fw_update_available: False, upgrade_major_version: 0, upgrade_minor_version: 0, upgrade_patch_version: 0, sign_cert_types: ROOTCA RELEASE, manufacturing_upgrade: False, multi_images: []}"/>
+                <property name="Modem Firmware"
+                          value="{modem_model: Internal C18B (SIM1), mfg_model: LM960A18-CP, imei: 357926101037377, router_port: int1, iccid: 8901260113771998967, carrier: T-Mobile, modem_firmware: [{index: 0, carrier: EuAPAC-GN, fwVer: 32.00.113, priVer: 1022, priID: 32.00.113_EuAPAC-GN, active: False, ver: 32.00.153, location: modem}, {index: 1, carrier: Verizon, fwVer: 32.00.123, priVer: 2019, priID: 32.00.123_Verizon, active: False, ver: 32.00.153, location: modem}, {index: 2, carrier: ATT, fwVer: 32.00.143, priVer: 4021, priID: 32.00.143_ATT, active: False, ver: 32.00.153, location: modem}, {index: 3, carrier: NAmerica-GN, fwVer: 32.00.153, priVer: 5004, priID: 32.00.153_NAmerica-GN, active: True, ver: 32.00.153, location: modem}]} "/>
+                <property name="Summary" value="	--Information--
+			Full log file for test"/>
+            </properties>
+            <failed>
+            </failed>
+        </testcase>
+    </testsuite>
+    <testsuite classname='TEST' pass='0' errors='0' failures='1' name='ModemDiagnostics'>
+        <testcase classname='E300' file='carrier_testing.tests.functional_testing.FunctionalTests.APN' name='TestScenario' time='0'>
+            <properties>
+                <property name="Router" value="E3000-C4D"/>
+                <property name="Modem" value="   Internal C18B (SIM1) LM960A18-CP T-Mobile 8901260113771998967 "/>
+                <property name="Router Firmware"
+                          value="{major_version: 7, minor_version: 2, patch_version: 40, build_date: Mon Jul 27 16:33:55 UTC 2020, build_version: 54f4b25, build_type: RELEASE, fw_update_available: False, upgrade_major_version: 0, upgrade_minor_version: 0, upgrade_patch_version: 0, sign_cert_types: ROOTCA RELEASE, manufacturing_upgrade: False, multi_images: []}"/>
+                <property name="Modem Firmware"
+                          value="{modem_model: Internal C18B (SIM1), mfg_model: LM960A18-CP, imei: 357926101037377, router_port: int1, iccid: 8901260113771998967, carrier: T-Mobile, modem_firmware: [{index: 0, carrier: EuAPAC-GN, fwVer: 32.00.113, priVer: 1022, priID: 32.00.113_EuAPAC-GN, active: False, ver: 32.00.153, location: modem}, {index: 1, carrier: Verizon, fwVer: 32.00.123, priVer: 2019, priID: 32.00.123_Verizon, active: False, ver: 32.00.153, location: modem}, {index: 2, carrier: ATT, fwVer: 32.00.143, priVer: 4021, priID: 32.00.143_ATT, active: False, ver: 32.00.153, location: modem}, {index: 3, carrier: NAmerica-GN, fwVer: 32.00.153, priVer: 5004, priID: 32.00.153_NAmerica-GN, active: True, ver: 32.00.153, location: modem}]} "/>
+                <property name="Summary" value="	--Information--
+			Full log file for test"/>
+            </properties>
+            <failed>
+            </failed>
+        </testcase>
+    </testsuite>
+
+</testsuites>

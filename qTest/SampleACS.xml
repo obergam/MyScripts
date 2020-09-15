@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite errors="0" failures="1" hostname="5098409dd151" name="pytest" skipped="1" tests="151" time="15.703"
+               timestamp="2020-07-27T17:42:22.421047">
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[regions]" time="0.295"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[countries]" time="0.304"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[carriers]" time="0.062"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[certificationAuthorities]" time="0.124"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[certifications]" time="0.282"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[hardwareSeries]" time="0.037"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[marketSegments]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[packageAbstracts]" time="0.177"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="13"
+                  name="test_read_objects_success[productModels]" time="0.329"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[regions]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[countries]" time="0.017"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[carriers]" time="0.010"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[certificationAuthorities]" time="0.017"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[certifications]" time="0.021"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[hardwareSeries]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[marketSegments]" time="0.017"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[packageAbstracts]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="18"
+                  name="test_read_object_invalid_id[productModels]" time="0.016"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[regions]" time="0.048"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[countries]" time="0.296"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[carriers]" time="0.078"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[certificationAuthorities]" time="0.281"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[certifications]" time="0.293"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[hardwareSeries]" time="0.057"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[marketSegments]" time="0.032"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[packageAbstracts]" time="0.186"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="22"
+                  name="test_read_object_success[productModels]" time="0.339"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[regions]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[countries]" time="0.012"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[carriers]" time="0.024"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[certificationAuthorities]" time="0.023"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[certifications]" time="0.029"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[hardwareSeries]" time="0.011"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[marketSegments]" time="0.017"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[packageAbstracts]" time="0.008"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="29"
+                  name="test_create_object_bad_request[productModels]" time="0.011"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[regions]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[countries]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[carriers]" time="0.017"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[certificationAuthorities]" time="0.016"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[certifications]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[hardwareSeries]" time="0.018"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[marketSegments]" time="0.011"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[packageAbstracts]" time="0.019"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="34"
+                  name="test_update_object_invalid_id[productModels]" time="0.019"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[regions]" time="0.050"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[countries]" time="0.282"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[carriers]" time="0.067"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[certificationAuthorities]" time="0.271"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[certifications]" time="0.281"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[hardwareSeries]" time="0.048"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[marketSegments]" time="0.023"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[packageAbstracts]" time="0.170"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="39"
+                  name="test_update_object_bad_request[productModels]" time="0.340"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[regions]" time="0.014"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[countries]" time="0.016"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[carriers]" time="0.013"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[certificationAuthorities]" time="0.010"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[certifications]" time="0.017"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[hardwareSeries]" time="0.015"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[marketSegments]" time="0.014"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[packageAbstracts]" time="0.015"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_common.TestApiV1Common"
+                  file="account_services_testing/tests/product_service/test_api_v1_common.py" line="57"
+                  name="test_delete_object_invalid_id[productModels]" time="0.016"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_create_update_delete.TestApiV1ProductsCreateUpdateDelete"
+                file="account_services_testing/tests/product_service/test_api_v1_products_create_update_delete.py"
+                line="10" name="test_create_product_not_found" time="0.024"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_create_update_delete.TestApiV1ProductsCreateUpdateDelete"
+                file="account_services_testing/tests/product_service/test_api_v1_products_create_update_delete.py"
+                line="15" name="test_update_product_not_found" time="0.007"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_create_update_delete.TestApiV1ProductsCreateUpdateDelete"
+                file="account_services_testing/tests/product_service/test_api_v1_products_create_update_delete.py"
+                line="20" name="test_delete_product_by_sku" time="0.014"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_create_update_delete.TestApiV1ProductsCreateUpdateDelete"
+                file="account_services_testing/tests/product_service/test_api_v1_products_create_update_delete.py"
+                line="24" name="test_delete_all_products" time="0.044"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_create_update_delete.TestApiV1ProductsCreateUpdateDelete"
+                file="account_services_testing/tests/product_service/test_api_v1_products_create_update_delete.py"
+                line="28" name="test_get_products" time="4.332"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_read.TestApiV1ProductsRead"
+                file="account_services_testing/tests/product_service/test_api_v1_products_read.py" line="17"
+                name="test_read_product_not_found" time="0.122"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_read.TestApiV1ProductsRead"
+                file="account_services_testing/tests/product_service/test_api_v1_products_read.py" line="24"
+                name="test_read_service_found[ECM-PRM-MT1YR]" time="1.282"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_read.TestApiV1ProductsRead"
+                file="account_services_testing/tests/product_service/test_api_v1_products_read.py" line="24"
+                name="test_read_service_found[ECM-ENTC3-CC1YR]" time="0.844"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_read.TestApiV1ProductsRead"
+                file="account_services_testing/tests/product_service/test_api_v1_products_read.py" line="24"
+                name="test_read_service_found[BA1-NCESS]" time="0.916"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_read.TestApiV1ProductsRead"
+                file="account_services_testing/tests/product_service/test_api_v1_products_read.py" line="38"
+                name="test_read_product_by_commerceid[ECM-PRM-MT1YR]" time="0.022"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_read.TestApiV1ProductsRead"
+                file="account_services_testing/tests/product_service/test_api_v1_products_read.py" line="38"
+                name="test_read_product_by_commerceid[ECM-ENTC3-CC1YR]" time="0.031"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_api_v1_products_read.TestApiV1ProductsRead"
+                file="account_services_testing/tests/product_service/test_api_v1_products_read.py" line="38"
+                name="test_read_product_by_commerceid[BA1-NCESS]" time="0.021"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_version.TestVersionApiV1"
+                  file="account_services_testing/tests/product_service/test_api_v1_version.py" line="16"
+                  name="test_get_service_version_page" time="0.023"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_version.TestVersionApiV1"
+                  file="account_services_testing/tests/product_service/test_api_v1_version.py" line="22"
+                  name="test_service_version_page_no_auth" time="0.011"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_version.TestVersionApiV1"
+                  file="account_services_testing/tests/product_service/test_api_v1_version.py" line="26"
+                  name="test_post_service_version_page" time="0.007"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_version.TestVersionApiV1"
+                  file="account_services_testing/tests/product_service/test_api_v1_version.py" line="30"
+                  name="test_put_service_version_page" time="0.007"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_api_v1_version.TestVersionApiV1"
+                  file="account_services_testing/tests/product_service/test_api_v1_version.py" line="34"
+                  name="test_delete_service_version_page" time="0.007"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[actuator]" time="0.024"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[autoconfig]" time="0.015"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[beans]" time="0.009"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[configprops]" time="0.008"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[docs]" time="0.009"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[dump]" time="0.008"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[env]" time="0.014"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[flyway]" time="0.008"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[liquibase]" time="0.008"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[logfile]" time="0.009"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[mappings]" time="0.008"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[shutdown]" time="0.013"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[trace]" time="0.008"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="17"
+                name="test_disabled_metrics_auth[amqp]" time="0.008"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[actuator]" time="0.030"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[autoconfig]" time="0.022"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[beans]" time="0.019"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[configprops]" time="0.021"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[docs]" time="0.023"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[dump]" time="0.023"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[env]" time="0.022"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[flyway]" time="0.025"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[liquibase]" time="0.021"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[logfile]" time="0.022"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[mappings]" time="0.022"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[shutdown]" time="0.021"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[trace]" time="0.020"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[amqp]" time="0.022"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[info]" time="0.019"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="22"
+                name="test_disabled_metrics_no_auth[metrics]" time="0.022"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[actuator0]" time="0.028"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[autoconfig0]" time="0.025"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[beans0]" time="0.033"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[configprops0]" time="0.033"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[docs0]" time="0.032"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[dump0]" time="0.033"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[env0]" time="0.029"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[flyway0]" time="0.034"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[liquibase0]" time="0.028"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[logfile0]" time="0.032"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[mappings0]" time="0.028"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[shutdown0]" time="0.033"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[trace0]" time="0.030"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[amqp0]" time="0.033"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[actuator1]" time="0.029"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[autoconfig1]" time="0.033"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[beans1]" time="0.035"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[configprops1]" time="0.036"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[docs1]" time="0.030"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[dump1]" time="0.031"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[env1]" time="0.030"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[flyway1]" time="0.028"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[liquibase1]" time="0.035"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[logfile1]" time="0.028"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[mappings1]" time="0.032"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[shutdown1]" time="0.029"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[trace1]" time="0.032"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[amqp1]" time="0.032"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[info]" time="0.028"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[metrics]" time="0.030"></testcase>
+        <testcase
+                classname="account_services_testing.tests.product_service.test_disabled_manage_endpoints.TestDisabledManageEndpoints"
+                file="account_services_testing/tests/product_service/test_disabled_manage_endpoints.py" line="27"
+                name="test_disabled_endpoints_from_root[health]" time="0.046"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_health.TestServiceHealth"
+                  file="account_services_testing/tests/product_service/test_health.py" line="10"
+                  name="test_service_health" time="0.022"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_health.TestServiceHealth"
+                  file="account_services_testing/tests/product_service/test_health.py" line="13"
+                  name="test_service_health_no_auth" time="0.019"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_health.TestServiceHealth"
+                  file="account_services_testing/tests/product_service/test_health.py" line="17"
+                  name="test_swagger_health" time="0.020"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_info.TestInfo"
+                  file="account_services_testing/tests/product_service/test_info.py" line="11"
+                  name="test_service_manage_info" time="0.022"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_metrics.TestServiceMetrics"
+                  file="account_services_testing/tests/product_service/test_metrics.py" line="10"
+                  name="test_service_manage_metrics" time="0.035"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_metrics.TestServiceMetrics"
+                  file="account_services_testing/tests/product_service/test_metrics.py" line="17"
+                  name="test_builtin_configured_metrics" time="0.010"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_metrics.TestServiceMetrics"
+                  file="account_services_testing/tests/product_service/test_metrics.py" line="39"
+                  name="test_bsf_custom_metrics" time="0.010"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_metrics.TestServiceMetrics"
+                  file="account_services_testing/tests/product_service/test_metrics.py" line="48"
+                  name="test_service_manage_metrics_no_auth" time="0.040"></testcase>
+        <testcase classname="account_services_testing.tests.product_service.test_swagger_api_spec.TestSwaggerApiSpec"
+                  file="account_services_testing/tests/product_service/test_swagger_api_spec.py" line="12"
+                  name="test_swagger_specs_available" time="0.265"></testcase>
+    </testsuite>
+</testsuites>
