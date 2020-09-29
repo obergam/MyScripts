@@ -1,0 +1,62 @@
+{
+  "constants": [
+    {
+      "id": "constant-1",
+      "name": "ManagerURL",
+      "hidden": false,
+      "value": "cradlepoint.qtestnet.com"
+    },
+    {
+      "id": "constant-2",
+      "name": "QTEST_TOKEN",
+      "hidden": false,
+      "value": "xxxxxx-xxxx-xxxx-xxxxxxxxxxxxx"
+    }
+  ],
+  "actions": [
+    {
+      "id": "action-1",
+      "name": "UpdateQTestAndScenarioWithFormattedResults.js",
+      "description": null,
+      "code": "const request = require('request');\nconst { Webhooks } = require('@qasymphony/pulse-sdk');\nconst ScenarioSdk = require('@qasymphony/scenario-sdk');\n\nconst Features = {\n    getIssueLinkByFeatureName(qtestToken, scenarioProjectId, name) {\n        return new ScenarioSdk.Features({ qtestToken, scenarioProjectId }).getFeatures(`\"${name}\"`);\n    }\n};\n\nexports.handler = function ({ event: body, constants, triggers }, context, callback) {\n    function emitEvent(name, payload) {\n        let t = triggers.find(t => t.name === name);\n        return t && new Webhooks().invoke(t, payload);\n    }\n\n    // Specific to pulse actions\n    var payload = body;\n\n    var testLogs = payload.logs;\n    var cycleId = payload.testCycle;\n    var projectId = payload.projectId;\n\n    var scenarioCount = 0;\n    var scenarioList = \"\";\n\n    var standardHeaders = {\n        'Content-Type': 'application/json',\n        'Authorization': `bearer ${constants.QTEST_TOKEN}`\n    }\n\n    var createLogsAndTCs = function () {\n        var opts = {\n            url: \"http://\" + constants.ManagerURL + \"/api/v3/projects/\" + projectId + \"/auto-test-logs?type=automation\",\n            json: true,\n            headers: standardHeaders,\n            body: {\n                test_cycle: cycleId,\n                test_logs: testLogs\n            }\n        };\n\n        return request.post(opts, function (err, response, resbody) {\n\n            if (err) {\n                Promise.reject(err);\n            }\n            else {\n                console.log('response from qTest Manager:', JSON.stringify(response))\n                //emitEvent('SlackEvent', { AutomationLogUploaded: resbody });\n\n                if (response.body.type == \"AUTOMATION_TEST_LOG\") {\n                    Promise.resolve(\"Uploaded results successfully\");\n                }\n                else {\n                    //emitEvent('SlackEvent', { Error: \"Wrong type\" });\n                    Promise.reject(\"Unable to upload test results\");\n                }\n            }\n        });\n    };\n\n    createLogsAndTCs()\n        .on('response', function () {\n            console.log(\"About to call Link Requirements Rule\")\n            //emitEvent('LinkScenarioRequirements', payload);\n            //linkReq();\n        })\n        .on('error', function (err) {\n            //emitEvent('SlackEvent', { CaughtError: err });\n        })\n}\n"
+    },
+    {
+      "id": "action-2",
+      "name": "FormatPythonPyTestJUnit.js",
+      "description": null,
+      "code": "const { Webhooks } = require('@qasymphony/pulse-sdk');\n\nexports.handler = function ({ event: body, constants, triggers }, context, callback) {\n    function emitEvent(name, payload) {\n        let t = triggers.find(t => t.name === name);\n        return t && new Webhooks().invoke(t, payload);\n    }\n\n    var payload = body;\n    var testResults = payload.result.replace(/\\<testsuites>|\\<\\/testsuites>/g, '');\n    var projectId = payload.projectId;\n    var cycleId = payload.testCycle;\n\n    xml2js = require('xml2js');\n\n    var testLogs = [];\n    function FormatLogs(tr) {\n\n        var testResults = JSON.parse(tr);\n        testResults.testsuite.testcase.forEach(function (tc) {\n            var tcResult = tc[\"$\"];\n            var tcName = \"\";\n\n            // Format the name\n            var note = \"\";\n            if (!tcResult.name)\n                tcName = \"Unnamed\";\n            else\n                tcName = tcResult.name;//.substring(0, tcResult.name.indexOf('['));\n\n            //note = tcResult.name;\n\n            TCStatus = \"PASS\";\n\n            if (tc.failure) {\n                TCStatus = \"FAIL\";\n                if (note)\n                    note = \"\\n\" + JSON.stringify(tc.failure);\n                else\n                    note = JSON.stringify(tc.failure);\n            }\n\n            // The automation content is what we're going to use to run this later so it's important to get that format for Python pytest\n            //$file :: $classname (after the last .) :: $name (before the [)\n            var tcShortClassName = tcResult.classname.substring(tcResult.classname.lastIndexOf('.') + 1)\n            var auto = tcResult.file + \"::\" + tcShortClassName + \"::\" + tcName;\n\n            var reportingLog = {\n                exe_start_date: new Date(), // TODO this could use the time to complete to be more precise\n                exe_end_date: new Date(),\n                module_names: [\n                    'JUnitTests'\n                ],\n                name: tcName,\n                automation_content: auto,\n                note: note\n            };\n\n            // There are no steps here, so we'll add one step entry\n            var testStepLogs = [{\n                order: 0,\n                description: tcName,\n                expected_result: tcName,\n                status: TCStatus\n            }];\n\n            reportingLog.description = \"Test case imported from Python Test\"\n            reportingLog.status = TCStatus;\n            reportingLog.test_step_logs = testStepLogs;\n            testLogs.push(reportingLog);\n        });\n\n        var formattedResults = {\n            \"projectId\": projectId,\n            \"testCycle\": cycleId,\n            \"logs\": testLogs\n        };\n\n        return formattedResults;\n    }\n\n    var parser = new xml2js.Parser();\n\n    // Pulse Version\n    parser.parseString(testResults, function (err, result) {\n        var formattedResults = FormatLogs(JSON.stringify(result));\n        emitEvent('pytest-already-formatted', formattedResults);\n    });\n}\n"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "trigger-1",
+      "name": "pytest"
+    },
+    {
+      "id": "trigger-2",
+      "name": "pytest-already-formatted"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule-3",
+      "name": "junit-xml",
+      "active": true,
+      "triggerId": "trigger-1",
+      "actionIds": [
+        "action-2"
+      ],
+      "tags": []
+    },
+    {
+      "id": "rule-4",
+      "name": "already-formatted",
+      "active": true,
+      "triggerId": "trigger-2",
+      "actionIds": [
+        "action-1"
+      ],
+      "tags": []
+    }
+  ]
+}

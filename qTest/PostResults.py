@@ -2,13 +2,13 @@ import requests
 
 qTestTriggerURL = "https://pulse-7.qtestnet.com/webhook/b0e5d8e7-4a75-47fc-a392-1e2580585967"
 qtest_projectID = 89593
-qtest_testcycle = 2024376
+qtest_testcycle = 3525308
 
 
 def myPoster(data):
 	sendSuccessful = False
 	try:
-		response = requests.post(qTestTriggerURL, json=data)
+		response = requests.put(qTestTriggerURL, json=data)
 		sendSuccessful = True
 	except Exception as e:
 		print('requests.post had an exception: {}'.format(e))
@@ -20,7 +20,7 @@ def myPoster(data):
 		print('qTest reporting failed')
 
 
-filepath = ('Sample.xml')
+filepath = ('SampleACS.xml')
 data = {}
 
 with open(filepath, 'r') as file:

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testsuite pass= '0' errors='0' failures='0' name='P12.Nightly_AdvancedSettings' >
+		<testcase classname='NIGHTLY_AUTO_06-25-2020_20:00:02' file='P12.Nightly_AdvancedSettings' name='P12.Nightly_AdvancedSettings_CBA550_150M_D' time='0' >
+ <properties>
+ <property name="Router" value="CBA550-150M-D"/>
+ <property name="Modem" value="   Internal 150M-D (SIM1) EC25-AF Verizon 89148000004031344610 "/>
+ <property name="Router Firmware" value="{major_version: 7, minor_version: 2, patch_version: 30, build_date: Tue Jun 23 17:03:21 UTC 2020, build_version: e817e06, build_type: RELEASE, fw_update_available: False, upgrade_major_version: 0, upgrade_minor_version: 0, upgrade_patch_version: 0, sign_cert_types: ROOTCA RELEASE, manufacturing_upgrade: False}"/>
+ <property name="Modem Firmware" value="{modem_model: Internal 150M-D (SIM1), mfg_model: EC25-AF, imei: 861107037470771, router_port: int1, iccid: 89148000004031344610, carrier: Verizon, modem_firmware: [{index: 0, carrier: GENERIC, fwVer: 7.9.1002.1002, priVer: 201905141, priID: 7.9.1002.1002_GENERIC, active: False, ver: EC25AFFDR07A09M4G_01.002.01.002, location: modem}, {index: 1, carrier: VERIZON, fwVer: 7.9.1002.1002, priVer: 202004091, priID: 7.9.1002.1002_VERIZON, active: True, ver: EC25AFFDR07A09M4G_01.002.01.002, location: modem}]} "/>
+ <property name="Summary" value="	---P12.Nightly_AdvancedSettings Test Summary---
+		--Information--
+			Full log file for test P12.Nightly_AdvancedSettings is located at "/>
+ </properties>
+ 		<failure message= 'CBA550-150M-D'>
+		</failure>
+		</testcase>
+	</testsuite>
+</testsuites>wantester@wantester:~/WANTester_
