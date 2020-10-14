@@ -13,6 +13,7 @@ VERSION_LEN = 3
 ASYNC_HDLC_FLAG = 0x7e
 #DM ='/dev/ttyUSB0'
 
+
 QXDM_PORT = 8888
 CRASH_INFO_PORT = 8889
 RAM_DUMP_PORT = 8890
@@ -83,8 +84,8 @@ class QxdmLogger():
 		self.legacy = False
 		self.port = QXDM_PORT
 
-	def get_cfg(self, pw):
-		get_qxdm_cfg = 'curl -s -u admin:{} --connect-timeout 5 -X GET http://192.168.0.1/api/config/system/qxdmproxy'.format(pw)
+	def get_cfg(self, pw, router_ip):
+		get_qxdm_cfg = 'curl -s -u admin:{} --connect-timeout 10 -X GET http://{}/api/config/system/qxdmproxy'.format(pw,router_ip)
 		proc = subprocess.Popen(get_qxdm_cfg.split(),stdout=subprocess.PIPE)
 		resp = proc.communicate()[0]
 		#communicate returns a bytes array. Need to convert to string so we can do a regular expression match
@@ -727,8 +728,9 @@ class RAMDump():
 if __name__ == '__main__':
 	# apt-get install python-argparse
 	parser = argparse.ArgumentParser()
-	parser.add_argument("--pw", default=None)
-	parser.add_argument("--filter_file", default=None)
+	parser.add_argument("-p", "--pw", default=None)
+	parser.add_argument("-f", "--filter_file", default=None)
+	parser.add_argument("-r", "--router_ip", default=None)
 	value = parser.parse_args()
 
 	if value.pw == None:
@@ -737,8 +739,14 @@ if __name__ == '__main__':
 		print('       set mode "lan"; set enabled true\n')
 		sys.exit(1)
 
+	if value.router_ip == None:
+		print("Usage: cp_qxdm_logger.py --router_ip=192.168.0.1 [--filter_file=file.sqf]")
+		print(" NOTE: you must enable the qxdm proxy on the router under /config/system/qxdmproxy")
+		print('       set mode "lan"; set enabled true\n')
+		sys.exit(1)
+
 	qxdm_logger = QxdmLogger()	
-	get_qxdm_cfg, res = qxdm_logger.get_cfg(value.pw)
+	get_qxdm_cfg, res = qxdm_logger.get_cfg(value.pw, value.router_ip)
 	if res != 1:
 		print('Failed to get config, possible bad password or incompatible router version')
 		sys.exit(1)
@@ -762,7 +770,7 @@ if __name__ == '__main__':
 			qxdm_logger.s=socket.socket()
 			time.sleep (1)
 			qxdm_logger.s.settimeout(10) # 10 second timeout for no response
-			qxdm_logger.s.connect(('192.168.0.1', qxdm_logger.port))
+			qxdm_logger.s.connect((value.router_ip, qxdm_logger.port))
 
 			# QXDM and crash info are pretty much the same from the script side
 			if qxdm_logger.port == QXDM_PORT or qxdm_logger.port == CRASH_INFO_PORT:

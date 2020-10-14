@@ -1,0 +1,71 @@
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 4097 (0x1001)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=ID, O=Cradlepoint, Inc, OU=Engineering, CN=int-firmware-signing.csr DEBUG/emailAddress=adrian@cradlepoint.com
+        Validity
+            Not Before: Oct  5 17:16:35 2018 GMT
+            Not After : Oct  4 17:16:35 2023 GMT
+        Subject: C=US, ST=ID, O=Cradlepoint, Inc, OU=Engineering, CN=firmware-signing.csr DEBUG/emailAddress=adrian@cradlepoint.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c7:4c:34:bf:81:57:82:00:a8:64:6d:09:1c:06:
+                    66:18:7d:b2:fe:8e:6c:d4:f3:9a:64:6b:c4:eb:c3:
+                    d5:62:ef:60:b0:ab:cf:49:a3:47:5e:b5:e3:1e:3a:
+                    cb:f0:8a:df:7a:bc:b3:da:08:65:81:11:2b:20:a3:
+                    43:61:61:f1:62:07:a3:41:15:83:34:9a:a9:ef:5e:
+                    4d:98:8e:e2:30:de:59:99:0a:7d:10:96:cc:21:74:
+                    19:88:7d:dc:c6:f1:a1:f5:f6:ee:62:b3:d3:f2:a9:
+                    9f:0f:8f:f3:8e:3c:74:5b:63:e8:5f:6c:f8:49:9e:
+                    f2:9f:ab:e2:61:7c:61:28:e1:f6:4d:73:9c:84:33:
+                    f4:75:2c:6f:5e:11:4f:bc:b2:4d:ba:06:dd:7b:c4:
+                    e0:d0:fc:44:5e:86:b1:58:7b:a0:67:46:c3:c0:87:
+                    07:01:5a:76:61:1a:27:5f:35:74:89:8d:0e:b9:d6:
+                    06:32:0c:ef:b7:e2:8e:e5:a1:1b:31:01:3e:c0:b0:
+                    7a:e9:6c:02:5d:06:5b:ee:ed:5b:e3:27:9a:84:76:
+                    ba:1f:ab:ed:a4:3c:c8:78:55:aa:bf:db:e3:51:c0:
+                    2f:d8:8a:ec:82:a2:88:68:8a:5d:4f:3c:06:68:81:
+                    cb:cc:9c:a7:71:cb:e2:58:e8:19:79:0e:f1:1e:ff:
+                    b2:3b
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha256WithRSAEncryption
+         29:2c:1c:de:45:5e:c9:92:c3:72:48:69:1b:25:36:6b:bf:59:
+         c6:ad:e0:07:6d:ec:2f:be:1b:fd:ee:60:9e:fd:95:56:04:30:
+         6d:67:63:42:86:2a:09:13:39:63:d2:c8:3c:d2:4c:64:ca:6e:
+         fc:db:df:f9:1a:7a:4d:ad:23:aa:86:1e:62:3f:48:9d:4c:2b:
+         26:45:50:94:a6:4e:90:a4:8b:e6:9e:4f:53:e0:fb:4e:a3:8d:
+         16:82:64:b7:06:01:a6:60:c0:bc:6d:3e:49:fa:66:c8:11:52:
+         17:e3:a4:27:08:3b:13:41:10:60:62:38:09:b8:3c:8c:18:00:
+         97:0a:38:82:d2:fb:78:cf:0e:32:51:c1:79:4f:57:dc:5b:58:
+         ca:9a:0f:55:ef:bd:69:2e:06:cf:5e:b2:99:c5:73:a0:a9:07:
+         7d:ad:18:63:86:b8:27:67:f9:d3:26:b4:9e:d2:0b:fc:bc:1c:
+         11:cf:fe:97:94:61:1c:6b:c4:40:b2:a4:fd:88:78:14:56:35:
+         39:cb:08:04:8f:17:77:83:93:ca:73:4c:ac:a3:13:d2:42:18:
+         2f:cd:28:08:43:aa:b4:c2:28:f2:df:eb:a7:5d:ad:58:f4:b3:
+         98:06:2e:bc:cb:46:88:51:2a:b3:61:92:96:65:1f:7b:05:d9:
+         d9:d5:dd:79
+-----BEGIN CERTIFICATE-----
+MIIDqTCCApECAhABMA0GCSqGSIb3DQEBCwUAMIGbMQswCQYDVQQGEwJVUzELMAkG
+A1UECAwCSUQxGTAXBgNVBAoMEENyYWRsZXBvaW50LCBJbmMxFDASBgNVBAsMC0Vu
+Z2luZWVyaW5nMScwJQYDVQQDDB5pbnQtZmlybXdhcmUtc2lnbmluZy5jc3IgREVC
+VUcxJTAjBgkqhkiG9w0BCQEWFmFkcmlhbkBjcmFkbGVwb2ludC5jb20wHhcNMTgx
+MDA1MTcxNjM1WhcNMjMxMDA0MTcxNjM1WjCBlzELMAkGA1UEBhMCVVMxCzAJBgNV
+BAgMAklEMRkwFwYDVQQKDBBDcmFkbGVwb2ludCwgSW5jMRQwEgYDVQQLDAtFbmdp
+bmVlcmluZzEjMCEGA1UEAwwaZmlybXdhcmUtc2lnbmluZy5jc3IgREVCVUcxJTAj
+BgkqhkiG9w0BCQEWFmFkcmlhbkBjcmFkbGVwb2ludC5jb20wggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDHTDS/gVeCAKhkbQkcBmYYfbL+jmzU85pka8Tr
+w9Vi72Cwq89Jo0deteMeOsvwit96vLPaCGWBESsgo0NhYfFiB6NBFYM0mqnvXk2Y
+juIw3lmZCn0QlswhdBmIfdzG8aH19u5is9PyqZ8Pj/OOPHRbY+hfbPhJnvKfq+Jh
+fGEo4fZNc5yEM/R1LG9eEU+8sk26Bt17xODQ/ERehrFYe6BnRsPAhwcBWnZhGidf
+NXSJjQ651gYyDO+34o7loRsxAT7AsHrpbAJdBlvu7VvjJ5qEdrofq+2kPMh4Vaq/
+2+NRwC/YiuyCoohoil1PPAZogcvMnKdxy+JY6Bl5DvEe/7I7AgMBAAEwDQYJKoZI
+hvcNAQELBQADggEBACksHN5FXsmSw3JIaRslNmu/Wcat4Adt7C++G/3uYJ79lVYE
+MG1nY0KGKgkTOWPSyDzSTGTKbvzb3/kaek2tI6qGHmI/SJ1MKyZFUJSmTpCki+ae
+T1Pg+06jjRaCZLcGAaZgwLxtPkn6ZsgRUhfjpCcIOxNBEGBiOAm4PIwYAJcKOILS
++3jPDjJRwXlPV9xbWMqaD1XvvWkuBs9espnFc6CpB32tGGOGuCdn+dMmtJ7SC/y8
+HBHP/peUYRxrxECypP2IeBRWNTnLCASPF3eDk8pzTKyjE9JCGC/NKAhDqrTCKPLf
+66ddrVj0s5gGLrzLRohRKrNhkpZlH3sF2dnV3Xk=
+-----END CERTIFICATE-----
