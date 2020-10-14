@@ -1,3 +1,5 @@
+//UpdateQTestAndScenarioWithFormattedResults.js
+
 const request = require('request');
 const { Webhooks } = require('@qasymphony/pulse-sdk');
 const ScenarioSdk = require('@qasymphony/scenario-sdk');
@@ -72,7 +74,7 @@ exports.handler = function ({ event: body, constants, triggers }, context, callb
         })
 }
 
-//
+//FormatPythonPyTestJUnit.js
 
 const { Webhooks } = require('@qasymphony/pulse-sdk');
 
