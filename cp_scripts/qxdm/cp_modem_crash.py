@@ -144,8 +144,8 @@ if __name__ == '__main__':
                     print('qxdm logging mode is not lan on router')
                     sys.exit(1)
 
-                if value.filter_file != None:
-                    qxdm_logger.filter = value.filter_file
+                # if value.filter_file != None:
+                #	qxdm_logger.filter = value.filter_file
 
                 print('connecting')
                 s = socket.socket()
