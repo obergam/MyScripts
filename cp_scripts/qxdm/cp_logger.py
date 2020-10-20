@@ -730,7 +730,7 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-p", "--pw", default=None)
 	parser.add_argument("-f", "--filter_file", default=None)
-	parser.add_argument("-r", "--router_ip", default=None)
+	parser.add_argument("-r", "--router_ip", default='192.168.0.1')
 	value = parser.parse_args()
 
 	if value.pw == None:
