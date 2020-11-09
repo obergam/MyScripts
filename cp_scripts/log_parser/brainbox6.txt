@@ -1,0 +1,1210 @@
+Firmware Type: RELEASE
+Firmware Version: 7.2.10.100146d
+Firmware Build Date: Sat May  2 00:42:14 UTC 2020
+Product Name: IBR200-10M-B
+
+Wed Dec 31 18:00:02 1969|INFO|syslogd|started: BusyBox v1.30.1
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|klogd started: BusyBox v1.30.1 (2020-05-02 00:40:55 UTC)
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.000000] Linux version 4.4.100-coconut (@b9dc9c812a39) (gcc version 6.3.0 (crosstool-NG crosstool-ng-1.23.0) ) #1 Sat May 2 00:40:17 UTC 2020
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.000000] Bootup reason (0xc0030000): power off reset
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Board has DDR2
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Analog PMU set to hw control
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Digital PMU set to hw control
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] SoC Type: Ralink MT7620A ver:2 eco:6
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] CPU0 revision is: 00019650 (MIPS 24KEc)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] MIPS: machine is ralink,mt7620a-soc
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Determined physical RAM map:
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] memory: 08000000 @ 00000000 (usable)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] User-defined physical RAM map:
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] memory: 08000000 @ 00000000 (usable)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Zone ranges:
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Normal [mem 0x0000000000000000-0x0000000007ffffff]
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Movable zone start for each node
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Early memory node ranges
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] node 0: [mem 0x0000000000000000-0x0000000007ffffff]
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Built 1 zonelists in Zone order, mobility grouping on. Total pages: 32512
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.000000] Kernel command line: console=none root=/dev/mtdblock4 mem=128M
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Writing ErrCtl register=0001f45c
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Readback ErrCtl register=0001f45c
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] Memory: 125120K/131072K available (3641K kernel code, 134K rwdata, 680K rodata, 208K init, 90K bss, 5952K reserved, 0K cma-reserved)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] NR_IRQS:128
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] CPU Clock: 580MHz
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] clocksource: systick: mask: 0xffff max_cycles: 0xffff, max_idle_ns: 583261500 ns
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] systick: enable autosleep mode
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] systick: running - mult: 214748, shift: 32
+Wed Dec 31 18:00:02 1969|ERR|kernel|[ 0.000000] genirq: Flags mismatch irq 7. 00014680 (timer) vs. 00014600 (systick)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6590553264 ns
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000011] sched_clock: 32 bits at 290MHz, resolution 3ns, wraps every 7405115902ns
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.000045] Calibrating delay loop... 385.02 BogoMIPS (lpj=770048)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.027926] pid_max: default: 32768 minimum: 301
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.028077] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.028092] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.033033] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.033082] futex hash table entries: 256 (order: -1, 3072 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.033867] NET: Registered protocol family 16
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.055745] usbcore: registered new interface driver usbfs
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.055828] usbcore: registered new interface driver hub
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.055888] usbcore: registered new device driver usb
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.056828] clocksource: Switched to clocksource systick
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.057957] NET: Registered protocol family 2
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.058935] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.058976] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.059011] TCP: Hash tables configured (established 1024 bind 1024)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.059133] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.059174] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.059507] NET: Registered protocol family 1
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.059832] rt-timer 10000100.timer: maximum frequency is 1220Hz
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.060100] Board GPIO Setup
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.067923] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.069410] io scheduler noop registered (default)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.069645] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.070550] 10000c00.uartlite: ttyS0 at MMIO 0x10000c00 (irq = 20, base_baud = 2500000) is a Palmchip BK-3103
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.070959] 10000500.uart: ttyS1 at MMIO 0x10000500 (irq = 13, base_baud = 2500000) is a Palmchip BK-3103
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.071336] Ralink GPIO driver init.
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.071989] device id : ef 40 18 0 0 (40180000)
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.072116] W25Q128BV(ef 40180000) (16384 Kbytes)
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.072134] mtd .name = raspi, .size = 0x01000000 (16M) .erasesize = 0x00010000 (64K) .numeraseregions = 0
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.072914] Creating 7 MTD partitions on "raspi":
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.072955] 0x000000000000-0x000000030000 : "Bootloader"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.073989] 0x000000030000-0x000000040000 : "Config"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.074883] 0x000000040000-0x000000050000 : "Factory"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.075787] 0x000000050000-0x0000001f0000 : "Kernel"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.076661] 0x0000001f0000-0x000000c10000 : "RootFS"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.077675] 0x000000fc0000-0x000000fe0000 : "2nd Filemanager"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.078582] 0x000000fe0000-0x000001000000 : "Filemanager"
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 0.079595] ra_nand_init: alloc 1388, at 87c76000 , bbt(87c770c0, 100), ranfc_mtd:87c771c0
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.079633] 0x000000000000-0x000002000000 : "Upgrade"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.086832] 0x000002000000-0x000008000000 : "Filesystem"
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.107145] tun: Universal TUN/TAP device driver, 1.6
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.107168] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.107284] PPP generic driver version 2.4.2
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.107452] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.107476] ehci-platform: EHCI generic platform driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.127727] ehci-platform 101c0000.ehci: EHCI Host Controller
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.127774] ehci-platform 101c0000.ehci: new USB bus registered, assigned bus number 1
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.127925] ehci-platform 101c0000.ehci: irq 26, io mem 0x101c0000
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.130959] ehci-platform 101c0000.ehci: USB 2.0 started, EHCI 1.00
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.131728] hub 1-0:1.0: USB hub found
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.131780] hub 1-0:1.0: 1 port detected
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.132194] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.132222] ohci-platform: OHCI generic platform driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.152404] ohci-platform 101c1000.ohci: Generic Platform OHCI controller
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.152454] ohci-platform 101c1000.ohci: new USB bus registered, assigned bus number 2
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.152518] ohci-platform 101c1000.ohci: irq 26, io mem 0x101c1000
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.175537] hub 2-0:1.0: USB hub found
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.175602] hub 2-0:1.0: 1 port detected
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.176057] Netfilter messages via NETLINK v0.30.
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.176090] nfnl_acct: registering with nfnetlink.
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.176115] nf_conntrack version 0.5.0 (1955 buckets, 7820 max)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.178016] NET: Registered protocol family 10
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.179961] NET: Registered protocol family 17
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.180059] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 0.180122] Bridge firewalling registered
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.180146] 8021q: 802.1Q VLAN Support v1.8
+Wed Dec 31 18:00:02 1969|ERR|kernel|[ 0.182368] Warning: unable to open an initial console.
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.186230] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.187441] Freeing unused kernel memory: 208K
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 0.761983] usb 1-1: new high-speed USB device number 2 using ehci-platform
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 1.097677] hub 1-1:1.0: USB hub found
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 1.098100] hub 1-1:1.0: 4 ports detected
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 1.649320] rt2880_wdt 10000120.watchdog: Initialized
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 2.606379] cpmodem_wrapper: module license 'Proprietary' taints kernel.
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 2.606407] Disabling lock debugging due to kernel taint
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 2.607804] cp_lkm_wrapper: Inserting kernel module
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 2.627699] cp_lkm: Product chipset 7620
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 2.627725] cp_lkm: Product platform ramips
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 2.627744] cp_lkm: Processor: 7620, Max work: 32, NAPI budget: 32, QLEN: 32.
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 2.627976] cp_lkm: Inserting kernel module
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 6.050466] random: cppython: uninitialized urandom read (24 bytes read, 25 bits of entropy available)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 7.058589] usb 1-1: USB disconnect, device number 2
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 7.643987] usb 1-1: new high-speed USB device number 3 using ehci-platform
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 8.164462] hub 1-1:1.0: USB hub found
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 8.164845] hub 1-1:1.0: 4 ports detected
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 16.816109] random: cppython: uninitialized urandom read (2496 bytes read, 69 bits of entropy available)
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 16.818082] random: cppython: uninitialized urandom read (2496 bytes read, 69 bits of entropy available)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 27.373560] usb 1-1.1: new high-speed USB device number 4 using ehci-platform
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 31.105518] random: nonblocking pool is initialized
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 35.996321] ip_set: protocol 6
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 40.170447] ip_tables: (C) 2000-2006 Netfilter Core Team
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 40.239769] ip6_tables: (C) 2000-2006 Netfilter Core Team
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 47.540709] libphy: mdio: probed
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 47.566570] Ralink RT762x Embedded Switch port map [ 1 (off) (off) (off) (off) (off) ]
+Wed Dec 31 18:00:02 1969|WARN|kernel|[ 47.568088] Registered switch Ralink RT762x Embedded Switch (241:0)
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 47.568128] ralink_soc_eth 10100000.ethernet: connected fixed link PHY at 0:00 [uid=03a2940d, driver=Ralink SoC Embedded Switch]
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 47.569253] eth0: Ralink FE: rx/tx ring size 64 napi weight 32
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.250502] ubi1: attaching mtd8
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.693205] ubi1: scanning is finished
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.707892] ubi1: attached mtd8 (name "Filesystem", size 96 MiB)
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.707923] ubi1: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.707939] ubi1: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.707955] ubi1: VID header offset: 2048 (aligned 2048), data offset: 4096
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.707970] ubi1: good PEBs: 768, bad PEBs: 0, corrupted PEBs: 0
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.707984] ubi1: user volume: 1, internal volumes: 1, max. volumes count: 128
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.708003] ubi1: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 1815587226
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.708018] ubi1: available PEBs: 0, total reserved PEBs: 768, PEBs reserved for bad PEB handling: 20
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 53.711909] ubi1: background thread "ubi_bgt1d" started, PID 250
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.103023] UBIFS (ubi1:0): background thread "ubifs_bgt1_0" started, PID 253
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.127897] UBIFS (ubi1:0): recovery needed
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.188556] UBIFS (ubi1:0): recovery completed
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.188588] UBIFS (ubi1:0): UBIFS: mounted UBI device 1, volume 0, name "Filesystem"
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.188605] UBIFS (ubi1:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.188628] UBIFS (ubi1:0): FS size: 93073408 bytes (88 MiB, 733 LEBs), journal size 4698112 bytes (4 MiB, 37 LEBs)
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.188644] UBIFS (ubi1:0): reserved for root: 4396086 bytes (4293 KiB)
+Wed Dec 31 18:00:02 1969|NOTICE|kernel|[ 54.188670] UBIFS (ubi1:0): media format: w4/r0 (latest is w4/r0), UUID C3D1E3C6-E98D-4B34-A961-F7079159EB26, small LPT model
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 56.612015] Setting debug log level:0
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 57.264862] gre: GRE over IPv4 demultiplexor driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 57.299069] ip_gre: GRE over IPv4 tunneling driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 57.431154] ip6_gre: GRE over IPv6 tunneling driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 57.962626] IPv4 over IPsec tunneling driver
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 59.279772] usbcore: registered new interface driver cpusb2
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: ra_gsw
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: ralink-eth
+Wed Dec 31 18:00:02 1969|INFO|mountfilesystem|Mounted ubifs Filesystem partition (total 81.4 MB, free 77.2 MB) on nand flash /dev/mtd8
+Wed Dec 31 18:00:02 1969|INFO|root|Firmware Build Date: Sat May 2 00:42:14 UTC 2020
+Wed Dec 31 18:00:02 1969|INFO|root|Firmware Version: 7.2.10.100146d
+Wed Dec 31 18:00:02 1969|INFO|root|Firmware Type: RELEASE
+Wed Dec 31 18:00:02 1969|INFO|policy.SwansEnginePolicy|None -> UpProcess (primary: None, next_dev: None)
+Wed Dec 31 18:00:02 1969|INFO|policy.SWANS|None -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:00:02 1969|INFO|policy.FailoverFailback|None -> start (primary: None, next_dev: None)
+Wed Dec 31 18:00:02 1969|INFO|policy.WanChange|None -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:00:02 1969|WARN|lan|IPv6 LAN: No delegated prefixes
+Wed Dec 31 18:00:02 1969|INFO|scheduler|Resuming network Primary LAN
+Wed Dec 31 18:00:02 1969|INFO|scheduler|Uninhibiting device wireless0
+Wed Dec 31 18:00:02 1969|INFO|scheduler|Setting radio 0 bss 0 inhibit to False
+Wed Dec 31 18:00:02 1969|INFO|lan|Adding IP Network: (name: Primary LAN, ip: 192.168.0.1/255.255.255.0)
+Wed Dec 31 18:00:02 1969|INFO|scheduler|Resuming network Guest LAN
+Wed Dec 31 18:00:02 1969|INFO|scheduler|Uninhibiting device wireless1
+Wed Dec 31 18:00:02 1969|INFO|scheduler|Setting radio 0 bss 1 inhibit to False
+Wed Dec 31 18:00:02 1969|INFO|policy.FailoverFailback|start -> pick_next (primary: None, next_dev: None)
+Wed Dec 31 18:00:02 1969|INFO|lan|Adding IP Network: (name: Guest LAN, ip: 192.168.10.1/255.255.255.0)
+Wed Dec 31 18:00:02 1969|INFO|qxdmlog|logSetMode - val:usb
+Wed Dec 31 18:00:02 1969|INFO|qxdmlog|logEnableEvent - val:False
+Wed Dec 31 18:00:02 1969|INFO|qxdmlog|ramdumpEnableEvent - val:False
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 0
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 2
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 3
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 4
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 5
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 6
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 7
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Put dual SIM to default on port: 8
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 0 to 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 1 to 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 2 to 1
+Wed Dec 31 18:00:02 1969|INFO|clock|System time set to: 01:00:00 01/01/70 UTC
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 3 to 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 4 to 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 5 to 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 6 to 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 7 to 1
+Wed Dec 31 18:00:02 1969|INFO|cpevt|Initialize multiPDN on port: 8 to 1
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: nf_nat_proto_gre
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: nf_conntrack_proto_gre
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: ip_tunnel
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: gre
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: ip_gre
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: ip6_tunnel
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: ip6_gre
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: xfrm4_mode_tunnel
+Wed Dec 31 18:00:02 1969|INFO|kmod|Loading kernel module: ip_vti
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone All with id 1
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone Router with id 2
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone WAN Zone with id 3
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone Primary LAN Zone with id 4
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone Guest LAN Zone with id 5
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added filter policy Default Allow All
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added filter policy Default Deny All
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone forwarding 00000002-695c-3d87-95cb-d0ee2029d0b5->00000003-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone forwarding 00000003-695c-3d87-95cb-d0ee2029d0b5->00000002-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone forwarding 00000002-695c-3d87-95cb-d0ee2029d0b5->00000004-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:02 1969|INFO|firewall|Added zone forwarding 00000004-695c-3d87-95cb-d0ee2029d0b5->00000002-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:02 1969|INFO|vlan|Plugging VLAN: 1
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 59.449497] device eth0 entered promiscuous mode
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 59.465639] IPv6: ADDRCONF(NETDEV_UP): primarylan1: link is not ready
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 59.469006] device eth0.1 entered promiscuous mode
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 59.469210] primarylan1: port 1(eth0.1) entered forwarding state
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 59.469267] primarylan1: port 1(eth0.1) entered forwarding state
+Wed Dec 31 18:00:02 1969|INFO|kernel|[ 59.469459] IPv6: ADDRCONF(NETDEV_CHANGE): primarylan1: link becomes ready
+Wed Dec 31 18:00:02 1969|INFO|policyMgr.PolicyMgr|WAN ready state: True
+Wed Dec 31 18:00:02 1969|WARN|pam|PCI/DSS mode set. Ensure all user passwords are PCI/DSS compliant.
+Wed Dec 31 18:00:03 1969|INFO|msft_iot|Connection to IoT Central is now: disconnected
+Wed Dec 31 18:00:03 1969|INFO|wlan|Random channel selection chose channel=6 for radio=0
+Wed Dec 31 18:00:03 1969|INFO|kmod|Loading kernel module: rlt_wifi
+Wed Dec 31 18:00:04 1969|NOTICE|kernel|[ 60.813600] RTMPSetProfileParameters DhcpBridging=0
+Wed Dec 31 18:00:05 1969|NOTICE|kernel|[ 61.259903] RTMPSetProfileParameters DhcpBridging=0
+Wed Dec 31 18:00:05 1969|INFO|wlankev|Wireless interface 0 up
+Wed Dec 31 18:00:06 1969|NOTICE|kernel|[ 62.178222] RTMPSetProfileParameters DhcpBridging=0
+Wed Dec 31 18:00:06 1969|INFO|wlankev|Wireless interface down
+Wed Dec 31 18:00:06 1969|INFO|wlankev|Wireless interface 0 up
+Wed Dec 31 18:00:06 1969|INFO|kernel|[ 63.203740] device ra0 entered promiscuous mode
+Wed Dec 31 18:00:06 1969|INFO|kernel|[ 63.203846] primarylan1: port 2(ra0) entered forwarding state
+Wed Dec 31 18:00:06 1969|INFO|kernel|[ 63.203887] primarylan1: port 2(ra0) entered forwarding state
+Wed Dec 31 18:00:06 1969|INFO|gre|LAN change
+Wed Dec 31 18:00:07 1969|WARN|dns|No DNS Servers Configured! Some features may not function properly!
+Wed Dec 31 18:00:08 1969|INFO|wlankev|Wireless interface down
+Wed Dec 31 18:00:08 1969|INFO|wlankev|Wireless interface 0 up
+Wed Dec 31 18:00:09 1969|WARN|root|No snmp user accounts were found.
+Wed Dec 31 18:00:09 1969|INFO|kmod|Loading kernel module: usbserial
+Wed Dec 31 18:00:09 1969|INFO|kernel|[ 66.188352] usbcore: registered new interface driver usbserial
+Wed Dec 31 18:00:09 1969|INFO|kmod|Loading kernel module: ftdi_sio
+Wed Dec 31 18:00:09 1969|INFO|kernel|[ 66.245318] usbcore: registered new interface driver ftdi_sio
+Wed Dec 31 18:00:09 1969|INFO|kernel|[ 66.245450] usbserial: USB Serial support registered for FTDI USB Serial Device
+Wed Dec 31 18:00:09 1969|INFO|gre|LAN change
+Wed Dec 31 18:00:10 1969|WARN|dns|No DNS Servers Configured! Some features may not function properly!
+Wed Dec 31 18:00:14 1969|INFO|cp_stack_mgr|int1: QMI not ready yet, try again Error Code: 7
+Wed Dec 31 18:00:17 1969|INFO|cpevt|ifc supported tech: lte/3g
+Wed Dec 31 18:00:17 1969|INFO|WAN:36d1fd65|is_upgrading: False
+Wed Dec 31 18:00:17 1969|INFO|WAN:36d1fd65|Plug event: ok
+Wed Dec 31 18:00:17 1969|INFO|WAN:36d1fd65|plug_event, is_upgrading: False
+Wed Dec 31 18:00:17 1969|INFO|kernel|[ 70.568882] primarylan1: port 1(eth0.1) entered forwarding state
+Wed Dec 31 18:00:17 1969|INFO|WAN:36d1fd65|wandev plugged: mdm, uid: 36d1fd65, uptime: 76
+Wed Dec 31 18:00:18 1969|INFO|WAN:36d1fd65|execute GET_ICCID
+Wed Dec 31 18:00:18 1969|INFO|WAN:36d1fd65|Execute Event ok: 10
+Wed Dec 31 18:00:21 1969|INFO|WAN:36d1fd65|Preconfigured Event: ok
+Wed Dec 31 18:00:21 1969|INFO|WAN:36d1fd65|wandev preconfigured type: mdm, uid: 36d1fd65, uptime: 79
+Wed Dec 31 18:00:21 1969|INFO|kernel|[ 72.259263] primarylan1: port 2(ra0) entered forwarding state
+Wed Dec 31 18:00:21 1969|INFO|cp_stack_mgr|int1: wan_manager_parse_cb() - GPS_INTERVAL changed to 10
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 139564871 (0x8519747)
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 92%, RSSI:-79(dBm), SINR:2.0(dB), RSRP:-105(dB), RSRQ:-11(dB), RFBAND: Band 5, Service: LTE
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|Configure Event: ok
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|is_upgrading: False
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|configured_event: Device activation state: True
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|wandev configured type: mdm, uid: 36d1fd65, uptime: 101
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|StandardModem::checkNIASession: NIA mode : disconnected session : None
+Wed Dec 31 18:00:43 1969|INFO|WAN:36d1fd65|StandardModem::checkNIASession: connection state : disconnected
+Wed Dec 31 18:00:44 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:00:44 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:00:44 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65|WanDevMixIn:Starting
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65|disconnected -> connecting
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65|wandev connecting type: mdm, uid: 36d1fd65, uptime: 102
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 92%, RSSI:-79(dBm), SINR:2.0(dB), RSRP:-105(dB), RSRQ:-11(dB), RFBAND: Band 5, Service: LTE
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:00:44 1969|INFO|WAN:36d1fd65.CPPM|Connecting device
+Wed Dec 31 18:01:10 1969|INFO|cp_stack_mgr|int1: Active APN: mnet.bell.ca.ioe
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|Connect Event: ok - kwargs: {'event': 'CONNECT', 'ifc': 'pmip2', 'port': 'int1'}, state: connecting
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....CPPM
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNBack
+Wed Dec 31 18:01:11 1969|INFO|udhcpc[498]|started, v1.30.1
+Wed Dec 31 18:01:11 1969|INFO|udhcpc[498]|sending discover
+Wed Dec 31 18:01:11 1969|INFO|udhcpc[498]|sending select for 10.130.208.114
+Wed Dec 31 18:01:11 1969|INFO|udhcpc[498]|lease of 10.130.208.114 obtained, lease time 7200
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65.DHCP|ipinfo={'gateway': '10.130.208.113', 'ip_address': '10.130.208.114', 'netmask': '255.255.255.252', 'dnslist': ['204.101.237.136', '207.164.79.249']}
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....DHCP
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....SignalVerify
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|WanDevMixIn:startStabilityCheck
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|WanDevMixIn:startDoneContCheck
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|connecting -> connected, Reason: Failover
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|wandev connected type: mdm, uid: 36d1fd65, uptime: 129
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|Connection Type: LTE
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 139564812 (0x851970c)
+Wed Dec 31 18:01:11 1969|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 96%, RSSI:-77(dBm), SINR:-8.0(dB), RSRP:-110(dB), RSRQ:-20(dB), RFBAND: Band 12, Service: LTE
+Wed Dec 31 18:01:12 1969|INFO|policy.WanChange|connect_wait -> idle (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:01:12 1969|INFO|kernel|[ 91.141571] ctnetlink v0.93: registering with nfnetlink.
+Wed Dec 31 18:01:13 1969|INFO|policy.FailoverFailback|wait_for_next -> disconnect_prev (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:01:13 1969|INFO|policy.FailoverFailback|disconnect_prev -> connected (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:01:17 1969|INFO|cp_stack_mgr|SIM door is open
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.146781] usb 1-1.1: USB disconnect, device number 4
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.151072] Unlink cpdev from pm
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.151111] Unlink cpdev: 87770308 from pm
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.151126] Disable cpdev other tasklet
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.151139] Cancel cpdev kevents
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.151155] Wait for all cpdev urbs to be returned
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.151168] Shutdown cpdev timers and tasklets
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.151232] cpdev unplug done
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.153715] Device with id:2 unplugged
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.153743] Wait for cpdev to finish unplugging
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.153757] usbcore: deregistering interface driver cpusb2
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.153930] cpdev done unplugging
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.154783] Link Down indicated - id:2
+Wed Dec 31 18:01:17 1969|INFO|kernel|[ 93.154783]
+Wed Dec 31 18:01:17 1969|INFO|WAN:36d1fd65|Unplugged
+Wed Dec 31 18:01:17 1969|INFO|WAN:36d1fd65|WanDevMixIn:stopStabilityCheck
+Wed Dec 31 18:01:17 1969|INFO|WAN:36d1fd65|WanDevMixIn:stopStartDoneContCheck
+Wed Dec 31 18:01:17 1969|INFO|WAN:36d1fd65|connected -> disconnecting
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65|disconnecting -> disconnected, Reason: Unplugged
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....SignalVerify
+Wed Dec 31 18:01:18 1969|ERR|udhcpc[498]|received SIGTERM
+Wed Dec 31 18:01:18 1969|WARN|ntp|Unable to connect to NTP server: time.google.com ([Errno -2] Name or service not known)
+Wed Dec 31 18:01:18 1969|INFO|wanmgr|Removing orphan: Network device: (type: mdm, link: <Link pmip2, ifindex: 16>, uid: 36d1fd65, net_mode: None)
+Wed Dec 31 18:01:18 1969|INFO|wanmgr|Removed device: Network device: (type: mdm, link: <Link pmip2, ifindex: 16>, uid: 36d1fd65, net_mode: None)
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....DHCP
+Wed Dec 31 18:01:18 1969|WARN|WAN:36d1fd65.ConnectorMgr|_disconnectConnectors but already disconnecting???
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....SignalVerify
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....DHCP
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNBack
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....CPPM
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNFront
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoSelect
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIM
+Wed Dec 31 18:01:18 1969|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Wed Dec 31 18:01:18 1969|INFO|policy.FailoverFailback|connected -> start (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:01:18 1969|INFO|policy.FailoverFailback|start -> pick_next (primary: None, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:01:20 1969|WARN|dns|No DNS Servers Configured! Some features may not function properly!
+Wed Dec 31 18:01:28 1969|INFO|cp_stack_mgr|SIM door is closed
+Wed Dec 31 18:01:45 1969|INFO|kernel|[ 103.535961] usb 1-1.1: new high-speed USB device number 5 using ehci-platform
+Wed Dec 31 18:01:47 1969|INFO|kernel|[ 104.335813] usbcore: registered new interface driver cpusb3
+Wed Dec 31 18:02:02 1969|INFO|cp_stack_mgr|int1: QMI not ready yet, try again Error Code: 7
+Wed Dec 31 18:02:13 1969|INFO|cp_stack_mgr|int1: QMI not ready yet, try again Error Code: 7
+Wed Dec 31 18:02:15 1969|INFO|cpevt|ifc supported tech: lte/3g
+Wed Dec 31 18:02:16 1969|INFO|WAN:36d1fd65|is_upgrading: False
+Wed Dec 31 18:02:16 1969|INFO|WAN:36d1fd65|Plug event: ok
+Wed Dec 31 18:02:16 1969|INFO|WAN:36d1fd65|plug_event, is_upgrading: False
+Wed Dec 31 18:02:16 1969|INFO|WAN:36d1fd65|wandev plugged: mdm, uid: 36d1fd65, uptime: 194
+Wed Dec 31 18:02:16 1969|INFO|WAN:36d1fd65|execute GET_ICCID
+Wed Dec 31 18:02:16 1969|INFO|WAN:36d1fd65|Execute Event ok: 10
+Wed Dec 31 18:02:19 1969|INFO|WAN:36d1fd65|Preconfigured Event: ok
+Wed Dec 31 18:02:19 1969|INFO|WAN:36d1fd65|wandev preconfigured type: mdm, uid: 36d1fd65, uptime: 198
+Wed Dec 31 18:02:20 1969|INFO|cp_stack_mgr|int1: wan_manager_parse_cb() - GPS_INTERVAL changed to 10
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 139564812 (0x851970c)
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-72(dBm), SINR:0.2(dB), RSRP:-101(dB), RSRQ:-12(dB), RFBAND: Band 12, Service: LTE
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|Configure Event: ok
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|is_upgrading: False
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|configured_event: Device activation state: True
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|wandev configured type: mdm, uid: 36d1fd65, uptime: 220
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|StandardModem::checkNIASession: NIA mode : disconnected session : None
+Wed Dec 31 18:02:42 1969|INFO|WAN:36d1fd65|StandardModem::checkNIASession: connection state : disconnected
+Wed Dec 31 18:02:43 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:02:43 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:02:43 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65|WanDevMixIn:Starting
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65|disconnected -> connecting
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65|wandev connecting type: mdm, uid: 36d1fd65, uptime: 221
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-72(dBm), SINR:0.2(dB), RSRP:-101(dB), RSRQ:-12(dB), RFBAND: Band 12, Service: LTE
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:02:43 1969|INFO|WAN:36d1fd65.CPPM|Connecting device
+Wed Dec 31 18:03:09 1969|INFO|cp_stack_mgr|int1: Active APN: mnet.bell.ca.ioe
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65|Connect Event: ok - kwargs: {'event': 'CONNECT', 'ifc': 'pmip3', 'port': 'int1'}, state: connecting
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....CPPM
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNBack
+Wed Dec 31 18:03:10 1969|INFO|udhcpc[674]|started, v1.30.1
+Wed Dec 31 18:03:10 1969|INFO|udhcpc[674]|sending discover
+Wed Dec 31 18:03:10 1969|INFO|udhcpc[674]|sending select for 10.159.192.65
+Wed Dec 31 18:03:10 1969|INFO|udhcpc[674]|lease of 10.159.192.65 obtained, lease time 7200
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65.DHCP|ipinfo={'gateway': '10.159.192.66', 'ip_address': '10.159.192.65', 'netmask': '255.255.255.252', 'dnslist': ['204.101.237.136', '207.164.79.249']}
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....DHCP
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....SignalVerify
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65|WanDevMixIn:startStabilityCheck
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65|WanDevMixIn:startDoneContCheck
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65|connecting -> connected, Reason: Failover
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65|wandev connected type: mdm, uid: 36d1fd65, uptime: 249
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65|Connection Type: LTE
+Wed Dec 31 18:03:10 1969|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:3.2(dB), RSRP:-107(dB), RSRQ:-15(dB), RFBAND: Band 12, Service: LTE
+Wed Dec 31 18:03:11 1969|INFO|policy.WanChange|connect_wait -> idle (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:03:12 1969|INFO|policy.FailoverFailback|wait_for_next -> disconnect_prev (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Wed Dec 31 18:03:12 1969|INFO|policy.FailoverFailback|disconnect_prev -> connected (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 08:52:53 2020|INFO|clock|System time set to: 14:52:53 10/31/20 UTC
+Sat Oct 31 08:52:58 2020|INFO|netcloud|Connecting to NetCloud
+Sat Oct 31 08:52:58 2020|INFO|netcloud|Checking Authentication
+Sat Oct 31 08:52:59 2020|INFO|netcloud|Binding to Stream Server
+Sat Oct 31 08:52:59 2020|INFO|netcloud|Successfully connected to NetCloud
+Sat Oct 31 08:53:00 2020|INFO|netcloud|[truncated] Return {'__errors__': {}, 'service': {'ecm': {'csdiff': ({'wan': {'rules2': {'2': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe'}}, '4': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe', 'ppp_username': 'admin', 'ppp_password': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ=='}, 'priority': 2.25, 'trigger_name': 'Modem-36d1fd65', 'trigger_string': 'type|is|mdm%tech|is|lte/3g%uid|is|36d1fd65', '_id_': '00010004-a81d-3590-93ca-8b1fcfeb8e14'}}}, 'ecm': {'config_version': 8}, 'system': {'ui_activated': True, 'gps': {'enabled': True}, 'admin': {'product_name': 'IBR200-10M-B'}, 'desc': 'office'}}, []), 'runtime_defaults': ({'system': {'system_id': 'IBR200-941', 'users': {0: {'username': 'admin', 'password': '$2$08bf5dfc$AM5q0XfPqQLkDpetMAlQw9TfGLqvPb77ujFWNs1mtKs=', 'group': 'admin'}}}, 'wlan': {'radio': {0: {'bss': {0: {'ssid': 'IBR200-941', 'wpapsk': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ==', 'radius0key': '$1$26cc935c$02le7S8kl9ZvL8yZ1ZOeAQ=='}, 1
+Sat Oct 31 08:53:01 2020|INFO|netcloud|Updated status.ecm.info.Account
+Sat Oct 31 08:53:01 2020|INFO|netcloud|Updated status.ecm.info.Group
+Sat Oct 31 08:53:01 2020|INFO|netcloud|Trimmed 1 WAN state records.
+Sat Oct 31 08:53:17 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 82%, RSSI:-84(dBm), SINR:1.0(dB), RSRP:-107(dB), RSRQ:-8(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 08:53:21 2020|INFO|wlankev|Client f8:ff:c2:3b:81:93 associated
+Sat Oct 31 08:53:21 2020|INFO|wlankev|Client f8:ff:c2:3b:81:93 WPA2 key negotiation completed
+Sat Oct 31 08:53:23 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:-3.2(dB), RSRP:-107(dB), RSRQ:-16(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 08:53:26 2020|INFO|dhcp|New DHCP client: 3469-MBP13 192.168.0.157 f8:ff:c2:3b:81:93
+Sat Oct 31 08:53:29 2020|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 138726659 (0x844cd03)
+Sat Oct 31 08:53:29 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:3.6(dB), RSRP:-107(dB), RSRQ:-10(dB), RFBAND: Band 4, Service: LTE
+Sat Oct 31 08:53:35 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 72%, RSSI:-87(dBm), SINR:0.6(dB), RSRP:-121(dB), RSRQ:-10(dB), RFBAND: Band 4, Service: LTE
+Sat Oct 31 08:53:42 2020|INFO|rollback|Schedule rollback in 900 seconds
+Sat Oct 31 08:53:43 2020|INFO|netcloud|Applying config patch
+Sat Oct 31 08:53:43 2020|INFO|netcloud|Restarting server connection in 15 seconds
+Sat Oct 31 08:53:43 2020|INFO|netcloud|Patched config
+Sat Oct 31 08:53:43 2020|WARN|netcloud|Abandoning post for inactive stream: <services.wpcclient.CSStreamConnection object at 0x7147e810>
+Sat Oct 31 08:53:46 2020|WARN|netcloud|Abandoning post for inactive stream: None
+Sat Oct 31 08:53:47 2020|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 139564871 (0x8519747)
+Sat Oct 31 08:53:47 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 72%, RSSI:-87(dBm), SINR:-1.4(dB), RSRP:-126(dB), RSRQ:-15(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 08:53:53 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 90%, RSSI:-80(dBm), SINR:4.2(dB), RSRP:-108(dB), RSRQ:-15(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 08:53:58 2020|INFO|netcloud|NetCloud Session Stopped
+Sat Oct 31 08:53:58 2020|INFO|netcloud|Connecting to NetCloud
+Sat Oct 31 08:53:59 2020|INFO|netcloud|Checking Authentication
+Sat Oct 31 08:53:59 2020|INFO|netcloud|Binding to Stream Server
+Sat Oct 31 08:53:59 2020|INFO|netcloud|Successfully connected to NetCloud
+Sat Oct 31 08:53:59 2020|INFO|rollback|Cancel rollback
+Sat Oct 31 08:53:59 2020|INFO|netcloud|Config patch accepted on reconnect
+Sat Oct 31 08:54:01 2020|INFO|netcloud|[truncated] Return {'__errors__': {}, 'service': {'ecm': {'csdiff': ({'wan': {'rules2': {'2': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe'}}, '4': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe', 'ppp_username': 'admin', 'ppp_password': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ=='}, 'priority': 2.25, 'trigger_name': 'Modem-36d1fd65', 'trigger_string': 'type|is|mdm%tech|is|lte/3g%uid|is|36d1fd65', '_id_': '00010004-a81d-3590-93ca-8b1fcfeb8e14'}}}, 'ecm': {'config_version': 9}, 'system': {'ui_activated': True, 'gps': {'enabled': True}, 'admin': {'product_name': 'IBR200-10M-B'}, 'desc': 'Denlow'}}, []), 'runtime_defaults': ({'system': {'system_id': 'IBR200-941', 'users': {0: {'username': 'admin', 'password': '$2$08bf5dfc$AM5q0XfPqQLkDpetMAlQw9TfGLqvPb77ujFWNs1mtKs=', 'group': 'admin'}}}, 'wlan': {'radio': {0: {'bss': {0: {'ssid': 'IBR200-941', 'wpapsk': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ==', 'radius0key': '$1$26cc935c$02le7S8kl9ZvL8yZ1ZOeAQ=='}, 1
+Sat Oct 31 08:54:01 2020|INFO|netcloud|Updated status.ecm.info.Account
+Sat Oct 31 08:54:01 2020|INFO|netcloud|Updated status.ecm.info.Group
+Sat Oct 31 08:54:37 2020|INFO|httpserver|Accepted web login from local address 192.168.0.157, user: admin
+Sat Oct 31 08:56:53 2020|INFO|upgrade|Found file on server; version: 02.28.03.01_ATT,002.071_000
+Sat Oct 31 08:56:53 2020|INFO|upgrade|overwrite supported: False, downgrade supported: False
+Sat Oct 31 08:56:53 2020|INFO|upgrade|No upgrade found
+Sat Oct 31 09:00:47 2020|INFO|upgrade|Found file on server; version: 02.28.03.01_ATT,002.071_000
+Sat Oct 31 09:00:47 2020|INFO|upgrade|overwrite supported: False, downgrade supported: False
+Sat Oct 31 09:00:47 2020|INFO|upgrade|No upgrade found
+Sat Oct 31 09:06:32 2020|WARN|workqueue|LoopedTask Task id: 676, callback: services.wpcclient.FunctionEventTrigger.taskHandler still running on reschedule, checking again in 1s
+Sat Oct 31 09:06:34 2020|INFO|rollback|Schedule rollback in 900 seconds
+Sat Oct 31 09:06:34 2020|INFO|netcloud|Applying config patch
+Sat Oct 31 09:06:34 2020|INFO|netcloud|Restarting server connection in 15 seconds
+Sat Oct 31 09:06:34 2020|INFO|netcloud|Patched config
+Sat Oct 31 09:06:34 2020|WARN|netcloud|Abandoning post for inactive stream: <services.wpcclient.CSStreamConnection object at 0x71336bf0>
+Sat Oct 31 09:06:36 2020|WARN|workqueue|LoopedTask Task id: 676, callback: services.wpcclient.FunctionEventTrigger.taskHandler still running on reschedule, checking again in 1s
+Sat Oct 31 09:06:49 2020|INFO|netcloud|NetCloud Session Stopped
+Sat Oct 31 09:06:49 2020|INFO|netcloud|Connecting to NetCloud
+Sat Oct 31 09:06:50 2020|INFO|netcloud|Checking Authentication
+Sat Oct 31 09:06:50 2020|INFO|netcloud|Binding to Stream Server
+Sat Oct 31 09:06:50 2020|INFO|netcloud|Successfully connected to NetCloud
+Sat Oct 31 09:06:50 2020|INFO|rollback|Cancel rollback
+Sat Oct 31 09:06:50 2020|INFO|netcloud|Config patch accepted on reconnect
+Sat Oct 31 09:06:51 2020|INFO|netcloud|[truncated] Return {'__errors__': {}, 'service': {'ecm': {'csdiff': ({'wan': {'rules2': {'0': {'disabled': True}, '2': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe'}}, '3': {'disabled': True}, '4': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe', 'ppp_username': 'admin', 'ppp_password': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ=='}, 'priority': 2.25, 'trigger_name': 'Modem-36d1fd65', 'trigger_string': 'type|is|mdm%tech|is|lte/3g%uid|is|36d1fd65', '_id_': '00010004-a81d-3590-93ca-8b1fcfeb8e14'}}}, 'ecm': {'config_version': 10}, 'system': {'ui_activated': True, 'gps': {'enabled': True}, 'admin': {'product_name': 'IBR200-10M-B'}, 'desc': 'Denlow'}}, []), 'runtime_defaults': ({'system': {'system_id': 'IBR200-941', 'users': {0: {'username': 'admin', 'password': '$2$08bf5dfc$AM5q0XfPqQLkDpetMAlQw9TfGLqvPb77ujFWNs1mtKs=', 'group': 'admin'}}}, 'wlan': {'radio': {0: {'bss': {0: {'ssid': 'IBR200-941', 'wpapsk': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ==', 'radi
+Sat Oct 31 09:06:52 2020|INFO|netcloud|Updated status.ecm.info.Account
+Sat Oct 31 09:06:52 2020|INFO|netcloud|Updated status.ecm.info.Group
+Sat Oct 31 09:06:53 2020|WARN|netcloud|Abandoning post for inactive stream: <services.wpcclient.CSStreamConnection object at 0x71360b70>
+Sat Oct 31 09:06:53 2020|INFO|logsys|Last message repeated 18 times.
+Sat Oct 31 09:06:53 2020|INFO|rollback|Schedule rollback in 900 seconds
+Sat Oct 31 09:06:53 2020|INFO|netcloud|Applying config patch
+Sat Oct 31 09:06:54 2020|INFO|netcloud|Restarting server connection in 15 seconds
+Sat Oct 31 09:06:54 2020|INFO|netcloud|Patched config
+Sat Oct 31 09:06:54 2020|WARN|netcloud|Abandoning post for inactive stream: <services.wpcclient.CSStreamConnection object at 0x71360b70>
+Sat Oct 31 09:07:09 2020|INFO|netcloud|NetCloud Session Stopped
+Sat Oct 31 09:07:09 2020|INFO|netcloud|Connecting to NetCloud
+Sat Oct 31 09:07:09 2020|INFO|netcloud|Checking Authentication
+Sat Oct 31 09:07:10 2020|INFO|netcloud|Binding to Stream Server
+Sat Oct 31 09:07:10 2020|INFO|netcloud|Successfully connected to NetCloud
+Sat Oct 31 09:07:10 2020|INFO|rollback|Cancel rollback
+Sat Oct 31 09:07:10 2020|INFO|netcloud|Config patch accepted on reconnect
+Sat Oct 31 09:07:11 2020|INFO|netcloud|[truncated] Return {'__errors__': {}, 'service': {'ecm': {'csdiff': ({'wan': {'rules2': {'0': {'disabled': True}, '2': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe'}}, '3': {'disabled': True}, '4': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe', 'ppp_username': 'admin', 'ppp_password': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ=='}, 'priority': 2.25, 'trigger_name': 'Modem-36d1fd65', 'trigger_string': 'type|is|mdm%tech|is|lte/3g%uid|is|36d1fd65', '_id_': '00010004-a81d-3590-93ca-8b1fcfeb8e14'}}}, 'ecm': {'config_version': 11}, 'system': {'ui_activated': True, 'gps': {'enabled': True}, 'admin': {'product_name': 'IBR200-10M-B'}, 'desc': 'Denlow'}}, []), 'runtime_defaults': ({'system': {'system_id': 'IBR200-941', 'users': {0: {'username': 'admin', 'password': '$2$08bf5dfc$AM5q0XfPqQLkDpetMAlQw9TfGLqvPb77ujFWNs1mtKs=', 'group': 'admin'}}}, 'wlan': {'radio': {0: {'bss': {0: {'ssid': 'IBR200-941', 'wpapsk': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ==', 'radi
+Sat Oct 31 09:07:12 2020|INFO|netcloud|Updated status.ecm.info.Account
+Sat Oct 31 09:07:12 2020|INFO|netcloud|Updated status.ecm.info.Group
+Sat Oct 31 09:10:45 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-74(dBm), SINR:2.8(dB), RSRP:-103(dB), RSRQ:-15(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 09:10:51 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 86%, RSSI:-82(dBm), SINR:4.2(dB), RSRP:-103(dB), RSRQ:-15(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 09:13:16 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 98%, RSSI:-76(dBm), SINR:0.2(dB), RSRP:-103(dB), RSRQ:-15(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 09:13:40 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 84%, RSSI:-83(dBm), SINR:1.6(dB), RSRP:-103(dB), RSRQ:-15(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 09:14:39 2020|INFO|filemgr|Rebuilding flash sector: id: 1, allocated: 773, remaining: 6300, total: 59236, erase_count: 9, inodes: 11, files: 3
+Sat Oct 31 09:14:40 2020|WARN|workqueue|LoopedTask Task id: 1752, callback: services.wpcclient.FunctionEventTrigger.taskHandler still running on reschedule, checking again in 1s
+Sat Oct 31 09:14:42 2020|INFO|WAN:36d1fd65|Resetting
+Sat Oct 31 09:14:42 2020|INFO|rollback|Schedule rollback in 900 seconds
+Sat Oct 31 09:14:42 2020|INFO|WAN:36d1fd65|Modem:onReset
+Sat Oct 31 09:14:42 2020|INFO|WAN:36d1fd65|isResetSafe: self_switch:False, self_upg:None, fw_status:None, safe: True
+Sat Oct 31 09:14:42 2020|INFO|cp_stack_mgr|int1: WAN Device reset (5)
+Sat Oct 31 09:14:42 2020|INFO|netcloud|Applying config patch
+Sat Oct 31 09:14:42 2020|INFO|filemgr|Rebuilding flash sector: id: 0, allocated: 589, remaining: 6127, total: 59409, erase_count: 8, inodes: 12, files: 2
+Sat Oct 31 09:14:42 2020|INFO|netcloud|Restarting server connection in 15 seconds
+Sat Oct 31 09:14:42 2020|INFO|netcloud|Patched config
+Sat Oct 31 09:14:43 2020|WARN|netcloud|Abandoning post for inactive stream: <services.wpcclient.CSStreamConnection object at 0x71360bd0>
+Sat Oct 31 09:14:43 2020|INFO|policy.FailoverFailback|connected -> wait_for_next (primary: mdm-36d1fd65, next_dev: None)
+Sat Oct 31 09:14:43 2020|INFO|policy.FailoverFailback|wait_for_next -> pick_next (primary: mdm-36d1fd65, next_dev: None)
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65|Stopping
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65|connected -> disconnecting
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 84%, RSSI:-83(dBm), SINR:5.0(dB), RSRP:-103(dB), RSRQ:-15(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....SignalVerify
+Sat Oct 31 09:14:43 2020|ERR|udhcpc[674]|received SIGTERM
+Sat Oct 31 09:14:43 2020|WARN|workqueue|LoopedTask Task id: 1752, callback: services.wpcclient.FunctionEventTrigger.taskHandler still running on reschedule, checking again in 1s
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....DHCP
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNBack
+Sat Oct 31 09:14:43 2020|INFO|kernel|[ 939.506088] Link Down indicated - id:3
+Sat Oct 31 09:14:43 2020|INFO|kernel|[ 939.506088]
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....CPPM
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNFront
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoSelect
+Sat Oct 31 09:14:43 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Sat Oct 31 09:14:44 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIM
+Sat Oct 31 09:14:44 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Sat Oct 31 09:14:44 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStartDoneContCheck
+Sat Oct 31 09:14:44 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStabilityCheck
+Sat Oct 31 09:14:44 2020|INFO|WAN:36d1fd65|disconnecting -> disconnected, Reason: Unready
+Sat Oct 31 09:14:44 2020|INFO|WAN:36d1fd65|Stopped
+Sat Oct 31 09:14:44 2020|WARN|WAN:36d1fd65.ConnectorMgr|already reset
+Sat Oct 31 09:14:46 2020|WARN|dns|No DNS Servers Configured! Some features may not function properly!
+Sat Oct 31 09:14:49 2020|INFO|netcloud|NetCloud Session Stopped
+Sat Oct 31 09:14:53 2020|INFO|cp_stack_mgr|int1: WAN Device hard reset, hub 3:1
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.395172] usb 1-1.1: USB disconnect, device number 5
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.401249] Unlink cpdev from pm
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.401286] Unlink cpdev: 874ca388 from pm
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.401302] Disable cpdev other tasklet
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.401315] Cancel cpdev kevents
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.401334] Wait for all cpdev urbs to be returned
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.401347] Shutdown cpdev timers and tasklets
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.401364] cpdev unplug done
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.402576] Device with id:3 unplugged
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.402604] Wait for cpdev to finish unplugging
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.402617] usbcore: deregistering interface driver cpusb3
+Sat Oct 31 09:14:53 2020|INFO|kernel|[ 945.402780] cpdev done unplugging
+Sat Oct 31 09:14:53 2020|INFO|WAN:36d1fd65|Unplugged
+Sat Oct 31 09:14:53 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStabilityCheck
+Sat Oct 31 09:14:53 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStartDoneContCheck
+Sat Oct 31 09:14:53 2020|WARN|WAN:36d1fd65.ConnectorMgr|already reset
+Sat Oct 31 09:14:53 2020|INFO|wanmgr|Removing orphan: Network device: (type: mdm, link: <Link pmip3, ifindex: 17>, uid: 36d1fd65, net_mode: None)
+Sat Oct 31 09:14:53 2020|INFO|wanmgr|Removed device: Network device: (type: mdm, link: <Link pmip3, ifindex: 17>, uid: 36d1fd65, net_mode: None)
+Sat Oct 31 09:15:16 2020|INFO|kernel|[ 955.502770] usb 1-1.1: new high-speed USB device number 6 using ehci-platform
+Sat Oct 31 09:15:18 2020|INFO|kernel|[ 956.528577] usbcore: registered new interface driver cpusb4
+Sat Oct 31 09:15:33 2020|INFO|cp_stack_mgr|int1: QMI not ready yet, try again Error Code: 7
+Sat Oct 31 09:15:43 2020|INFO|cp_stack_mgr|int1: QMI not ready yet, try again Error Code: 7
+Sat Oct 31 09:15:46 2020|INFO|cpevt|ifc supported tech: lte/3g
+Sat Oct 31 09:15:46 2020|INFO|WAN:36d1fd65|is_upgrading: False
+Sat Oct 31 09:15:46 2020|INFO|WAN:36d1fd65|Plug event: ok
+Sat Oct 31 09:15:46 2020|INFO|WAN:36d1fd65|plug_event, is_upgrading: False
+Sat Oct 31 09:15:46 2020|INFO|WAN:36d1fd65|wandev plugged: mdm, uid: 36d1fd65, uptime: 1629
+Sat Oct 31 09:15:47 2020|INFO|WAN:36d1fd65|execute GET_ICCID
+Sat Oct 31 09:15:47 2020|INFO|WAN:36d1fd65|Execute Event ok: 10
+Sat Oct 31 09:15:50 2020|INFO|WAN:36d1fd65|Preconfigured Event: ok
+Sat Oct 31 09:15:50 2020|INFO|WAN:36d1fd65|wandev preconfigured type: mdm, uid: 36d1fd65, uptime: 1633
+Sat Oct 31 09:15:51 2020|INFO|cp_stack_mgr|int1: wan_manager_parse_cb() - GPS_INTERVAL changed to 10
+Sat Oct 31 09:16:01 2020|INFO|cp_stack_mgr|int1: Setting profile 1, APN: test-pgw7, Type:IP.
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 139564871 (0x8519747)
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-74(dBm), SINR:3.8(dB), RSRP:-88(dB), RSRQ:-11(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|Configure Event: ok
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|is_upgrading: False
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|configured_event: Device activation state: True
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|wandev configured type: mdm, uid: 36d1fd65, uptime: 1655
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|StandardModem::checkNIASession: NIA mode : disconnected session : None
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|StandardModem::checkNIASession: connection state : disconnected
+Sat Oct 31 09:16:13 2020|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:16:13 2020|INFO|policy.WanChange|idle -> connect_next (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:16:13 2020|INFO|policy.WanChange|connect_next -> connect_wait (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|WanDevMixIn:Starting
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|disconnected -> connecting
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|wandev connecting type: mdm, uid: 36d1fd65, uptime: 1655
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-74(dBm), SINR:3.8(dB), RSRP:-88(dB), RSRQ:-11(dB), RFBAND: Band 5, Service: LTE
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIM
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoSelect
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNFront
+Sat Oct 31 09:16:13 2020|INFO|WAN:36d1fd65.CPPM|Connecting device
+Sat Oct 31 09:16:18 2020|INFO|cp_stack_mgr|int1: Active APN: test-pgw7
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|Connect Event: ok - kwargs: {'event': 'CONNECT', 'ifc': 'pmip4', 'port': 'int1'}, state: connecting
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....CPPM
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNBack
+Sat Oct 31 09:16:18 2020|INFO|udhcpc[4926]|started, v1.30.1
+Sat Oct 31 09:16:18 2020|INFO|udhcpc[4926]|sending discover
+Sat Oct 31 09:16:18 2020|INFO|udhcpc[4926]|sending select for 70.28.247.1
+Sat Oct 31 09:16:18 2020|INFO|udhcpc[4926]|lease of 70.28.247.1 obtained, lease time 7200
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 139564812 (0x851970c)
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-74(dBm), SINR:2.0(dB), RSRP:-102(dB), RSRQ:-11(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65.DHCP|ipinfo={'gateway': '70.28.247.2', 'ip_address': '70.28.247.1', 'netmask': '255.255.255.252', 'dnslist': ['204.101.237.136', '207.164.79.249']}
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....DHCP
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....SignalVerify
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|WanDevMixIn:startStabilityCheck
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|WanDevMixIn:startDoneContCheck
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|connecting -> connected, Reason: Failback
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|wandev connected type: mdm, uid: 36d1fd65, uptime: 1660
+Sat Oct 31 09:16:18 2020|INFO|WAN:36d1fd65|Connection Type: LTE
+Sat Oct 31 09:16:18 2020|INFO|policy.WanChange|connect_wait -> idle (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:16:19 2020|INFO|policy.FailoverFailback|wait_for_next -> disconnect_prev (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:16:19 2020|INFO|policy.FailoverFailback|disconnect_prev -> connected (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:16:24 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 88%, RSSI:-81(dBm), SINR:0.4(dB), RSRP:-102(dB), RSRQ:-16(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 09:16:24 2020|INFO|netcloud|Connecting to NetCloud
+Sat Oct 31 09:16:25 2020|INFO|netcloud|Checking Authentication
+Sat Oct 31 09:16:25 2020|INFO|netcloud|Binding to Stream Server
+Sat Oct 31 09:16:25 2020|INFO|netcloud|Successfully connected to NetCloud
+Sat Oct 31 09:16:25 2020|INFO|rollback|Cancel rollback
+Sat Oct 31 09:16:25 2020|INFO|netcloud|Config patch accepted on reconnect
+Sat Oct 31 09:16:26 2020|INFO|netcloud|[truncated] Return {'__errors__': {}, 'service': {'ecm': {'csdiff': ({'wan': {'rules2': {'0': {'disabled': True}, '2': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe'}}, '3': {'disabled': True}, '4': {'modem': {'apn_mode': 'manual', 'manual_apn': 'test-pgw7'}, 'priority': 2.25, 'trigger_name': 'Modem-36d1fd65', 'trigger_string': 'type|is|mdm%tech|is|lte/3g%uid|is|36d1fd65', '_id_': '00010004-a81d-3590-93ca-8b1fcfeb8e14'}}}, 'ecm': {'config_version': 12}, 'system': {'ui_activated': True, 'gps': {'enabled': True}, 'admin': {'product_name': 'IBR200-10M-B'}, 'desc': 'Denlow'}}, []), 'runtime_defaults': ({'system': {'system_id': 'IBR200-941', 'users': {0: {'username': 'admin', 'password': '$2$08bf5dfc$AM5q0XfPqQLkDpetMAlQw9TfGLqvPb77ujFWNs1mtKs=', 'group': 'admin'}}}, 'wlan': {'radio': {0: {'bss': {0: {'ssid': 'IBR200-941', 'wpapsk': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ==', 'radius0key': '$1$26cc935c$02le7S8kl9ZvL8yZ1ZOeAQ=='}, 1: {'ssid': 'Public-941', 'wpapsk': '$
+Sat Oct 31 09:16:27 2020|INFO|netcloud|Updated status.ecm.info.Account
+Sat Oct 31 09:16:27 2020|INFO|netcloud|Updated status.ecm.info.Group
+Sat Oct 31 09:16:28 2020|INFO|netcloud|Trimmed 1 WAN state records.
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|started, version 2.78 cachesize 150
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|compile time options: IPv6 GNU-getopt cpbsd no-DBus no-i18n no-IDN DHCP DHCPv6 no-Lua no-TFTP no-conntrack ipset no-auth no-DNSSEC loop-detect no-inotify
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|asynchronous logging enabled, queue limit is 5 messages
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|DHCP, IP range 192.168.10.85 -- 192.168.10.170, lease time 12h
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|DHCP, IP range 192.168.0.85 -- 192.168.0.170, lease time 12h
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|DHCPv6, IP range ::1 -- ::5555, lease time 12h, template for guestlan2
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|router advertisement on guestlan2
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|DHCPv6, IP range ::1 -- ::5555, lease time 12h, template for primarylan1
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|router advertisement on primarylan1
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|IPv6 router advertisement enabled
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|using local addresses only for domain local.tld
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|read /tmp/hosts - 3 addresses
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq-dhcp[5232]|read /tmp/dhcp-hosts
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|using nameserver 207.164.79.249#53
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|using nameserver 204.101.237.136#53
+Sat Oct 31 09:17:45 2020|INFO|dnsmasq[5232]|using local addresses only for domain local.tld
+Sat Oct 31 09:17:45 2020|WARN|workqueue|LoopedTask Task id: 2619, callback: services.wpcclient.FunctionEventTrigger.taskHandler still running on reschedule, checking again in 1s
+Sat Oct 31 09:17:47 2020|CRIT|root|setting log level to: debug
+Sat Oct 31 09:17:47 2020|INFO|syslogd|exiting
+Sat Oct 31 09:17:47 2020|INFO|syslogd|started: BusyBox v1.30.1
+Sat Oct 31 09:17:47 2020|DEBUG|psmon:syslogd|Started process 5252: ['/sbin/syslogd', '...']
+Sat Oct 31 09:17:47 2020|NOTICE|kernel|klogd started: BusyBox v1.30.1 (2020-05-02 00:40:55 UTC)
+Sat Oct 31 09:17:47 2020|DEBUG|psmon:klogd|Started process 5256: ['/sbin/klogd', '...']
+Sat Oct 31 09:17:47 2020|WARN|pam|PCI/DSS mode set. Ensure all user passwords are PCI/DSS compliant.
+Sat Oct 31 09:17:47 2020|DEBUG|dns|Updating internal DNS servers
+Sat Oct 31 09:17:47 2020|DEBUG|dns|No DNS no retry, 1 WAN device(s) with 2 dns server(s)
+Sat Oct 31 09:17:47 2020|INFO|rollback|Schedule rollback in 900 seconds
+Sat Oct 31 09:17:47 2020|INFO|netcloud|Applying config patch
+Sat Oct 31 09:17:48 2020|INFO|netcloud|Restarting server connection in 15 seconds
+Sat Oct 31 09:17:48 2020|INFO|netcloud|Patched config
+Sat Oct 31 09:17:48 2020|WARN|netcloud|Abandoning post for inactive stream: <services.wpcclient.CSStreamConnection object at 0x7147a810>
+Sat Oct 31 09:17:48 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.688034'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.302826'}, 'time': 151747, 'satellites': 15}, 'nmea': '$GLGSV,2,1,08,66,26,042,25,82,73,192,33,76,07,064,18,75,06,019,21,1*70\r\n$GLGSV,2,2,08,83,48,320,25,81,23,158,37,67,74,345,36,68,37,243,33,1*7B\r\n$GPGSV,4,1,13,02,06,130,18,05,28,073,36,13,56,070,31,18,56,307,36,1*6D\r\n$GPGSV,4,2,13,23,28,271,36,24,06,160,24,29,37,210,24,30,09,040,30,1*6C\r\n$GPGSV,4,3,13,10,01,262,,15,72,171,,16,00,310,,20,30,275,,1*65\r\n$GPGSV,4,4,13,51,,,34,1*65\r\n$GPGGA,151747.00,4352.744818,N,07918.238399,W,1,08,0.7,195.3,M,-41.0,M,,*5D\r\n$PQXFI,151747.0,4352.744818,N,07918.238399,W,195.3,9.27,2.52,0.09*79\r\n$GNGNS,151747.00,4352.744818,N,07918.238399,W,AAN,15,0.7,195.3,-41.0,,,V*51\r\n$GPVTG,175.7,T,183.6,M,0.0,N,0.0,K,A*2B\r\n$GPRMC,151747.00,A,4352 [1/2]
+Sat Oct 31 09:17:48 2020|DEBUG|WAN:36d1fd65|.744818,N,07918.238399,W,0.0,175.7,311020,7.9,W,A,V*4E\r\n$GPGSA,A,2,05,13,15,18,20,23,29,30,,,,,1.0,0.7,0.7,1*2E\r\n$GNGSA,A,2,05,13,15,18,20,23,29,30,,,,,1.0,0.7,0.7,1*30\r\n$GNGSA,A,2,66,67,68,75,81,82,83,,,,,,1.0,0.7,0.7,2*37\r\n$GNGSA,A,2,,,,,,,,,,,,,1.0,0.7,0.7,3*33\r\n'} [2/2]
+Sat Oct 31 09:17:48 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:48 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:48 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:17:49 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:49 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:50 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:50 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:51 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:51 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:52 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:52 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:53 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:53 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:54 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:54 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:54 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:17:55 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:55 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:56 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:56 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:57 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:17:57 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:58 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:17:58 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:17:59 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:17:59 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:00 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:00 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:00 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:01 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:01 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:02 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:02 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:03 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:03 2020|DEBUG|netcloud|Stopping NetCloud Session
+Sat Oct 31 09:18:03 2020|INFO|netcloud|NetCloud Session Stopped
+Sat Oct 31 09:18:03 2020|DEBUG|netcloud|Starting NetCloud Session
+Sat Oct 31 09:18:03 2020|INFO|netcloud|Connecting to NetCloud
+Sat Oct 31 09:18:03 2020|DEBUG|netcloud|Creating Stream Connection: stream.cradlepointecm.com:8001
+Sat Oct 31 09:18:03 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:03 2020|INFO|netcloud|Checking Authentication
+Sat Oct 31 09:18:03 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.691696'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.302826'}, 'time': 151803, 'satellites': 16}, 'nmea': '$GLGSV,2,1,08,66,26,042,28,82,73,192,32,76,07,064,17,75,06,019,20,1*72\r\n$GLGSV,2,2,08,83,48,320,24,81,23,158,37,67,74,345,38,68,37,243,35,1*72\r\n$GPGSV,4,1,13,02,06,130,18,05,28,073,36,13,56,070,30,15,72,171,21,1*62\r\n$GPGSV,4,2,13,18,56,307,36,20,30,275,21,23,28,271,36,24,06,160,22,1*64\r\n$GPGSV,4,3,13,29,37,210,21,30,09,040,31,10,01,262,,16,00,310,,1*61\r\n$GPGSV,4,4,13,51,,,34,1*65\r\n$GPGGA,151803.00,4352.744877,N,07918.238417,W,1,09,0.7,195.3,M,-41.0,M,,*5B\r\n$PQXFI,151803.0,4352.744877,N,07918.238417,W,195.3,9.27,2.50,0.09*7C\r\n$GNGNS,151803.00,4352.744877,N,07918.238417,W,AAN,16,0.7,195.3,-41.0,,,V*55\r\n$GPVTG,175.7,T,183.6,M,0.0,N,0.0,K,A*2B\r\n$GPRMC,151803.00,A, [1/2]
+Sat Oct 31 09:18:03 2020|DEBUG|WAN:36d1fd65|4352.744877,N,07918.238417,W,0.0,175.7,311020,7.9,W,A,V*49\r\n$GPGSA,A,2,02,05,13,15,18,20,23,29,30,,,,1.0,0.7,0.7,1*2C\r\n$GNGSA,A,2,02,05,13,15,18,20,23,29,30,,,,1.0,0.7,0.7,1*32\r\n$GNGSA,A,2,66,67,68,75,81,82,83,,,,,,1.0,0.7,0.7,2*37\r\n$GNGSA,A,2,,,,,,,,,,,,,1.0,0.7,0.7,3*33\r\n'} [2/2]
+Sat Oct 31 09:18:04 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:04 2020|INFO|netcloud|Binding to Stream Server
+Sat Oct 31 09:18:04 2020|INFO|netcloud|Successfully connected to NetCloud
+Sat Oct 31 09:18:04 2020|INFO|rollback|Cancel rollback
+Sat Oct 31 09:18:04 2020|DEBUG|rollback|Delete backup configuration
+Sat Oct 31 09:18:04 2020|INFO|netcloud|Config patch accepted on reconnect
+Sat Oct 31 09:18:04 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:04 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:04 2020|DEBUG|netcloud|multiget
+Sat Oct 31 09:18:04 2020|DEBUG|netcloud|PATHS={'service.ecm.csdiff', 'status.ecm.last_sync_error', 'config.system.lldp', 'status.security.default_password', 'status.fw_info', 'status.wlan.region', 'status.wlan.region.0', 'status.iot.msft', 'status.security.ips.signature_version', 'service.ecm.runtime_defaults', 'status.ecm.sync', 'status.product_info.product_name', 'status.iot.bluetooth.radio', 'status.product_info.manufacturing.serial_num'}
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|csdiff=({'wan': {'rules2': {'0': {'disabled': True}, '2': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe'}}, '3': {'disabled': True}, '4': {'modem': {'apn_mode': 'manual', 'manual_apn': 'test-pgw7'}, 'priority': 2.25, 'trigger_name': 'Modem-36d1fd65', 'trigger_string': 'type|is|mdm%tech|is|lte/3g%uid|is|36d1fd65', '_id_': '00010004-a81d-3590-93ca-8b1fcfeb8e14'}}}, 'ecm': {'config_version': 13}, 'system': {'ui_activated': True, 'logging': {'level': 'debug'}, 'gps': {'enabled': True}, 'admin': {'product_name': 'IBR200-10M-B'}, 'desc': 'Denlow'}}, [])
+Sat Oct 31 09:18:05 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:05 2020|INFO|netcloud|[truncated] Return {'__errors__': {}, 'service': {'ecm': {'csdiff': ({'wan': {'rules2': {'0': {'disabled': True}, '2': {'modem': {'apn_mode': 'manual', 'manual_apn': 'mnet.bell.ca.ioe'}}, '3': {'disabled': True}, '4': {'modem': {'apn_mode': 'manual', 'manual_apn': 'test-pgw7'}, 'priority': 2.25, 'trigger_name': 'Modem-36d1fd65', 'trigger_string': 'type|is|mdm%tech|is|lte/3g%uid|is|36d1fd65', '_id_': '00010004-a81d-3590-93ca-8b1fcfeb8e14'}}}, 'ecm': {'config_version': 13}, 'system': {'ui_activated': True, 'logging': {'level': 'debug'}, 'gps': {'enabled': True}, 'admin': {'product_name': 'IBR200-10M-B'}, 'desc': 'Denlow'}}, []), 'runtime_defaults': ({'system': {'system_id': 'IBR200-941', 'users': {0: {'username': 'admin', 'password': '$2$08bf5dfc$AM5q0XfPqQLkDpetMAlQw9TfGLqvPb77ujFWNs1mtKs=', 'group': 'admin'}}}, 'wlan': {'radio': {0: {'bss': {0: {'ssid': 'IBR200-941', 'wpapsk': '$1$08bf5dfc$3gmtbFMfbFY7w0L6E5hmFQ==', 'radius0key': '$1$26cc935c$02le7S8kl9ZvL8yZ1ZOeAQ=='}, 1: {'ss
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|Stream Client Control: heartbeat kwargs:{'enabled': True, 'idle': 240, 'interval': 5, 'retry': 6, 'user_timeout': 300}
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 80a79c3478_0: system:function interval:61>
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 449221f515_0: system:function interval:60>
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|NCM update for dict_keys(['ap_disc', 'primary_device']).
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:05 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 4dbc2da6cb_0: system:function interval:307>
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 2256139390_0: system:function interval:120>
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 42b1c0fe6f_0: system:function interval:45>
+Sat Oct 31 09:18:06 2020|INFO|netcloud|Updated status.ecm.info.Account
+Sat Oct 31 09:18:06 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:06 2020|INFO|netcloud|Updated status.ecm.info.Group
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Filemanager Task: get file:keydb
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger c43143b80a_0: system:alert>
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 18c12981b9_0: system:function interval:15>
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 77cc72a3bd_0: system:function interval:1>
+Sat Oct 31 09:18:06 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:06 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 9f44f4fbd0_0: system:function interval:300>
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|NCM uptime: Uptime remote code running...
+Sat Oct 31 09:18:07 2020|DEBUG|stats|wanStateCheckPending: done list: [['mdm-36d1fd65', 2, 1604157378, 'Failback']]
+Sat Oct 31 09:18:07 2020|DEBUG|stats|wanStateAddEvent: event: ['mdm-36d1fd65', 2, 1604157378, 'Failback']
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|NCM uptime: last_uptime_sample = 1604157347
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|NCM uptime: samples_at_last_time = 1
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|NCM uptime: state_dict = {}
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|NCM uptime: wan_uptime_hourly_sync_time = 1604155981
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|NCM uptime: fix uptime event time 3643 to 1604155718
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 5cecf4dcf9_0: system:cs event:put path:status.ecm.sync>
+Sat Oct 31 09:18:07 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 0d33ce90d8_0: system:cs event:put path:config>
+Sat Oct 31 09:18:07 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:08 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:08 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:08 2020|DEBUG|netcloud|Filemanager Task: set file:keydb
+Sat Oct 31 09:18:08 2020|DEBUG|netcloud|Adding event trigger: <Event Trigger 3c2ef965b8_0: system:loop interval:172800>
+Sat Oct 31 09:18:08 2020|DEBUG|license|Base license is enabled (959 days remaining)
+Sat Oct 31 09:18:09 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:09 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:10 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:10 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:11 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:11 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:12 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:12 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:12 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:13 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:13 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:14 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: SMS_ACTION_DONE
+Sat Oct 31 09:18:14 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:14 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:15 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:15 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:16 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:16 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:17 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:17 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:18 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:18 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:18 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:19 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.691696'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.302826'}, 'time': 151818, 'satellites': 13}, 'nmea': '$GLGSV,2,1,08,66,25,042,27,82,71,191,34,76,07,064,16,75,06,018,23,1*7A\r\n$GLGSV,2,2,08,83,49,320,22,81,22,160,36,67,73,350,39,68,39,244,36,1*76\r\n$GPGSV,4,1,13,02,06,130,16,05,28,073,35,13,56,070,35,15,72,171,25,1*6E\r\n$GPGSV,4,2,13,18,56,307,37,20,30,275,19,23,28,271,37,24,06,160,21,1*6C\r\n$GPGSV,4,3,13,29,37,210,25,30,09,040,32,10,01,262,,16,00,310,,1*66\r\n$GPGSV,4,4,13,51,,,34,1*65\r\n$GPGGA,151818.00,4352.744907,N,07918.238439,W,1,07,0.8,195.3,M,-41.0,M,,*5A\r\n$PQXFI,151818.0,4352.744907,N,07918.238439,W,195.3,9.27,2.50,0.09*7C\r\n$GNGNS,151818.00,4352.744907,N,07918.238439,W,AAN,13,0.8,195.3,-41.0,,,V*5F\r\n$GPVTG,175.7,T,183.6,M,0.0,N,0.0,K,A*2B\r\n$GPRMC,151818.00,A, [1/2]
+Sat Oct 31 09:18:19 2020|DEBUG|WAN:36d1fd65|4352.744907,N,07918.238439,W,0.0,175.7,311020,7.9,W,A,V*49\r\n$GPGSA,A,2,05,13,15,18,23,29,30,,,,,,1.1,0.8,0.8,1*2D\r\n$GNGSA,A,2,05,13,15,18,23,29,30,,,,,,1.1,0.8,0.8,1*33\r\n$GNGSA,A,2,66,67,68,81,82,83,,,,,,,1.1,0.8,0.8,2*34\r\n$GNGSA,A,2,,,,,,,,,,,,,1.1,0.8,0.8,3*32\r\n'} [2/2]
+Sat Oct 31 09:18:19 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:19 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:20 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:20 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:21 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:21 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:21 2020|DEBUG|netcloud|response: {'app_sync': True, 'sdk.crt': True, 'sdk.crt.hash': 'e4329c13e9b6a933c1d6334b46717194', 'status.system.sdk.apps': [], 'app.crt': True, 'app.crt.hash': 'ead770d468ad016dc92f8004883ebea0', 'status.system.apps': []}
+Sat Oct 31 09:18:21 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:22 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:18:22 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:23 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:23 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:24 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:24 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:24 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:25 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:25 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:26 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:26 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:27 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:27 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:28 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:28 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:29 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:29 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:30 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:18:30 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:30 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:31 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:31 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:32 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:32 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:33 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:33 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:34 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.695129'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.306374'}, 'time': 151833, 'satellites': 13}, 'nmea': '$GLGSV,2,1,08,66,25,042,31,82,71,191,34,75,06,018,19,83,49,320,21,1*73\r\n$GLGSV,2,2,08,81,22,160,35,67,73,350,39,68,39,244,37,76,07,064,,1*77\r\n$GPGSV,4,1,13,05,28,073,36,13,56,070,39,15,72,171,32,18,56,307,36,1*6D\r\n$GPGSV,4,2,13,23,28,271,37,24,06,160,23,29,37,210,24,30,09,040,31,1*6B\r\n$GPGSV,4,3,13,02,06,130,,10,01,262,,16,00,310,,20,30,275,,1*65\r\n$GPGSV,4,4,13,51,,,35,1*64\r\n$GPGGA,151833.00,4352.744951,N,07918.238476,W,1,07,0.8,195.3,M,-41.0,M,,*5B\r\n$PQXFI,151833.0,4352.744951,N,07918.238476,W,195.3,3.54,2.50,0.09*73\r\n$GNGNS,151833.00,4352.744951,N,07918.238476,W,AAN,13,0.8,195.3,-41.0,,,V*5E\r\n$GPVTG,175.7,T,183.6,M,0.0,N,0.0,K,A*2B\r\n$GPRMC,151833.00,A,4352.7 [1/2]
+Sat Oct 31 09:18:34 2020|DEBUG|WAN:36d1fd65|44951,N,07918.238476,W,0.0,175.7,311020,7.9,W,A,V*48\r\n$GPGSA,A,2,05,13,15,18,23,29,30,,,,,,1.1,0.8,0.8,1*2D\r\n$GNGSA,A,2,05,13,15,18,23,29,30,,,,,,1.1,0.8,0.8,1*33\r\n$GNGSA,A,2,66,67,68,81,82,83,,,,,,,1.1,0.8,0.8,2*34\r\n$GNGSA,A,2,,,,,,,,,,,,,1.1,0.8,0.8,3*32\r\n'} [2/2]
+Sat Oct 31 09:18:34 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:34 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:35 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:35 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:36 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:36 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:36 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:37 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:37 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:38 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:38 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:39 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:39 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:40 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:18:40 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:41 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:18:41 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:42 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:42 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:42 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:43 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:43 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:44 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: SMS_ACTION_DONE
+Sat Oct 31 09:18:44 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:44 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:45 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:18:45 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:46 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:18:46 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:47 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:47 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:48 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:48 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:48 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:49 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.698792'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.310036'}, 'time': 151848, 'satellites': 13}, 'nmea': '$GLGSV,2,1,08,66,25,042,32,82,71,191,36,76,07,064,24,75,06,018,22,1*7C\r\n$GLGSV,2,2,08,83,49,320,24,81,22,160,33,67,73,350,39,68,39,244,38,1*7B\r\n$GPGSV,4,1,13,05,28,073,32,13,56,070,40,15,72,171,35,18,56,307,38,1*6E\r\n$GPGSV,4,2,13,20,30,275,21,23,28,271,38,24,06,160,23,29,37,210,29,1*67\r\n$GPGSV,4,3,13,30,09,040,28,02,06,130,,10,01,262,,16,00,310,,1*60\r\n$GPGSV,4,4,13,51,,,35,1*64\r\n$GPGGA,151848.00,4352.744988,N,07918.238505,W,1,07,0.8,195.2,M,-41.0,M,,*57\r\n$PQXFI,151848.0,4352.744988,N,07918.238505,W,195.2,3.54,2.50,0.09*7F\r\n$GNGNS,151848.00,4352.744988,N,07918.238505,W,AAN,13,0.8,195.2,-41.0,,,V*52\r\n$GPVTG,175.7,T,183.6,M,0.0,N,0.0,K,A*2B\r\n$GPRMC,151848.00,A,43 [1/2]
+Sat Oct 31 09:18:49 2020|DEBUG|WAN:36d1fd65|52.744988,N,07918.238505,W,0.0,175.7,311020,7.9,W,A,V*45\r\n$GPGSA,A,2,05,13,15,18,23,29,30,,,,,,1.1,0.8,0.8,1*2D\r\n$GNGSA,A,2,05,13,15,18,23,29,30,,,,,,1.1,0.8,0.8,1*33\r\n$GNGSA,A,2,66,67,68,81,82,83,,,,,,,1.1,0.8,0.8,2*34\r\n$GNGSA,A,2,,,,,,,,,,,,,1.1,0.8,0.8,3*32\r\n'} [2/2]
+Sat Oct 31 09:18:49 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:49 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:50 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:50 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:51 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:51 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:52 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:52 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:53 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:53 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:54 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:54 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:54 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:18:55 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:55 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:56 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:56 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:57 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:57 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:58 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:58 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:18:59 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:18:59 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:00 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:00 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:01 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:01 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-75(dBm), SINR:-4.0(dB), RSRP:-108(dB), RSRQ:-16(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 09:19:01 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:01 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:02 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:02 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:03 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:03 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:04 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.759903'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.345970'}, 'time': 151903, 'satellites': 17}, 'nmea': '$GLGSV,2,1,08,66,25,042,36,82,71,191,36,76,07,064,24,75,06,018,22,1*78\r\n$GLGSV,2,2,08,83,49,320,23,81,22,160,31,67,73,350,39,68,39,244,36,1*70\r\n$GPGSV,4,1,13,02,06,130,20,05,28,073,33,13,56,070,39,15,72,171,34,1*61\r\n$GPGSV,4,2,13,18,56,307,37,20,30,275,29,23,28,271,37,29,37,210,32,1*66\r\n$GPGSV,4,3,13,30,09,040,23,10,01,262,,16,00,310,,24,06,160,,1*6A\r\n$GPGSV,4,4,13,51,,,36,1*67\r\n$GPGGA,151903.00,4352.746027,N,07918.239102,W,1,08,0.7,194.9,M,-41.0,M,,*5F\r\n$PQXFI,151903.0,4352.746027,N,07918.239102,W,194.9,3.54,2.50,0.09*77\r\n$GNGNS,151903.00,4352.746027,N,07918.239102,W,AAA,17,0.7,194.9,-41.0,,,V*5E\r\n$GPVTG,204.6,T,212.5,M,0.0,N,0.0,K,A*27\r\n$GPRMC,151903.00,A,43 [1/2]
+Sat Oct 31 09:19:04 2020|DEBUG|WAN:36d1fd65|52.746027,N,07918.239102,W,0.0,204.6,311020,7.9,W,A,V*43\r\n$GPGSA,A,2,05,13,15,18,20,23,29,30,,,,,1.0,0.7,0.7,1*2E\r\n$GNGSA,A,2,05,13,15,18,20,23,29,30,,,,,1.0,0.7,0.7,1*30\r\n$GNGSA,A,2,66,67,68,81,82,83,,,,,,,1.0,0.7,0.7,2*35\r\n$GNGSA,A,2,07,26,33,,,,,,,,,,1.0,0.7,0.7,3*30\r\n'} [2/2]
+Sat Oct 31 09:19:04 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:04 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:05 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:19:05 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:06 2020|INFO|cp_stack_mgr|int1: Modem link is down
+Sat Oct 31 09:19:06 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:06 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStartDoneContCheck
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStabilityCheck
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|Link Down
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 100%, RSSI:-75(dBm), SINR:-4.0(dB), RSRP:-108(dB), RSRQ:-16(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65|Cancel
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|connected -> disconnecting
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent device:disconnecting
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent connection:any
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent connection:primary
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent connection:any
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent connection:availability
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:onCancel
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|disconnecting -> disconnected, Reason: Linkdown
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x71b888b0
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x71b888b0
+Sat Oct 31 09:19:06 2020|DEBUG|gpio|check_alerts pin=25 old_value=0 new_value=1
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent device:disconnected
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: reset id: 0x71b888b0
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.SignalVerify|connected -> disconnecting
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.SignalVerify|disconnecting -> disconnected
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65|Canceled
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent device:linkdown
+Sat Oct 31 09:19:06 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....SignalVerify
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.DHCP|connected -> disconnecting
+Sat Oct 31 09:19:06 2020|DEBUG|psmon:udhcpc|Stopping process 4926: /sbin/udhcpc
+Sat Oct 31 09:19:06 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: LINKDOWN
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStartDoneContCheck
+Sat Oct 31 09:19:06 2020|DEBUG|gre|WAN change, 0 devices connected: []
+Sat Oct 31 09:19:06 2020|DEBUG|psmon:udhcpc|Process (/sbin/udhcpc[4926]) exited with code: 0
+Sat Oct 31 09:19:06 2020|DEBUG|dns|Updating internal DNS servers
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStabilityCheck
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|Link Down while not connected (state: disconnected). Ignoring.
+Sat Oct 31 09:19:06 2020|DEBUG|dns|No DNS no retry, 0 WAN device(s) with 0 dns server(s)
+Sat Oct 31 09:19:06 2020|INFO|dnsmasq[5232]|read /tmp/hosts - 3 addresses
+Sat Oct 31 09:19:06 2020|INFO|dnsmasq-dhcp[5232]|read /tmp/dhcp-hosts
+Sat Oct 31 09:19:06 2020|INFO|dnsmasq[5232]|using local addresses only for domain local.tld
+Sat Oct 31 09:19:06 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:06 2020|DEBUG|psmon:udhcpc|Stopped process 4926: /sbin/udhcpc
+Sat Oct 31 09:19:06 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 88%, RSSI:-81(dBm), SINR:-1.4(dB), RSRP:-108(dB), RSRQ:-16(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.DHCP|disconnecting -> disconnected
+Sat Oct 31 09:19:06 2020|DEBUG|dnsmasq_client[5520]|dnsmasq_client.c: old IPv4 lease for 3469-MBP13 (id:01:f8:ff:c2:3b:81:93, mac:f8:ff:c2:3b:81:93): 192.168.0.157
+Sat Oct 31 09:19:06 2020|DEBUG|nfconntrack|Not flushing flows that match these criteria: dict_keys([])
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.DHCP|Flushed 69 WAN states for IP: 70.28.247.1
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....DHCP
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.AutoAPNBack|connected -> disconnecting
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.AutoAPNBack|disconnecting -> disconnected
+Sat Oct 31 09:19:06 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNBack
+Sat Oct 31 09:19:06 2020|DEBUG|localnet|internalSvcTask use_route : False isWanConnected : False svcsRunning : True
+Sat Oct 31 09:19:06 2020|DEBUG|localnet|internalSvcTask : firing stop event
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:06 2020|DEBUG|WAN:36d1fd65.CPPM|connected -> disconnecting
+Sat Oct 31 09:19:07 2020|INFO|kernel|[ 1099.068628] Link Down indicated - id:4
+Sat Oct 31 09:19:07 2020|INFO|kernel|[ 1099.068628]
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent internalSvc:stop
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:07 2020|DEBUG|localnet|internalSvcTask : firing any event
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.CPPM|disconnecting -> disconnected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....CPPM
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent internalSvc:any
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|connected -> disconnecting
+Sat Oct 31 09:19:07 2020|DEBUG|dns|Updating internal DNS servers
+Sat Oct 31 09:19:07 2020|DEBUG|dns|No DNS no retry, 0 WAN device(s) with 0 dns server(s)
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|disconnecting -> disconnected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNFront
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoSelect|connected -> disconnecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoSelect|disconnecting -> disconnected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoSelect
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|connected -> disconnecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|disconnecting -> disconnected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Sat Oct 31 09:19:07 2020|DEBUG|gpio|check_alerts pin=25 old_value=1 new_value=0
+Sat Oct 31 09:19:07 2020|DEBUG|gpio|check_alerts pin=26 old_value=1 new_value=0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIM|connected -> disconnecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIM|disconnecting -> disconnected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIM
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|connected -> disconnecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|disconnecting -> disconnected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_reset id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|routing|NO DEFAULT WAN DEV: None
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: done id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|link|Processing link/addr event: ('addr', 'new', <cp.link.Addr object fe80::8d8:c8ff:fefe:996/64 on ondemand at 0x71452198>)
+Sat Oct 31 09:19:07 2020|DEBUG|routing|Updating default route on WAN change: None from set()
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent manager:stats-dev-changed
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:07 2020|DEBUG|routing|Installed default route
+Sat Oct 31 09:19:07 2020|DEBUG|routing|Skipping no-op update of static and policy routes on WAN change, disconnect: set()
+Sat Oct 31 09:19:07 2020|DEBUG|stats|wanStateChange:: state: disconnected
+Sat Oct 31 09:19:07 2020|DEBUG|stats|wanStateClearPending: name: mdm-36d1fd65
+Sat Oct 31 09:19:07 2020|DEBUG|stats|wanStateAddEvent: event: ['mdm-36d1fd65', 0, 1604157547, 'Linkdown']
+Sat Oct 31 09:19:07 2020|DEBUG|nat|Updating NAT rules on WAN change, disconnect: []
+Sat Oct 31 09:19:07 2020|DEBUG|nat|No NPT network defined, no NPT rules added
+Sat Oct 31 09:19:07 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:07 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65|WanDevMixIn:Starting
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65|disconnected -> connecting
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent device:connecting
+Sat Oct 31 09:19:07 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65|wandev connecting type: mdm, uid: 36d1fd65, uptime: 1829
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 88%, RSSI:-81(dBm), SINR:-1.4(dB), RSRP:-108(dB), RSRQ:-16(dB), RFBAND: Band 12, Service: LTE
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:onStart
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: connect id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|disconnected -> connecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|connecting -> connected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIM|disconnected -> connecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIM|connecting -> connected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIM
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|disconnected -> connecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|connecting -> connected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoSelect|disconnected -> connecting
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoSelect|connecting -> connected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoSelect
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|disconnected -> connecting
+Sat Oct 31 09:19:07 2020|DEBUG|gpio|check_alerts pin=26 old_value=0 new_value=1
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|connecting -> connected
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNFront
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x71b888b0
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.CPPM|disconnected -> connecting
+Sat Oct 31 09:19:07 2020|INFO|WAN:36d1fd65.CPPM|Connecting device
+Sat Oct 31 09:19:07 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x71b888b0
+Sat Oct 31 09:19:08 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:08 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:08 2020|INFO|policy.WanChange|idle -> connect_next (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:19:09 2020|WARN|dns|No DNS Servers Configured! Some features may not function properly!
+Sat Oct 31 09:19:09 2020|DEBUG|dhcp|DHCPv6 mode primarylan1: none-delegated prefixes with slaacdhcp
+Sat Oct 31 09:19:09 2020|DEBUG|dhcp|DHCPv6 mode guestlan2: none-delegated prefixes with slaacdhcp
+Sat Oct 31 09:19:09 2020|DEBUG|dns|Updating static hosts
+Sat Oct 31 09:19:09 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:09 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:10 2020|DEBUG|wf-webaccess|Limiting LANs to: set()
+Sat Oct 31 09:19:10 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:10 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:11 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:11 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:11 2020|INFO|cp_stack_mgr|int1: Active APN: test-pgw7
+Sat Oct 31 09:19:11 2020|INFO|cp_stack_mgr|int1: QMI WDS no connection: type: 2, reason: 209
+Sat Oct 31 09:19:11 2020|INFO|cp_stack_mgr|int1: LTE Modem data connection failed - status:27
+Sat Oct 31 09:19:11 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:11 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 88%, RSSI:-81(dBm), SINR:-1.4(dB), RSRP:-108(dB), RSRQ:-16(dB), RFBAND: Band 12, Service: HSPA
+Sat Oct 31 09:19:11 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: CONNECT
+Sat Oct 31 09:19:11 2020|INFO|WAN:36d1fd65|Connect Event: carrier reject - kwargs: {'event': 'CONNECT', 'ifc': 'pmip4', 'port': 'int1'}, state: connecting
+Sat Oct 31 09:19:12 2020|DEBUG|WAN:36d1fd65.CPPM|state=connecting result=carrier reject
+Sat Oct 31 09:19:12 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:12 2020|INFO|WAN:36d1fd65|The cell id for the Internal 10M-B on port int1 is 230202444 (0xdb89c4c)
+Sat Oct 31 09:19:12 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 86%, RSSI:-82(dBm), ECIO:-3.5(dBm), RFBAND: WCDMA 850, Service: HSPA
+Sat Oct 31 09:19:12 2020|DEBUG|netcloud|Stopping NetCloud Session
+Sat Oct 31 09:19:12 2020|DEBUG|netcloud|Waiting for session cleanup...
+Sat Oct 31 09:19:12 2020|INFO|netcloud|NetCloud Session Stopped
+Sat Oct 31 09:19:12 2020|DEBUG|netcloud|Not starting NetCloud Session [en, ti, ne, cm]: (True, 1604155973, False, True)
+Sat Oct 31 09:19:12 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:12 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:13 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:13 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:14 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:19:14 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: SMS_ACTION_DONE
+Sat Oct 31 09:19:14 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.CPPM|connecting -> disconnected
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectError....CPPM
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|INFO|logsys|Last message repeated 1 times.
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....SignalVerify
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....DHCP
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNBack
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....CPPM
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|connected -> disconnecting
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|disconnecting -> disconnected
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoAPNFront
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.AutoSelect|connected -> disconnecting
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.AutoSelect|disconnecting -> disconnected
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....AutoSelect
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|connected -> disconnecting
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|disconnecting -> disconnected
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.MultiSIM|connected -> disconnecting
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.MultiSIM|disconnecting -> disconnected
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIM
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|connected -> disconnecting
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|disconnecting -> disconnected
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_disconnect id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|connectorStatus - state:disconnected, exception:CPPM failed: carrier reject, id:0x71336610
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:connectorStatus disconnected
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStartDoneContCheck
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStabilityCheck
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:stopDone : connecting
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65|connecting -> disconnecting
+Sat Oct 31 09:19:14 2020|DEBUG|wanmgr|fireEvent device:disconnecting
+Sat Oct 31 09:19:14 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:14 2020|INFO|WAN:36d1fd65|disconnecting -> disconnected, Reason: Linkdown
+Sat Oct 31 09:19:14 2020|DEBUG|wanmgr|fireEvent device:disconnected
+Sat Oct 31 09:19:14 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|StandardModem:onStartErrorContinue
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|Start error
+Sat Oct 31 09:19:14 2020|ERR|WAN:36d1fd65|connector failed: CPPM failed: carrier reject
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|Cancel
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:onCancel
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65|Canceled
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: done id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: reset id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|WARN|WAN:36d1fd65.ConnectorMgr|already reset
+Sat Oct 31 09:19:14 2020|DEBUG|routing|NO DEFAULT WAN DEV: None
+Sat Oct 31 09:19:14 2020|DEBUG|routing|Default route WAN DEV unchanged
+Sat Oct 31 09:19:14 2020|DEBUG|routing|Skipping no-op update of static and policy routes on WAN change, disconnect: set()
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: done id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x71b888b0
+Sat Oct 31 09:19:14 2020|DEBUG|stats|wanStateChange:: state: disconnected
+Sat Oct 31 09:19:14 2020|DEBUG|stats|wanStateClearPending: name: mdm-36d1fd65
+Sat Oct 31 09:19:14 2020|DEBUG|stats|wanStateAddEvent: duplicate event, dropping: ['mdm-36d1fd65', 0, 1604157554, 'Linkdown']
+Sat Oct 31 09:19:15 2020|DEBUG|nat|No NPT network defined, no NPT rules added
+Sat Oct 31 09:19:15 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:15 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:15 2020|INFO|policy.FailoverFailback|connected -> start (primary: mdm-36d1fd65, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:19:15 2020|INFO|policy.FailoverFailback|start -> pick_next (primary: None, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:19:15 2020|INFO|policy.WanChange|connect_next -> idle (primary: None, next_dev: None)
+Sat Oct 31 09:19:16 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:16 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:17 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:17 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:18 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:18 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:18 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:19 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.774323'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.396439'}, 'time': 151918, 'satellites': 21}, 'nmea': '$GLGSV,2,1,08,66,25,042,37,82,71,191,32,76,07,064,26,75,06,018,22,1*7F\r\n$GLGSV,2,2,08,83,49,320,23,81,22,160,30,67,73,350,38,68,39,244,35,1*73\r\n$GPGSV,4,1,13,02,06,130,21,05,28,073,33,13,56,070,36,15,72,171,34,1*6F\r\n$GPGSV,4,2,13,18,56,307,37,20,30,275,27,23,28,271,36,29,37,210,32,1*69\r\n$GPGSV,4,3,13,30,09,040,25,10,02,264,,16,00,310,,24,07,158,,1*63\r\n$GPGSV,4,4,13,51,,,35,1*64\r\n$GPGGA,151918.00,4352.746253,N,07918.239959,W,1,09,0.6,194.9,M,-41.0,M,,*52\r\n$PQXFI,151918.0,4352.746253,N,07918.239959,W,194.9,3.54,2.50,0.09*7A\r\n$GNGNS,151918.00,4352.746253,N,07918.239959,W,AAA,21,0.6,194.9,-41.0,,,V*57\r\n$GPVTG,204.6,T,212.5,M,0.0,N,0.0,K,A*27\r\n$GPRMC,151918.00,A,43 [1/2]
+Sat Oct 31 09:19:19 2020|DEBUG|WAN:36d1fd65|52.746253,N,07918.239959,W,0.0,204.6,311020,7.9,W,A,V*4E\r\n$GPGSA,A,2,02,05,13,15,18,20,23,29,30,,,,0.9,0.6,0.7,1*25\r\n$GNGSA,A,2,02,05,13,15,18,20,23,29,30,,,,0.9,0.6,0.7,1*3B\r\n$GNGSA,A,2,66,67,68,75,81,82,83,,,,,,0.9,0.6,0.7,2*3E\r\n$GNGSA,A,2,07,08,13,26,33,,,,,,,,0.9,0.6,0.7,3*33\r\n'} [2/2]
+Sat Oct 31 09:19:19 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:19 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:20 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:20 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:21 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:21 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:22 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:22 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:23 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:23 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:24 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:24 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:24 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:25 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:25 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:26 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:26 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:26 2020|DEBUG|dyndns|enabled : False update : False
+Sat Oct 31 09:19:27 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:27 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:28 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:28 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:29 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:29 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:30 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:30 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:30 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:31 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:31 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:32 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:32 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:33 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:33 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:34 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.774323'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.396439'}, 'time': 151933, 'satellites': 19}, 'nmea': '$GLGSV,2,1,08,66,25,042,38,82,71,191,30,76,07,064,28,75,06,018,16,1*7B\r\n$GLGSV,2,2,08,83,49,320,24,81,22,160,27,67,73,350,37,68,39,244,33,1*7B\r\n$GPGSV,4,1,13,02,06,132,21,05,27,073,32,13,56,068,37,15,73,170,33,1*6C\r\n$GPGSV,4,2,13,18,56,307,37,20,30,277,29,23,28,271,34,29,36,209,33,1*6F\r\n$GPGSV,4,3,13,10,02,264,,16,00,310,,24,07,158,,30,08,039,,1*6B\r\n$GPGSV,4,4,13,51,,,35,1*64\r\n$GPGGA,151933.00,4352.746286,N,07918.239972,W,1,08,0.7,195.0,M,-41.0,M,,*52\r\n$PQXFI,151933.0,4352.746286,N,07918.239972,W,195.0,3.54,2.50,0.09*7A\r\n$GNGNS,151933.00,4352.746286,N,07918.239972,W,AAA,19,0.7,195.0,-41.0,,,V*5D\r\n$GPVTG,204.6,T,212.5,M,0.0,N,0.0,K,A*27\r\n$GPRMC,151933.00,A,4352 [1/2]
+Sat Oct 31 09:19:34 2020|DEBUG|WAN:36d1fd65|.746286,N,07918.239972,W,0.0,204.6,311020,7.9,W,A,V*46\r\n$GPGSA,A,2,02,05,13,15,18,20,23,29,,,,,1.0,0.7,0.7,1*2F\r\n$GNGSA,A,2,02,05,13,15,18,20,23,29,,,,,1.0,0.7,0.7,1*31\r\n$GNGSA,A,2,66,67,68,81,82,83,,,,,,,1.0,0.7,0.7,2*35\r\n$GNGSA,A,2,07,08,13,26,33,,,,,,,,1.0,0.7,0.7,3*3A\r\n'} [2/2]
+Sat Oct 31 09:19:34 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:34 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:35 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:35 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:36 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:36 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:37 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:37 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:37 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:38 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:38 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:39 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:39 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:40 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:40 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:41 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:41 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:42 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:42 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:42 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:43 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:43 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:44 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:44 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: SMS_ACTION_DONE
+Sat Oct 31 09:19:44 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:45 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:45 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:46 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:46 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:47 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:47 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:48 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:19:48 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:48 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:19:49 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:19:49 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '44.774323'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.399986'}, 'time': 151949, 'satellites': 21}, 'nmea': '$GLGSV,2,1,08,66,25,042,36,82,71,191,30,76,08,063,24,75,06,018,20,1*74\r\n$GLGSV,2,2,08,83,49,320,20,81,22,160,27,67,73,350,34,68,39,244,32,1*7D\r\n$GPGSV,4,1,13,02,06,132,20,05,27,073,29,10,02,264,25,13,56,068,34,1*66\r\n$GPGSV,4,2,13,15,73,170,30,18,56,307,35,20,30,277,30,23,28,271,33,1*62\r\n$GPGSV,4,3,13,29,36,209,32,30,08,039,22,16,00,310,,24,07,158,,1*6C\r\n$GPGSV,4,4,13,51,,,35,1*64\r\n$GPGGA,151949.00,4352.746293,N,07918.240037,W,1,09,0.6,195.2,M,-41.0,M,,*5F\r\n$PQXFI,151949.0,4352.746293,N,07918.240037,W,195.2,3.54,2.50,0.09*77\r\n$GNGNS,151949.00,4352.746293,N,07918.240037,W,AAA,21,0.6,195.2,-41.0,,,V*5A\r\n$GPVTG,204.6,T,212.5,M,0.0,N,0.0,K,A*27\r\n$GPRMC,151949.00,A, [1/2]
+Sat Oct 31 09:19:49 2020|DEBUG|WAN:36d1fd65|4352.746293,N,07918.240037,W,0.0,204.6,311020,7.9,W,A,V*49\r\n$GPGSA,A,2,02,05,13,15,18,20,23,29,30,,,,0.9,0.6,0.7,1*25\r\n$GNGSA,A,2,02,05,13,15,18,20,23,29,30,,,,0.9,0.6,0.7,1*3B\r\n$GNGSA,A,2,66,67,68,76,81,82,83,,,,,,0.9,0.6,0.7,2*3D\r\n$GNGSA,A,2,07,08,13,26,33,,,,,,,,0.9,0.6,0.7,3*33\r\n'} [2/2]
+Sat Oct 31 09:19:49 2020|DEBUG|netcloud|Remote code exec triggered

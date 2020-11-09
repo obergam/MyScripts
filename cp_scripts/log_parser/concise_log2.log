@@ -1,0 +1,17 @@
+[Line Number in common log (use -k to keep)] - [Time][IP][Level][Source][Info]
+3 - 2020-11-05 19:27:34 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 98%, RSSI:-76(dBm), SINR:-4.2(dB), RSRP:-106(dB), RSRQ:-12(dB), RFBAND: Band 4, Service: LTE
+4 - 2020-11-05 19:27:28 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 84%, RSSI:-83(dBm), SINR:4.4(dB), RSRP:-113(dB), RSRQ:-12(dB), RFBAND: Band 4, Service: LTE
+5 - 2020-11-05 19:27:04 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 100%, RSSI:-72(dBm), SINR:-3.6(dB), RSRP:-109(dB), RSRQ:-12(dB), RFBAND: Band 4, Service: LTE
+6 - 2020-11-05 19:26:52 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 90%, RSSI:-80(dBm), SINR:1.8(dB), RSRP:-109(dB), RSRQ:-12(dB), RFBAND: Band 4, Service: LTE
+23 - 2020-11-05 17:05:54 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 100%, RSSI:-60(dBm), SINR:-3.4(dB), RSRP:-92(dB), RSRQ:-18(dB), RFBAND: Band 4, Service: LTE
+50 - 2020-11-05 17:00:50 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 100%, RSSI:-59(dBm), SINR:10.4(dB), RSRP:-84(dB), RSRQ:-10(dB), RFBAND: Band 2, Service: LTE
+53 - 2020-11-05 17:00:50 0.0.0.0 S= INFO WAN:b74b501b -- connecting -> connected, Reason: Failover
+74 - 2020-11-05 17:00:45 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 100%, RSSI:-59(dBm), SINR:10.4(dB), RSRP:-84(dB), RSRQ:-10(dB), RFBAND: Band 2, Service: LTE
+92 - 2020-11-05 17:00:06 0.0.0.0 S= INFO kernel -- [ 109.035576] usb 1-1.4: USB disconnect, device number 6
+99 - 2020-11-05 17:00:05 0.0.0.0 S= INFO WAN:b74b501b -- disconnected -> connecting
+114 - 2020-11-05 17:00:04 0.0.0.0 S= INFO WAN:b7791754 -- Configure Event: ok
+115 - 2020-11-05 17:00:04 0.0.0.0 S= INFO WAN:b7791754 -- signal Internal LPE (SIM1) on port int1: SS: 0%, RSSI:-125(dBm), SINR:9.0(dB), ECIO:-2.5(dBm), Service: Unknown
+138 - 2020-11-05 16:59:21 0.0.0.0 S= INFO WAN:b74b501b -- Configure Event: ok
+139 - 2020-11-05 16:59:21 0.0.0.0 S= INFO WAN:b74b501b -- signal Internal LPE (SIM2) on port int1: SS: 100%, RSSI:-55(dBm), SINR:20.8(dB), RSRP:-77(dB), RSRQ:-9(dB), RFBAND: Band 2, Service: LTE
+151 - 2020-11-05 16:59:11 0.0.0.0 S= INFO WAN:b74b501b -- Plug event: ok
+160 - 2020-11-05 16:59:10 0.0.0.0 S= INFO WAN:b7791754 -- Plug event: ok

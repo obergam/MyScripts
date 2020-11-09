@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+        <html lang="en">
+
+          <head>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <style>
+            * {
+                box-sizing: border-box;
+            }
+            .center {
+              margin: auto;
+              width: 60%;
+            }
+            header {
+              margin: 0;
+              padding: 0;
+              height: 150px;
+              width: 100%;
+              background-color: #333f47;
+            }
+            header h1 {
+              margin: 0;
+              padding-top: 20px;
+              text-align: center;
+              color: #fead00;
+            }
+            html, body {
+              margin: 0;
+              padding: 0;
+            }
+            p {
+              text-align: center;
+            }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            </style>
+          </head>
+
+          <body onload="processFile(0, 1)">
+
+            <header>
+        <h1 id="filename">log1.log</h1>
+        <h1>Signal Quality and Connection State</h1>
+            </header>
+            <button onclick="Open()">Click me</button>
+            <div id="choose_file"; style="text-align: center">
+              Choose a different file to plot 
+              <input type='file' accept='.json' onchange='setStorage(event), renameLogFile(event)'>
+              (Must be .json file. This is produced when run with "-o json" argument)
+              <br>
+            </div>
+            <table id="header_table">
+                <tr>
+                    <th>UID</td>
+                    <th>Log Period</td>
+                    <th>Times Unplugged</td>
+                    <th>Times Disconnected</td>
+                    <th>Connection Uptime</td>
+                </tr>
+            </table>
+            <div style="width: 100%; overflow: hidden;">
+              <div style="width: 50%; float: left; left: 50px;"><h2 style="text-align: center">Signal Qualities</h2>
+              </div>
+              <div style="margin-left: 50%;"><h2 style="text-align: center">Connection States</h2>
+              </div>
+            </div>
+
+            <div style="width: 100%; overflow: hidden;">
+              <div id="sigPlot" style="width: 50%; float: left; left: 50px;"></div>
+              <div id="connPlot" style="margin-left: 50%;"></div>
+            </div>
+            <script>
+            function Open() {
+                window.open("usb_log.txt.html", "_blank");
+            }
+            //Will rename the title if a new file is opened
+            function renameLogFile(event = 0) {
+              if(sessionStorage.getItem("title") && !event) {
+                var title = document.getElementById("filename") 
+                title.innerHTML = sessionStorage.getItem("title");
+              }   
+              if(event) {
+                sessionStorage.setItem("title", event.target.files[0].name);
+              }
+
+            }
+
+            //reads json data from a file
+            function readFileAsync(event = 0, fromload = 0) {
+              return new Promise((resolve, reject) =>{
+                let reader = new FileReader();
+                reader.onload = () => {
+                  resolve(reader.result.split("\n"));
+                };
+                reader.onerror = reject;
+                reader.readAsText(event.target.files[0]);
+                })
+            }
+            async function setStorage(event) {
+                try {
+                  var text = await readFileAsync(event);
+                  sessionStorage.setItem("text0", text[0]);
+                  sessionStorage.setItem("text1", text[1]);
+                  window.open(window.location.pathname, "_blank");
+                } catch (err) {
+                  console.log(err);
+                }
+            }
+            //Main function, decides whether to use data in page or in file
+            async function processFile(event = 0, fromload = 0) {
+              renameLogFile(event);
+              //clearing divs so new data can be put in
+              const sigPlotClr = document.getElementById("sigPlot");
+              sigPlotClr.innerHTML = '';
+              const connPlotClr = document.getElementById("connPlot");
+              connPlotClr.innerHTML = '';
+              if(event) {
+                try {
+                  var text = await readFileAsync(event, fromload);
+                  sessionStorage.setItem("text0", text[0]);
+                  sessionStorage.setItem("text1", text[1]);
+                  window.open(window.location.pathname, "_blank");
+                } catch (err) {
+                  console.log(err);
+                }
+              }
+
+              // Data in the page so that it will display on load
+              if (fromload) {
+                if(sessionStorage.getItem("text0")) {
+                  var text = [sessionStorage.getItem("text0"),sessionStorage.getItem("text1")];
+                  fromload = 0;  
+                }
+                else {
+                    var text = [{"b7b8d34": [["2020-11-05 18:51:33", {"RSSI": [-75.0, "Fair"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-105.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 18:50:57", {"RSSI": [-81.0, "Poor"]}, {"SINR": [1.0, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 18:50:45", {"RSSI": [-74.0, "Fair"]}, {"SINR": [0.6, "Fair"]}, {"RSRP": [-102.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 18:50:39", {"RSSI": [-80.0, "Fair"]}, {"SINR": [6.6, "Fair"]}, {"RSRP": [-102.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 18:50:02", {"RSSI": [-84.0, "Poor"]}, {"SINR": [2.8, "Fair"]}, {"RSRP": [-110.0, "Poor"]}, {"RSRQ": [-12.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 18:44:47", {"RSSI": [-63.0, "Excellent"]}, {"SINR": [20.8, "Excellent"]}, {"RSRP": [-89.0, "Good"]}, {"RSRQ": [-7.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 18:43:22", {"RSSI": [-78.0, "Fair"]}, {"SINR": [2.0, "Fair"]}, {"RSRP": [-105.0, "Poor"]}, {"RSRQ": [-12.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 18:42:39", {"RSSI": [-85.0, "Poor"]}, {"SINR": [0.6, "Fair"]}, {"RSRP": [-115.0, "Poor"]}, {"RSRQ": [-18.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 18:42:27", {"RSSI": [-77.0, "Fair"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 18:42:22", {"RSSI": [-77.0, "Fair"]}, {"SINR": [2.8, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 18:42:21", {"RSSI": [-77.0, "Fair"]}, {"SINR": [2.8, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 18:36:27", {"RSSI": [-23.0, "Excellent"]}, {"SINR": [19.0, "Good"]}, {"RSRP": [-51.0, "Excellent"]}, {"RSRQ": [-7.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 16:58:09", {"RSSI": [-63.0, "Excellent"]}, {"SINR": [-2.0, "Poor"]}, {"RSRP": [-93.0, "Fair"]}, {"RSRQ": [-14.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 16:58:02", {"RSSI": [-68.0, "Good"]}, {"SINR": [-1.4, "Poor"]}, {"RSRP": [-96.0, "Fair"]}, {"RSRQ": [-14.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 17, Service: LTE"}], ["2020-11-05 16:00:58", {"RSSI": [-75.0, "Fair"]}, {"SINR": [0.8, "Fair"]}, {"RSRP": [-99.0, "Fair"]}, {"RSRQ": [-14.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 15:45:34", {"RSSI": [-72.0, "Fair"]}, {"SINR": [11.4, "Fair"]}, {"RSRP": [-97.0, "Fair"]}, {"RSRQ": [-8.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 15:41:25", {"RSSI": [-79.0, "Fair"]}, {"SINR": [12.0, "Fair"]}, {"RSRP": [-104.0, "Poor"]}, {"RSRQ": [-8.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:35:51", {"RSSI": [-76.0, "Fair"]}, {"SINR": [9.8, "Fair"]}, {"RSRP": [-103.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:34:07", {"RSSI": [-82.0, "Poor"]}, {"SINR": [10.2, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:32:54", {"RSSI": [-75.0, "Fair"]}, {"SINR": [12.0, "Fair"]}, {"RSRP": [-101.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:28:21", {"RSSI": [-81.0, "Poor"]}, {"SINR": [12.2, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:27:32", {"RSSI": [-74.0, "Fair"]}, {"SINR": [9.8, "Fair"]}, {"RSRP": [-100.0, "Fair"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:16:23", {"RSSI": [-82.0, "Poor"]}, {"SINR": [10.4, "Fair"]}, {"RSRP": [-105.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:15:35", {"RSSI": [-74.0, "Fair"]}, {"SINR": [13.0, "Good"]}, {"RSRP": [-94.0, "Fair"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:11:38", {"RSSI": [-81.0, "Poor"]}, {"SINR": [10.2, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:10:43", {"RSSI": [-74.0, "Fair"]}, {"SINR": [11.0, "Fair"]}, {"RSRP": [-96.0, "Fair"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:03:43", {"RSSI": [-84.0, "Poor"]}, {"SINR": [11.0, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:02:55", {"RSSI": [-73.0, "Fair"]}, {"SINR": [14.2, "Good"]}, {"RSRP": [-94.0, "Fair"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:01:54", {"RSSI": [-80.0, "Fair"]}, {"SINR": [12.8, "Fair"]}, {"RSRP": [-106.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 14:00:59", {"RSSI": [-73.0, "Fair"]}, {"SINR": [4.8, "Fair"]}, {"RSRP": [-101.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 13:42:57", {"RSSI": [-79.0, "Fair"]}, {"SINR": [11.8, "Fair"]}, {"RSRP": [-106.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 13:42:02", {"RSSI": [-73.0, "Fair"]}, {"SINR": [11.8, "Fair"]}, {"RSRP": [-100.0, "Fair"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 13:22:22", {"RSSI": [-80.0, "Fair"]}, {"SINR": [10.4, "Fair"]}, {"RSRP": [-109.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 13:21:28", {"RSSI": [-72.0, "Fair"]}, {"SINR": [8.4, "Fair"]}, {"RSRP": [-105.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 13:17:18", {"RSSI": [-81.0, "Poor"]}, {"SINR": [7.6, "Fair"]}, {"RSRP": [-105.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 12:41:32", {"RSSI": [-74.0, "Fair"]}, {"SINR": [8.6, "Fair"]}, {"RSRP": [-101.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 12:04:08", {"RSSI": [-80.0, "Fair"]}, {"SINR": [11.0, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 12:04:02", {"RSSI": [-67.0, "Excellent"]}, {"SINR": [7.0, "Fair"]}, {"RSRP": [-88.0, "Good"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 12:03:56", {"RSSI": [-67.0, "Excellent"]}, {"SINR": [9.2, "Fair"]}, {"RSRP": [-88.0, "Good"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 17, Service: LTE"}], ["2020-11-05 11:00:54", {"RSSI": [-83.0, "Poor"]}, {"SINR": [10.6, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-10.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 11:00:48", {"RSSI": [-64.0, "Excellent"]}, {"SINR": [8.6, "Fair"]}, {"RSRP": [-87.0, "Good"]}, {"RSRQ": [-10.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 10:59:53", {"RSSI": [-64.0, "Excellent"]}, {"SINR": [0.4, "Fair"]}, {"RSRP": [-96.0, "Fair"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 17, Service: LTE"}], ["2020-11-05 10:02:26", {"RSSI": [-84.0, "Poor"]}, {"SINR": [11.0, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 10:01:31", {"RSSI": [-73.0, "Fair"]}, {"SINR": [11.8, "Fair"]}, {"RSRP": [-95.0, "Fair"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:48:08", {"RSSI": [-80.0, "Fair"]}, {"SINR": [10.8, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:46:55", {"RSSI": [-86.0, "Poor"]}, {"SINR": [9.8, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:44:41", {"RSSI": [-79.0, "Fair"]}, {"SINR": [11.0, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:43:35", {"RSSI": [-85.0, "Poor"]}, {"SINR": [12.4, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:42:52", {"RSSI": [-79.0, "Fair"]}, {"SINR": [11.0, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:39:37", {"RSSI": [-85.0, "Poor"]}, {"SINR": [8.8, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:32:20", {"RSSI": [-79.0, "Fair"]}, {"SINR": [10.6, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:07:43", {"RSSI": [-85.0, "Poor"]}, {"SINR": [10.2, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 09:07:36", {"RSSI": [-85.0, "Poor"]}, {"SINR": [9.8, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 08:51:48", {"RSSI": [-85.0, "Poor"]}, {"SINR": [10.0, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-11-05 08:51:42", {"RSSI": [-85.0, "Poor"]}, {"SINR": [3.2, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:51:17", {"RSSI": [-92.0, "Poor"]}, {"SINR": [3.4, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:51:05", {"RSSI": [-86.0, "Poor"]}, {"SINR": [1.6, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:50:47", {"RSSI": [-92.0, "Poor"]}, {"SINR": [3.4, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-8.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:50:34", {"RSSI": [-86.0, "Poor"]}, {"SINR": [2.2, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-8.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:35:55", {"RSSI": [-91.0, "Poor"]}, {"SINR": [null, null]}, {"RSRP": [null, null]}, {"RSRQ": [null, null]}, {"ECIO": [-5.5, "Excellent"]}, {"RFBAND": " WCDMA PCS 1900, Service: HSPA"}], ["2020-11-05 08:29:21", {"RSSI": [-92.0, "Poor"]}, {"SINR": [0.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:29:03", {"RSSI": [-86.0, "Poor"]}, {"SINR": [0.6, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:28:19", {"RSSI": [-92.0, "Poor"]}, {"SINR": [3.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:23:34", {"RSSI": [-91.0, "Poor"]}, {"SINR": [2.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:23:27", {"RSSI": [-85.0, "Poor"]}, {"SINR": [2.6, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:22:20", {"RSSI": [-92.0, "Poor"]}, {"SINR": [4.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:22:14", {"RSSI": [-86.0, "Poor"]}, {"SINR": [4.6, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:21:44", {"RSSI": [-92.0, "Poor"]}, {"SINR": [5.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:21:26", {"RSSI": [-86.0, "Poor"]}, {"SINR": [5.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:19:00", {"RSSI": [-92.0, "Poor"]}, {"SINR": [6.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:18:54", {"RSSI": [-86.0, "Poor"]}, {"SINR": [6.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:18:17", {"RSSI": [-93.0, "Poor"]}, {"SINR": [4.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:17:59", {"RSSI": [-85.0, "Poor"]}, {"SINR": [4.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:17:16", {"RSSI": [-92.0, "Poor"]}, {"SINR": [5.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:17:04", {"RSSI": [-86.0, "Poor"]}, {"SINR": [4.6, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:16:52", {"RSSI": [-93.0, "Poor"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:16:46", {"RSSI": [-85.0, "Poor"]}, {"SINR": [6.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:15:15", {"RSSI": [-91.0, "Poor"]}, {"SINR": [4.6, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:15:09", {"RSSI": [-85.0, "Poor"]}, {"SINR": [5.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:13:50", {"RSSI": [-91.0, "Poor"]}, {"SINR": [2.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:13:38", {"RSSI": [-85.0, "Poor"]}, {"SINR": [4.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:12:43", {"RSSI": [-92.0, "Poor"]}, {"SINR": [4.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:12:25", {"RSSI": [-86.0, "Poor"]}, {"SINR": [4.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:12:13", {"RSSI": [-92.0, "Poor"]}, {"SINR": [4.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:12:06", {"RSSI": [-86.0, "Poor"]}, {"SINR": [4.6, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:11:24", {"RSSI": [-92.0, "Poor"]}, {"SINR": [5.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:11:12", {"RSSI": [-86.0, "Poor"]}, {"SINR": [6.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:11:05", {"RSSI": [-86.0, "Poor"]}, {"SINR": [3.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:11:04", {"RSSI": [-86.0, "Poor"]}, {"SINR": [3.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:08:39", {"RSSI": [-90.0, "Poor"]}, {"SINR": [5.4, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:03:38", {"RSSI": [-90.0, "Poor"]}, {"SINR": [6.0, "Fair"]}, {"RSRP": [-113.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:03:32", {"RSSI": [-83.0, "Poor"]}, {"SINR": [7.2, "Fair"]}, {"RSRP": [-106.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:02:55", {"RSSI": [-91.0, "Poor"]}, {"SINR": [5.0, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:02:49", {"RSSI": [-85.0, "Poor"]}, {"SINR": [5.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:02:37", {"RSSI": [-91.0, "Poor"]}, {"SINR": [6.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:02:31", {"RSSI": [-85.0, "Poor"]}, {"SINR": [4.8, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:02:06", {"RSSI": [-91.0, "Poor"]}, {"SINR": [4.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:02:00", {"RSSI": [-85.0, "Poor"]}, {"SINR": [6.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:01:29", {"RSSI": [-91.0, "Poor"]}, {"SINR": [4.6, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 08:01:11", {"RSSI": [-84.0, "Poor"]}, {"SINR": [5.4, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 07:59:13", {"RSSI": [-90.0, "Poor"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 07:59:08", {"RSSI": [-90.0, "Poor"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}], ["2020-11-05 07:59:06", {"RSSI": [-90.0, "Poor"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-114.0, "Poor"]}, {"RSRQ": [-9.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 2, Service: LTE"}]]},{"b7b8d34": [["2020-11-05 18:42:27", "connected", "Reason: Failover", "2020-11-05 18:42:27"], ["2020-11-05 18:42:22", "connecting", "PrevState: disconnected", "2020-11-05 18:42:22"], ["2020-11-05 18:42:21", "configure", "Reason:  ok", "2020-11-05 18:42:21"], ["2020-11-05 18:42:10", "plugged", "", "2020-11-05 18:42:10"], ["2020-11-05 18:41:39", "disconnected", "Reason: Unplugged", "2020-11-05 18:41:39"], ["2020-11-05 18:41:39", "disconnecting", "PrevState: connected", "2020-11-05 18:41:39"], ["2020-11-05 18:41:39", "unplugged", "", "2020-11-05 18:41:39"], ["2020-11-05 09:07:42", "connected", "Reason: Failover", "2020-11-05 09:07:42"], ["2020-11-05 09:07:36", "connecting", "PrevState: disconnected", "2020-11-05 09:07:36"], ["2020-11-05 08:50:34", "configure", "Reason:  ok", "2020-11-05 08:50:34"], ["2020-11-05 08:50:23", "plugged", "", "2020-11-05 08:50:23"], ["2020-11-05 08:47:27", "unplugged", "", "2020-11-05 08:47:27"], ["2020-11-05 08:35:55", "configure", "Reason:  ok", "2020-11-05 08:35:55"], ["2020-11-05 08:35:06", "plugged", "", "2020-11-05 08:35:06"], ["2020-11-05 08:31:44", "unplugged", "", "2020-11-05 08:31:44"], ["2020-11-05 08:28:20", "disconnected", "Reason: Failback", "2020-11-05 08:28:20"], ["2020-11-05 08:28:19", "disconnecting", "PrevState: connected", "2020-11-05 08:28:19"], ["2020-11-05 08:11:12", "connected", "Reason: Failback", "2020-11-05 08:11:12"], ["2020-11-05 08:11:05", "connecting", "PrevState: disconnected", "2020-11-05 08:11:05"], ["2020-11-05 08:11:04", "configure", "Reason:  ok", "2020-11-05 08:11:04"], ["2020-11-05 08:10:53", "plugged", "", "2020-11-05 08:10:53"], ["2020-11-05 08:08:54", "unplugged", "", "2020-11-05 08:08:54"], ["2020-11-05 08:08:40", "disconnected", "Reason: Unready", "2020-11-05 08:08:40"], ["2020-11-05 08:08:39", "disconnecting", "PrevState: connected", "2020-11-05 08:08:39"], ["2020-11-05 07:59:13", "connected", "Reason: Failover", "2020-11-05 07:59:13"], ["2020-11-05 07:59:07", "connecting", "PrevState: disconnected", "2020-11-05 07:59:07"], ["2020-11-05 07:59:06", "configure", "Reason:  ok", "2020-11-05 07:59:06"], ["2020-11-05 07:58:57", "plugged", "", "2020-11-05 07:58:57"]], "b4dc5fb": [["2020-11-05 18:42:13", "configure", "Reason:  user intervention required", "2020-11-05 18:42:13"], ["2020-11-05 18:42:12", "plugged", "", "2020-11-05 18:42:12"], ["2020-11-05 18:41:40", "unplugged", "", "2020-11-05 18:41:40"], ["2020-11-05 08:50:25", "configure", "Reason:  user intervention required", "2020-11-05 08:50:25"], ["2020-11-05 08:50:24", "plugged", "", "2020-11-05 08:50:24"], ["2020-11-05 08:47:28", "unplugged", "", "2020-11-05 08:47:28"], ["2020-11-05 08:35:08", "configure", "Reason:  user intervention required", "2020-11-05 08:35:08"], ["2020-11-05 08:35:07", "plugged", "", "2020-11-05 08:35:07"], ["2020-11-05 08:31:44", "unplugged", "", "2020-11-05 08:31:44"], ["2020-11-05 08:10:55", "configure", "Reason:  user intervention required", "2020-11-05 08:10:55"], ["2020-11-05 08:10:54", "plugged", "", "2020-11-05 08:10:54"], ["2020-11-05 08:08:54", "unplugged", "", "2020-11-05 08:08:54"], ["2020-11-05 07:59:01", "configure", "Reason:  user intervention required", "2020-11-05 07:59:01"], ["2020-11-05 07:58:59", "plugged", "", "2020-11-05 07:58:59"]], "wan": [["2020-11-05 09:07:34", "disconnected", "Reason: Unplugged", "2020-11-05 09:07:34"], ["2020-11-05 09:07:34", "disconnecting", "PrevState: connected", "2020-11-05 09:07:34"], ["2020-11-05 09:07:34", "unplugged", "", "2020-11-05 09:07:34"], ["2020-11-05 08:28:17", "connected", "Reason: Failback", "2020-11-05 08:28:17"], ["2020-11-05 08:28:15", "connecting", "PrevState: disconnected", "2020-11-05 08:28:15"]], "bd79db0d": [["2020-11-05 08:48:50", "unplugged", "", "2020-11-05 08:48:50"], ["2020-11-05 08:47:32", "plugged", "", "2020-11-05 08:47:32"]], "bd79db10": [["2020-11-05 08:33:06", "unplugged", "", "2020-11-05 08:33:06"], ["2020-11-05 08:31:49", "plugged", "", "2020-11-05 08:31:49"]], "bb1d36bd": [["2020-11-05 08:10:14", "unplugged", "", "2020-11-05 08:10:14"], ["2020-11-05 08:08:59", "plugged", "", "2020-11-05 08:08:59"]]}];
+                }
+              }
+              var dates = [];
+              var rssi_vals = [];
+              var sinr_vals = [];
+              var rsrp_vals = [];
+              var rsrq_vals = [];
+              var date_append = 0;
+              var bands = [];
+              var uids = [];
+              var states = [];
+              var reasons = [];
+              const possible_states = {
+                'unplugged': 0,
+                'plugged': 1,
+                'configure': 2,
+                'disconnected': 3,
+                'disconnecting': 4,
+                'standby_connecting': 5,
+                'standby': 6,
+                'connecting': 7,
+                'connected': 8
+              };
+              var index = 0;
+              //choosing which data to use
+              if (fromload) {
+                var sigQualObj = text[0];
+                var connStateObj = text[1];
+              } else {
+                var sigQualObj = JSON.parse(text[0]);
+                var connStateObj = JSON.parse(text[1]);
+              }
+              //Clear header table 
+              if (document.getElementById("header_table").rows.length > 1) {
+                var i;
+                for (i = 1; i < document.getElementById("header_table").rows.length; i++) {
+                    document.getElementById("header_table").deleteRow(-1);
+                  }
+              }         
+              //generating connection state data
+              for (uid in connStateObj) {
+                uids.push(uid);
+                for (entry in connStateObj[uid]) {
+                  reason_flag = 0;
+                  for (value in connStateObj[uid][entry]) {
+                    if (value == 0) {
+                      dates.push(connStateObj[uid][entry][value]);
+                      if (entry > 0) {
+                        if (date_append > 0 && dates[entry] == dates[entry -1].substring(0,dates[entry - 1].length - 3))
+                        {
+                            date_append += .01;
+                            dates[entry] = dates[entry] + date_append.toString().substring(1);
+                            continue;
+                          }
+                          if (dates[entry] == dates[entry - 1]) {
+                            dates[entry] = dates[entry] + '.01';
+                            date_append = .01;
+                            continue;
+                          }
+                        }
+                        date_append = 0;
+                    }
+                    if (possible_states.hasOwnProperty(connStateObj[uid][entry][value])) {
+                      states.push(possible_states[connStateObj[uid][entry][value]]);
+                    }
+                    if (connStateObj[uid][entry][value].includes('Reason')) {
+                        reasons.push(connStateObj[uid][entry][value]);
+                        reason_flag = 1;
+                    }
+                  }
+                  if (reason_flag == 0){
+                        reasons.push('');
+                    }
+                }
+                //dynamically create more divs as needed
+                var div = document.createElement("div");
+                div.setAttribute("id", "connPlot"+uids[index]);
+                document.getElementById("connPlot").appendChild(div);
+                var dates_len = dates.length - 1;
+                //With NCM logs the most recent entry is at the top. 
+                //This detects that and then corrects the connection state plot
+                var date_front = new Date(parseInt(dates[0].substring(0,4)),
+                                          parseInt(dates[0].substring(5,7)) - 1,
+                                          parseInt(dates[0].substring(8,10)),
+                                          parseInt(dates[0].substring(11,13)),
+                                          parseInt(dates[0].substring(14,16)),
+                                          parseInt(dates[0].substring(17,19)));
+                var date_end = new Date(parseInt(dates[dates_len].substring(0,4)),
+                                        parseInt(dates[dates_len].substring(5,7)) - 1,
+                                        parseInt(dates[dates_len].substring(8,10)),
+                                        parseInt(dates[dates_len].substring(11,13)),
+                                        parseInt(dates[dates_len].substring(14,16)),
+                                        parseInt(dates[dates_len].substring(17,19)));
+                if (date_front > date_end) {
+                  var plot_shape = 'vh';
+                }
+                else {
+                  var plot_shape = 'hv';
+                }
+                //Plotly plot data and formatting
+                var conn_trace = {
+                  x: dates,
+                  y: states,
+                  mode: 'lines+markers',
+                  name: 'Connection State',
+                  text: reasons,
+                  line: {shape: plot_shape},
+                  type: 'scatter'
+                };
+                var connData = [conn_trace];
+                var connLayout = {
+                  title: 'Connection State: ' + uids[index],
+                  autosize: false,
+                  width: 800,
+                  height: 500,
+                  margin: {
+                    l: 50,
+                    r: 50,
+                    b: 100,
+                    t: 100,
+                    pad: 4
+                  },
+                  xaxis: {
+                    title: 'Timestamp'
+                  },
+                  yaxis: {
+                    title: 'State',
+                    range: [0,8.5],
+                    automargin: true,
+                    tickvals: Object.values(possible_states),
+                    ticktext: Object.keys(possible_states)
+                  }
+                };
+                Plotly.newPlot('connPlot'+uids[index], connData, connLayout,
+                              {modeBarButtonsToRemove: ['select2d',
+                                                         'lasso2d',
+                                                         'zoomIn2d',
+                                                         'zoomOut2d',
+                                                         'resetScale2d',
+                                                         'toggleSpikelines',
+                                                         'hoverClosestCartesian',
+                                                         'hoverCompareCartesian'], displaylogo: false});
+                var state_counts = {};
+                for (var i = 0; i < states.length; i++) {
+                  var num = states[i];
+                  state_counts[num] = state_counts[num] ? state_counts[num] + 1 : 1;
+                }
+                var table = document.getElementById("header_table");
+                var row = table.insertRow(index+1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                cell1.innerHTML = uids[index];
+                cell2.innerHTML = dates[0] + " - " + dates[dates.length - 1];
+                if(state_counts[0] === undefined) {
+                    cell3.innerHTML = 0;
+                }
+                else {
+                    cell3.innerHTML = state_counts[0];
+                }
+                if(state_counts[3] === undefined) {
+                    cell4.innerHTML = 0;
+                }
+                else {
+                    cell4.innerHTML = state_counts[3];
+                }
+                var connected_time = 0;
+                let absolute_start = new Date(dates[0]);
+                let absolute_end = new Date(dates[dates.length - 1]);
+                let total_time = absolute_end - absolute_start;
+                for (var i = 0; i < states.length; i++) {
+                    if (states[i] == 8) {
+                        if (dates[i] != dates[dates.length - 1]) {
+                            let start_date = new Date(dates[i]);
+                            let end_date = new Date(dates[i+1]);
+                            connected_time += (end_date - start_date);
+                        }
+                    }
+                }
+                let uptime = connected_time/total_time;
+                cell5.innerHTML = (uptime * 100).toFixed(2) + "%";
+                dates.length = 0;
+                states.length = 0;
+                reasons.length = 0;
+                index += 1;
+              }
+              //clearing the dates array to be used again
+              dates.length = 0;
+              uids.length = 0;
+              index = 0;
+              //Generating signal quality data
+              for (uid in sigQualObj) {
+                uids.push(uid);
+                for (entry in sigQualObj[uid]) {
+                  for (data_obj in sigQualObj[uid][entry]) {
+                    if (typeof sigQualObj[uid][entry][data_obj] === 'object' &&
+                               sigQualObj[uid][entry][data_obj] !== null) 
+                    {
+                      for (sig in sigQualObj[uid][entry][data_obj]) {
+                        if (sig == 'RSSI') {
+                          rssi_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'SINR') {
+                          sinr_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'RSRP') {
+                          rsrp_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'RSRQ') {
+                          rsrq_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'RFBAND') {
+                          bands.push(sigQualObj[uid][entry][data_obj][sig]);
+                        }
+                      }
+                    }
+                    else if (sigQualObj[uid][entry][data_obj] !== null) {
+                      dates.push(sigQualObj[uid][entry][data_obj]);
+                    }
+                  }
+                }
+
+                var div = document.createElement("div");
+                div.setAttribute("id", "sigPlot"+uids[index]);
+                document.getElementById("sigPlot").appendChild(div);
+                //Plotly Data: 1-4 are real data, 5-8 necessary for right side y-axis describing 'poor' -> 'excellent'
+                var trace1 = {
+                  x: dates,
+                  y: rssi_vals,
+                  text: bands,
+                  mode: 'scatter',
+                  name: 'RSSI'
+                };
+                var trace2 = {
+                  x: dates,
+                  y: sinr_vals,
+                  text: bands,
+                  xaxis: 'x',
+                  yaxis: 'y4',
+                  mode: 'scatter',
+                  name: 'SINR'
+                };
+                var trace3 = {
+                  x: dates,
+                  y: rsrp_vals,
+                  text: bands,
+                  xaxis: 'x',
+                  yaxis: 'y2',
+                  mode: 'scatter',
+                  name: 'RSRP'
+                };
+                var trace4 = {
+                  x: dates,
+                  y: rsrq_vals,
+                  text: bands,
+                  xaxis: 'x',
+                  yaxis: 'y3',
+                  mode: 'scatter',
+                  name: 'RSRQ'
+                };
+                var trace5 = {
+                  x: dates[0],
+                  y: rssi_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y5',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var trace6 = {
+                  x: dates[0],
+                  y: sinr_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y8',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var trace7 = {
+                  x: dates[0],
+                  y: rsrp_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y6',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var trace8 = {
+                  x: dates[0],
+                  y: rsrq_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y7',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var data = [trace1, trace3, trace4, trace2, trace5, trace7, trace8, trace6];
+                var layout = {
+                  title: 'Signal Quality: ' + uids[index],
+                  autosize: false,
+                  width: 800,
+                  height: 800,
+                  margin: {
+                    l: 50,
+                    r: 50,
+                    b: 100,
+                    t: 100,
+                    pad: 4
+                  },
+                  legend: {
+                    x: 1.1,
+                    y: .5
+                  },
+                  xaxis: {
+                    title: 'Timestamp'
+                  },
+                  yaxis: {
+                    title: 'RSSI(dBm)',
+                    range: [-130, -25]
+                  },
+                  yaxis2: {
+                    title: 'RSRP(dB)',
+                    zeroline: false,
+                    range: [-140, -50]
+                  },
+                  yaxis3: {
+                    title: 'RSRQ(dB)',
+                    range: [-30, -5]
+                  },
+                  yaxis4: {
+                    title: 'SINR(dB)',
+                    zeroline: false,
+                    range: [-20, 35]
+                  },
+                  //Make sure tickvals the same as in the python script describing the signal strength cutoffs
+                  yaxis5: {
+                    title: 'Quality',
+                    range: [-130, -25],
+                    tickvals: [-60, -70, -80, -125],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y',
+                    side: 'right'
+                  },
+                  yaxis6: {
+                    title: 'Quality',
+                    zeroline: false,
+                    tickvals: [-80, -90, -100, -140],
+                    range: [-140, -50],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y2',
+                    side: 'right'
+                  },
+                  yaxis7: {
+                    title: 'Quality',
+                    range: [-30, -5],
+                    tickvals: [-10, -15, -20, -30],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y3',
+                    side: 'right'
+                  },
+                  yaxis8: {
+                    title: 'Quality',
+                    zeroline: false,
+                    tickvals: [20, 13, 0, -20],
+                    range: [-20, 35],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y4',
+                    side: 'right'
+                  },
+                  grid: {
+                    rows: 4,
+                    columns: 1,
+                    subplots: [['xy'], ['xy2'], ['xy3'], ['xy4']],
+                    roworder: 'top to bottom'
+                  }
+                }; // end of Layout object
+                Plotly.newPlot('sigPlot' + uids[index], data, layout,
+                              {modeBarButtonsToRemove: ['select2d',
+                                                         'lasso2d',
+                                                         'zoomIn2d',
+                                                         'zoomOut2d',
+                                                         'resetScale2d',
+                                                         'toggleSpikelines',
+                                                         'hoverClosestCartesian',
+                                                         'hoverCompareCartesian'], displaylogo: false});
+                rssi_vals.length = 0;
+                sinr_vals.length = 0;
+                rsrp_vals.length = 0;
+                rsrq_vals.length = 0;
+                dates.length = 0;
+                bands.length = 0;
+                index += 1;
+              } // end of sig quality loop. It's long
+            };// end of processFile()
+
+            </script>
+
+          </body>
+        </html>
+        

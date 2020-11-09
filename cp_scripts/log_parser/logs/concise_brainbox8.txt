@@ -1,0 +1,19 @@
+[Line Number in common log (use -k to keep)] - [Time][IP][Level][Source][Info]
+5 - 2020-10-31 09:34:08 0.0.0.0 S= INFO WAN:36d1fd65 -- Unplugged
+75 - 2020-10-31 09:35:03 0.0.0.0 S= INFO WAN:36d1fd65 -- Plug event: ok
+140 - 2020-10-31 09:35:09 0.0.0.0 S= INFO WAN:36d1fd65 -- signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:5.0(dB), RSRP:-104(dB), RSRQ:-11(dB), RFBAND: WCDMA 850, Service: Unknown
+142 - 2020-10-31 09:35:09 0.0.0.0 S= INFO WAN:36d1fd65 -- Configure Event: ok
+175 - 2020-10-31 09:35:11 0.0.0.0 S= INFO WAN:36d1fd65 -- disconnected -> connecting
+179 - 2020-10-31 09:35:11 0.0.0.0 S= INFO WAN:36d1fd65 -- signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:5.0(dB), RSRP:-104(dB), RSRQ:-11(dB), RFBAND: WCDMA 850, Service: Unknown
+271 - 2020-10-31 09:35:39 0.0.0.0 S= INFO WAN:36d1fd65 -- signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:5.0(dB), RSRP:-104(dB), RSRQ:-11(dB), RFBAND: WCDMA 850, Service: HSPA
+278 - 2020-10-31 09:35:40 0.0.0.0 S= INFO WAN:36d1fd65 -- signal Internal 10M-B on port int1: SS: 76%, RSSI:-86(dBm), ECIO:-6.5(dBm), RFBAND: WCDMA 850, Service: HSPA
+320 - 2020-10-31 09:35:40 0.0.0.0 S= INFO WAN:36d1fd65 -- connecting -> disconnecting
+324 - 2020-10-31 09:35:40 0.0.0.0 S= INFO WAN:36d1fd65 -- disconnecting -> disconnected, Reason: Failover
+443 - 2020-10-31 09:36:19 0.0.0.0 S= INFO kernel -- [ 1884.366982] usb 1-1.1: USB disconnect, device number 11
+458 - 2020-10-31 09:36:20 0.0.0.0 S= INFO WAN:36d1fd65 -- Unplugged
+529 - 2020-10-31 09:37:17 0.0.0.0 S= INFO WAN:36d1fd65 -- Plug event: ok
+593 - 2020-10-31 09:37:22 0.0.0.0 S= INFO WAN:36d1fd65 -- signal Internal 10M-B on port int1: SS: 80%, RSSI:-85(dBm), SINR:-6.4(dB), RSRP:-122(dB), RSRQ:-14(dB), RFBAND: Band 4, Service: LTE
+595 - 2020-10-31 09:37:22 0.0.0.0 S= INFO WAN:36d1fd65 -- Configure Event: ok
+626 - 2020-10-31 09:37:24 0.0.0.0 S= INFO WAN:36d1fd65 -- disconnected -> connecting
+630 - 2020-10-31 09:37:24 0.0.0.0 S= INFO WAN:36d1fd65 -- signal Internal 10M-B on port int1: SS: 80%, RSSI:-85(dBm), SINR:-6.4(dB), RSRP:-122(dB), RSRQ:-14(dB), RFBAND: Band 4, Service: LTE
+711 - 2020-10-31 09:37:29 0.0.0.0 S= INFO WAN:36d1fd65 -- connecting -> connected, Reason: Failover

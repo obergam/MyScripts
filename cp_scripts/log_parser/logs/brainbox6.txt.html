@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+        <html lang="en">
+
+          <head>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <style>
+            * {
+                box-sizing: border-box;
+            }
+            .center {
+              margin: auto;
+              width: 60%;
+            }
+            header {
+              margin: 0;
+              padding: 0;
+              height: 150px;
+              width: 100%;
+              background-color: #333f47;
+            }
+            header h1 {
+              margin: 0;
+              padding-top: 20px;
+              text-align: center;
+              color: #fead00;
+            }
+            html, body {
+              margin: 0;
+              padding: 0;
+            }
+            p {
+              text-align: center;
+            }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            </style>
+          </head>
+
+          <body onload="processFile(0, 1)">
+
+            <header>
+        <h1 id="filename">brainbox6.txt</h1>
+        <h1>Signal Quality and Connection State</h1>
+            </header>
+            <button onclick="Open()">Click me</button>
+            <div id="choose_file"; style="text-align: center">
+              Choose a different file to plot 
+              <input type='file' accept='.json' onchange='setStorage(event), renameLogFile(event)'>
+              (Must be .json file. This is produced when run with "-o json" argument)
+              <br>
+            </div>
+            <table id="header_table">
+                <tr>
+                    <th>UID</td>
+                    <th>Log Period</td>
+                    <th>Times Unplugged</td>
+                    <th>Times Disconnected</td>
+                    <th>Connection Uptime</td>
+                </tr>
+            </table>
+            <div style="width: 100%; overflow: hidden;">
+              <div style="width: 50%; float: left; left: 50px;"><h2 style="text-align: center">Signal Qualities</h2>
+              </div>
+              <div style="margin-left: 50%;"><h2 style="text-align: center">Connection States</h2>
+              </div>
+            </div>
+
+            <div style="width: 100%; overflow: hidden;">
+              <div id="sigPlot" style="width: 50%; float: left; left: 50px;"></div>
+              <div id="connPlot" style="margin-left: 50%;"></div>
+            </div>
+            <script>
+            function Open() {
+                window.open("usb_log.txt.html", "_blank");
+            }
+            //Will rename the title if a new file is opened
+            function renameLogFile(event = 0) {
+              if(sessionStorage.getItem("title") && !event) {
+                var title = document.getElementById("filename") 
+                title.innerHTML = sessionStorage.getItem("title");
+              }   
+              if(event) {
+                sessionStorage.setItem("title", event.target.files[0].name);
+              }
+
+            }
+
+            //reads json data from a file
+            function readFileAsync(event = 0, fromload = 0) {
+              return new Promise((resolve, reject) =>{
+                let reader = new FileReader();
+                reader.onload = () => {
+                  resolve(reader.result.split("\n"));
+                };
+                reader.onerror = reject;
+                reader.readAsText(event.target.files[0]);
+                })
+            }
+            async function setStorage(event) {
+                try {
+                  var text = await readFileAsync(event);
+                  sessionStorage.setItem("text0", text[0]);
+                  sessionStorage.setItem("text1", text[1]);
+                  window.open(window.location.pathname, "_blank");
+                } catch (err) {
+                  console.log(err);
+                }
+            }
+            //Main function, decides whether to use data in page or in file
+            async function processFile(event = 0, fromload = 0) {
+              renameLogFile(event);
+              //clearing divs so new data can be put in
+              const sigPlotClr = document.getElementById("sigPlot");
+              sigPlotClr.innerHTML = '';
+              const connPlotClr = document.getElementById("connPlot");
+              connPlotClr.innerHTML = '';
+              if(event) {
+                try {
+                  var text = await readFileAsync(event, fromload);
+                  sessionStorage.setItem("text0", text[0]);
+                  sessionStorage.setItem("text1", text[1]);
+                  window.open(window.location.pathname, "_blank");
+                } catch (err) {
+                  console.log(err);
+                }
+              }
+
+              // Data in the page so that it will display on load
+              if (fromload) {
+                if(sessionStorage.getItem("text0")) {
+                  var text = [sessionStorage.getItem("text0"),sessionStorage.getItem("text1")];
+                  fromload = 0;  
+                }
+                else {
+                    var text = [{"36d1fd65": [["2020-10-31 08:53:17", {"RSSI": [-84.0, "Poor"]}, {"SINR": [1.0, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-8.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 08:53:23", {"RSSI": [-78.0, "Fair"]}, {"SINR": [-3.2, "Poor"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-16.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 08:53:29", {"RSSI": [-78.0, "Fair"]}, {"SINR": [3.6, "Fair"]}, {"RSRP": [-107.0, "Poor"]}, {"RSRQ": [-10.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-10-31 08:53:35", {"RSSI": [-87.0, "Poor"]}, {"SINR": [0.6, "Fair"]}, {"RSRP": [-121.0, "Poor"]}, {"RSRQ": [-10.0, "Excellent"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 4, Service: LTE"}], ["2020-10-31 08:53:47", {"RSSI": [-87.0, "Poor"]}, {"SINR": [-1.4, "Poor"]}, {"RSRP": [-126.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 08:53:53", {"RSSI": [-80.0, "Fair"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:10:45", {"RSSI": [-74.0, "Fair"]}, {"SINR": [2.8, "Fair"]}, {"RSRP": [-103.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:10:51", {"RSSI": [-82.0, "Poor"]}, {"SINR": [4.2, "Fair"]}, {"RSRP": [-103.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:13:16", {"RSSI": [-76.0, "Fair"]}, {"SINR": [0.2, "Fair"]}, {"RSRP": [-103.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:13:40", {"RSSI": [-83.0, "Poor"]}, {"SINR": [1.6, "Fair"]}, {"RSRP": [-103.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:14:43", {"RSSI": [-83.0, "Poor"]}, {"SINR": [5.0, "Fair"]}, {"RSRP": [-103.0, "Poor"]}, {"RSRQ": [-15.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:16:13", {"RSSI": [-74.0, "Fair"]}, {"SINR": [3.8, "Fair"]}, {"RSRP": [-88.0, "Good"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:16:13", {"RSSI": [-74.0, "Fair"]}, {"SINR": [3.8, "Fair"]}, {"RSRP": [-88.0, "Good"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 5, Service: LTE"}], ["2020-10-31 09:16:18", {"RSSI": [-74.0, "Fair"]}, {"SINR": [2.0, "Fair"]}, {"RSRP": [-102.0, "Poor"]}, {"RSRQ": [-11.0, "Good"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 09:16:24", {"RSSI": [-81.0, "Poor"]}, {"SINR": [0.4, "Fair"]}, {"RSRP": [-102.0, "Poor"]}, {"RSRQ": [-16.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 09:19:01", {"RSSI": [-75.0, "Fair"]}, {"SINR": [-4.0, "Poor"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-16.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 09:19:06", {"RSSI": [-75.0, "Fair"]}, {"SINR": [-4.0, "Poor"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-16.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 09:19:06", {"RSSI": [-81.0, "Poor"]}, {"SINR": [-1.4, "Poor"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-16.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 09:19:07", {"RSSI": [-81.0, "Poor"]}, {"SINR": [-1.4, "Poor"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-16.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: LTE"}], ["2020-10-31 09:19:11", {"RSSI": [-81.0, "Poor"]}, {"SINR": [-1.4, "Poor"]}, {"RSRP": [-108.0, "Poor"]}, {"RSRQ": [-16.0, "Fair"]}, {"ECIO": [null, null]}, {"RFBAND": " Band 12, Service: HSPA"}], ["2020-10-31 09:19:12", {"RSSI": [-82.0, "Poor"]}, {"SINR": [null, null]}, {"RSRP": [null, null]}, {"RSRQ": [null, null]}, {"ECIO": [-3.5, "Excellent"]}, {"RFBAND": " WCDMA 850, Service: HSPA"}]]},{"36d1fd65": [["2020-10-31 09:14:43", "disconnecting", "PrevState: connected", "2020-10-31 09:14:43"], ["2020-10-31 09:14:44", "disconnected", "Reason: Unready", "2020-10-31 09:14:44"], ["2020-10-31 09:14:53", "unplugged", "", "2020-10-31 09:14:53"], ["2020-10-31 09:15:46", "plugged", "", "2020-10-31 09:15:46"], ["2020-10-31 09:16:13", "configure", "Reason:  ok", "2020-10-31 09:16:13"], ["2020-10-31 09:16:13", "connecting", "PrevState: disconnected", "2020-10-31 09:16:13"], ["2020-10-31 09:16:18", "connected", "Reason: Failback", "2020-10-31 09:16:18"], ["2020-10-31 09:19:06", "disconnecting", "PrevState: connected", "2020-10-31 09:19:06"], ["2020-10-31 09:19:06", "disconnected", "Reason: Linkdown", "2020-10-31 09:19:06"], ["2020-10-31 09:19:07", "connecting", "PrevState: disconnected", "2020-10-31 09:19:07"], ["2020-10-31 09:19:14", "disconnecting", "PrevState: connecting", "2020-10-31 09:19:14"], ["2020-10-31 09:19:14", "disconnected", "Reason: Linkdown", "2020-10-31 09:19:14"]]}];
+                }
+              }
+              var dates = [];
+              var rssi_vals = [];
+              var sinr_vals = [];
+              var rsrp_vals = [];
+              var rsrq_vals = [];
+              var date_append = 0;
+              var bands = [];
+              var uids = [];
+              var states = [];
+              var reasons = [];
+              const possible_states = {
+                'unplugged': 0,
+                'plugged': 1,
+                'configure': 2,
+                'disconnected': 3,
+                'disconnecting': 4,
+                'standby_connecting': 5,
+                'standby': 6,
+                'connecting': 7,
+                'connected': 8
+              };
+              var index = 0;
+              //choosing which data to use
+              if (fromload) {
+                var sigQualObj = text[0];
+                var connStateObj = text[1];
+              } else {
+                var sigQualObj = JSON.parse(text[0]);
+                var connStateObj = JSON.parse(text[1]);
+              }
+              //Clear header table 
+              if (document.getElementById("header_table").rows.length > 1) {
+                var i;
+                for (i = 1; i < document.getElementById("header_table").rows.length; i++) {
+                    document.getElementById("header_table").deleteRow(-1);
+                  }
+              }         
+              //generating connection state data
+              for (uid in connStateObj) {
+                uids.push(uid);
+                for (entry in connStateObj[uid]) {
+                  reason_flag = 0;
+                  for (value in connStateObj[uid][entry]) {
+                    if (value == 0) {
+                      dates.push(connStateObj[uid][entry][value]);
+                      if (entry > 0) {
+                        if (date_append > 0 && dates[entry] == dates[entry -1].substring(0,dates[entry - 1].length - 3))
+                        {
+                            date_append += .01;
+                            dates[entry] = dates[entry] + date_append.toString().substring(1);
+                            continue;
+                          }
+                          if (dates[entry] == dates[entry - 1]) {
+                            dates[entry] = dates[entry] + '.01';
+                            date_append = .01;
+                            continue;
+                          }
+                        }
+                        date_append = 0;
+                    }
+                    if (possible_states.hasOwnProperty(connStateObj[uid][entry][value])) {
+                      states.push(possible_states[connStateObj[uid][entry][value]]);
+                    }
+                    if (connStateObj[uid][entry][value].includes('Reason')) {
+                        reasons.push(connStateObj[uid][entry][value]);
+                        reason_flag = 1;
+                    }
+                  }
+                  if (reason_flag == 0){
+                        reasons.push('');
+                    }
+                }
+                //dynamically create more divs as needed
+                var div = document.createElement("div");
+                div.setAttribute("id", "connPlot"+uids[index]);
+                document.getElementById("connPlot").appendChild(div);
+                var dates_len = dates.length - 1;
+                //With NCM logs the most recent entry is at the top. 
+                //This detects that and then corrects the connection state plot
+                var date_front = new Date(parseInt(dates[0].substring(0,4)),
+                                          parseInt(dates[0].substring(5,7)) - 1,
+                                          parseInt(dates[0].substring(8,10)),
+                                          parseInt(dates[0].substring(11,13)),
+                                          parseInt(dates[0].substring(14,16)),
+                                          parseInt(dates[0].substring(17,19)));
+                var date_end = new Date(parseInt(dates[dates_len].substring(0,4)),
+                                        parseInt(dates[dates_len].substring(5,7)) - 1,
+                                        parseInt(dates[dates_len].substring(8,10)),
+                                        parseInt(dates[dates_len].substring(11,13)),
+                                        parseInt(dates[dates_len].substring(14,16)),
+                                        parseInt(dates[dates_len].substring(17,19)));
+                if (date_front > date_end) {
+                  var plot_shape = 'vh';
+                }
+                else {
+                  var plot_shape = 'hv';
+                }
+                //Plotly plot data and formatting
+                var conn_trace = {
+                  x: dates,
+                  y: states,
+                  mode: 'lines+markers',
+                  name: 'Connection State',
+                  text: reasons,
+                  line: {shape: plot_shape},
+                  type: 'scatter'
+                };
+                var connData = [conn_trace];
+                var connLayout = {
+                  title: 'Connection State: ' + uids[index],
+                  autosize: false,
+                  width: 800,
+                  height: 500,
+                  margin: {
+                    l: 50,
+                    r: 50,
+                    b: 100,
+                    t: 100,
+                    pad: 4
+                  },
+                  xaxis: {
+                    title: 'Timestamp'
+                  },
+                  yaxis: {
+                    title: 'State',
+                    range: [0,8.5],
+                    automargin: true,
+                    tickvals: Object.values(possible_states),
+                    ticktext: Object.keys(possible_states)
+                  }
+                };
+                Plotly.newPlot('connPlot'+uids[index], connData, connLayout,
+                              {modeBarButtonsToRemove: ['select2d',
+                                                         'lasso2d',
+                                                         'zoomIn2d',
+                                                         'zoomOut2d',
+                                                         'resetScale2d',
+                                                         'toggleSpikelines',
+                                                         'hoverClosestCartesian',
+                                                         'hoverCompareCartesian'], displaylogo: false});
+                var state_counts = {};
+                for (var i = 0; i < states.length; i++) {
+                  var num = states[i];
+                  state_counts[num] = state_counts[num] ? state_counts[num] + 1 : 1;
+                }
+                var table = document.getElementById("header_table");
+                var row = table.insertRow(index+1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                cell1.innerHTML = uids[index];
+                cell2.innerHTML = dates[0] + " - " + dates[dates.length - 1];
+                if(state_counts[0] === undefined) {
+                    cell3.innerHTML = 0;
+                }
+                else {
+                    cell3.innerHTML = state_counts[0];
+                }
+                if(state_counts[3] === undefined) {
+                    cell4.innerHTML = 0;
+                }
+                else {
+                    cell4.innerHTML = state_counts[3];
+                }
+                var connected_time = 0;
+                let absolute_start = new Date(dates[0]);
+                let absolute_end = new Date(dates[dates.length - 1]);
+                let total_time = absolute_end - absolute_start;
+                for (var i = 0; i < states.length; i++) {
+                    if (states[i] == 8) {
+                        if (dates[i] != dates[dates.length - 1]) {
+                            let start_date = new Date(dates[i]);
+                            let end_date = new Date(dates[i+1]);
+                            connected_time += (end_date - start_date);
+                        }
+                    }
+                }
+                let uptime = connected_time/total_time;
+                cell5.innerHTML = (uptime * 100).toFixed(2) + "%";
+                dates.length = 0;
+                states.length = 0;
+                reasons.length = 0;
+                index += 1;
+              }
+              //clearing the dates array to be used again
+              dates.length = 0;
+              uids.length = 0;
+              index = 0;
+              //Generating signal quality data
+              for (uid in sigQualObj) {
+                uids.push(uid);
+                for (entry in sigQualObj[uid]) {
+                  for (data_obj in sigQualObj[uid][entry]) {
+                    if (typeof sigQualObj[uid][entry][data_obj] === 'object' &&
+                               sigQualObj[uid][entry][data_obj] !== null) 
+                    {
+                      for (sig in sigQualObj[uid][entry][data_obj]) {
+                        if (sig == 'RSSI') {
+                          rssi_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'SINR') {
+                          sinr_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'RSRP') {
+                          rsrp_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'RSRQ') {
+                          rsrq_vals.push(sigQualObj[uid][entry][data_obj][sig][0]);
+                        }
+                        else if (sig == 'RFBAND') {
+                          bands.push(sigQualObj[uid][entry][data_obj][sig]);
+                        }
+                      }
+                    }
+                    else if (sigQualObj[uid][entry][data_obj] !== null) {
+                      dates.push(sigQualObj[uid][entry][data_obj]);
+                    }
+                  }
+                }
+
+                var div = document.createElement("div");
+                div.setAttribute("id", "sigPlot"+uids[index]);
+                document.getElementById("sigPlot").appendChild(div);
+                //Plotly Data: 1-4 are real data, 5-8 necessary for right side y-axis describing 'poor' -> 'excellent'
+                var trace1 = {
+                  x: dates,
+                  y: rssi_vals,
+                  text: bands,
+                  mode: 'scatter',
+                  name: 'RSSI'
+                };
+                var trace2 = {
+                  x: dates,
+                  y: sinr_vals,
+                  text: bands,
+                  xaxis: 'x',
+                  yaxis: 'y4',
+                  mode: 'scatter',
+                  name: 'SINR'
+                };
+                var trace3 = {
+                  x: dates,
+                  y: rsrp_vals,
+                  text: bands,
+                  xaxis: 'x',
+                  yaxis: 'y2',
+                  mode: 'scatter',
+                  name: 'RSRP'
+                };
+                var trace4 = {
+                  x: dates,
+                  y: rsrq_vals,
+                  text: bands,
+                  xaxis: 'x',
+                  yaxis: 'y3',
+                  mode: 'scatter',
+                  name: 'RSRQ'
+                };
+                var trace5 = {
+                  x: dates[0],
+                  y: rssi_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y5',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var trace6 = {
+                  x: dates[0],
+                  y: sinr_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y8',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var trace7 = {
+                  x: dates[0],
+                  y: rsrp_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y6',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var trace8 = {
+                  x: dates[0],
+                  y: rsrq_vals[0],
+                  xaxis: 'x',
+                  yaxis: 'y7',
+                  showlegend: false,
+                  mode: 'scatter'
+                };
+                var data = [trace1, trace3, trace4, trace2, trace5, trace7, trace8, trace6];
+                var layout = {
+                  title: 'Signal Quality: ' + uids[index],
+                  autosize: false,
+                  width: 800,
+                  height: 800,
+                  margin: {
+                    l: 50,
+                    r: 50,
+                    b: 100,
+                    t: 100,
+                    pad: 4
+                  },
+                  legend: {
+                    x: 1.1,
+                    y: .5
+                  },
+                  xaxis: {
+                    title: 'Timestamp'
+                  },
+                  yaxis: {
+                    title: 'RSSI(dBm)',
+                    range: [-130, -25]
+                  },
+                  yaxis2: {
+                    title: 'RSRP(dB)',
+                    zeroline: false,
+                    range: [-140, -50]
+                  },
+                  yaxis3: {
+                    title: 'RSRQ(dB)',
+                    range: [-30, -5]
+                  },
+                  yaxis4: {
+                    title: 'SINR(dB)',
+                    zeroline: false,
+                    range: [-20, 35]
+                  },
+                  //Make sure tickvals the same as in the python script describing the signal strength cutoffs
+                  yaxis5: {
+                    title: 'Quality',
+                    range: [-130, -25],
+                    tickvals: [-60, -70, -80, -125],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y',
+                    side: 'right'
+                  },
+                  yaxis6: {
+                    title: 'Quality',
+                    zeroline: false,
+                    tickvals: [-80, -90, -100, -140],
+                    range: [-140, -50],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y2',
+                    side: 'right'
+                  },
+                  yaxis7: {
+                    title: 'Quality',
+                    range: [-30, -5],
+                    tickvals: [-10, -15, -20, -30],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y3',
+                    side: 'right'
+                  },
+                  yaxis8: {
+                    title: 'Quality',
+                    zeroline: false,
+                    tickvals: [20, 13, 0, -20],
+                    range: [-20, 35],
+                    ticktext: ['Excellent', 'Good','Fair', 'Poor'],
+                    overlaying: 'y4',
+                    side: 'right'
+                  },
+                  grid: {
+                    rows: 4,
+                    columns: 1,
+                    subplots: [['xy'], ['xy2'], ['xy3'], ['xy4']],
+                    roworder: 'top to bottom'
+                  }
+                }; // end of Layout object
+                Plotly.newPlot('sigPlot' + uids[index], data, layout,
+                              {modeBarButtonsToRemove: ['select2d',
+                                                         'lasso2d',
+                                                         'zoomIn2d',
+                                                         'zoomOut2d',
+                                                         'resetScale2d',
+                                                         'toggleSpikelines',
+                                                         'hoverClosestCartesian',
+                                                         'hoverCompareCartesian'], displaylogo: false});
+                rssi_vals.length = 0;
+                sinr_vals.length = 0;
+                rsrp_vals.length = 0;
+                rsrq_vals.length = 0;
+                dates.length = 0;
+                bands.length = 0;
+                index += 1;
+              } // end of sig quality loop. It's long
+            };// end of processFile()
+
+            </script>
+
+          </body>
+        </html>
+        

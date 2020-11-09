@@ -1,0 +1,226 @@
+Firmware Type: RELEASE
+Firmware Version: 7.2.10.100146d
+Firmware Build Date: Sat May  2 00:42:14 UTC 2020
+Product Name: IBR200-10M-B
+
+Sat Oct 31 09:34:08 2020|INFO|kernel|[ 1779.896566] usbcore: deregistering interface driver cpusb8
+Sat Oct 31 09:34:08 2020|INFO|kernel|[ 1779.896826] cpdev done unplugging
+Sat Oct 31 09:34:08 2020|DEBUG|link|Processing link/addr event: ('link', 'del', <cp.link.Link object pmip8:22 at 0x714010a8>)
+Sat Oct 31 09:34:08 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: UNPLUG
+Sat Oct 31 09:34:08 2020|INFO|WAN:36d1fd65|Unplugged
+Sat Oct 31 09:34:08 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStabilityCheck
+Sat Oct 31 09:34:08 2020|INFO|WAN:36d1fd65|WanDevMixIn:stopStartDoneContCheck
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65|Cancel
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:onCancel
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65|Canceled
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x713d3030
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x713d3030
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: reset id: 0x713d3030
+Sat Oct 31 09:34:08 2020|WARN|WAN:36d1fd65.ConnectorMgr|already reset
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: done id: 0x713d3030
+Sat Oct 31 09:34:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x713d3030
+Sat Oct 31 09:34:08 2020|DEBUG|wanmgr|removeEventListener internalSvc:any <bound method deferred.<locals>.wrapper.<locals>.invoke of <services.ob_upgrade.Modem_OB_Upgrade object at 0x71453070>>
+Sat Oct 31 09:34:08 2020|DEBUG|wanmgr|removeEventListener internalSvc:any <bound method OB_Upgrade.checkNetStateWhileUpdating of <services.ob_upgrade.Modem_OB_Upgrade object at 0x71453070>>
+Sat Oct 31 09:34:08 2020|DEBUG|wanmgr|fireEvent device:unplug
+Sat Oct 31 09:34:08 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:34:08 2020|DEBUG|stats|wanStateChange:: state: unplug
+Sat Oct 31 09:34:08 2020|DEBUG|stats|wanStateClearPending: name: mdm-36d1fd65
+Sat Oct 31 09:34:08 2020|DEBUG|stats|wanStateAddEvent: event: ['mdm-36d1fd65', 0, 1604158448, 'Unplugged']
+Sat Oct 31 09:34:08 2020|DEBUG|wanmgr|removeEventListener any <bound method CPButtonLEDEvent.check_modem_state of <services.button_led_mgr.CPButtonLEDEvent object at 0x75fd1c70>>
+Sat Oct 31 09:34:08 2020|DEBUG|smsserver|Unplugged wandev
+Sat Oct 31 09:34:09 2020|DEBUG|smsserver|No SMS enabled devices, going idle
+Sat Oct 31 09:34:09 2020|DEBUG|wanmgr|removeEventListener any <bound method CPButtonLEDEvent.live_signal_strength_handler of <services.button_led_mgr.CPButtonLEDEvent object at 0x75fd1c70>>
+Sat Oct 31 09:34:09 2020|INFO|root|Logs Rotated 2 time(s)
+Sat Oct 31 09:34:09 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:34:09 2020|INFO|wanmgr|Removing orphan: Network device: (type: mdm, link: <Link pmip8, ifindex: 22>, uid: 36d1fd65, net_mode: None)
+Sat Oct 31 09:34:09 2020|INFO|wanmgr|Removed device: Network device: (type: mdm, link: <Link pmip8, ifindex: 22>, uid: 36d1fd65, net_mode: None)
+Sat Oct 31 09:34:09 2020|DEBUG|wanmgr|fireEvent device:remove
+Sat Oct 31 09:34:09 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:34:09 2020|DEBUG|WAN:36d1fd65|Modem:deinit
+Sat Oct 31 09:34:09 2020|DEBUG|wanmgr|removeEventListener device:configure-error <bound method Modem.handleCloneConfigured of <services.wm2.modem.localModem object at 0x7148ef90>>
+Sat Oct 31 09:34:09 2020|DEBUG|wanmgr|removeEventListener device:configured <bound method Modem.handleCloneConfigured of <services.wm2.modem.localModem object at 0x7148ef90>>
+Sat Oct 31 09:34:09 2020|DEBUG|smsserver|No SMS enabled devices, going idle
+Sat Oct 31 09:34:09 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:34:09 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:deinit
+Sat Oct 31 09:34:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x713d3030
+Sat Oct 31 09:34:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x713d3030
+Sat Oct 31 09:34:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: destroy id: 0x713d3030
+Sat Oct 31 09:34:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: destroy_deinit_deref id: 0x713d3030
+Sat Oct 31 09:34:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: deinited id: 0x713d3030
+Sat Oct 31 09:34:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|deinited - so should go away
+Sat Oct 31 09:34:10 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:34:11 2020|WARN|root|Alert Full System Log too frequent, suppressing.
+Sat Oct 31 09:34:11 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:34:15 2020|INFO|cp_stack_mgr|SIM door is closed
+Sat Oct 31 09:34:15 2020|INFO|logsys|Last message repeated 3 times.
+Sat Oct 31 09:34:15 2020|DEBUG|gpioEvtMonitor|sim_door_handler
+Sat Oct 31 09:34:15 2020|DEBUG|gpioEvtMonitor|SIM door Closed
+Sat Oct 31 09:34:15 2020|DEBUG|gpio|SIM door closed, restore LEDs
+Sat Oct 31 09:34:15 2020|DEBUG|wanmgr|addEventListener any <bound method CPButtonLEDEvent.check_modem_state of <services.button_led_mgr.CPButtonLEDEvent object at 0x75fd1c70>>
+Sat Oct 31 09:34:15 2020|DEBUG|wanmgr|addEventListener any <bound method CPButtonLEDEvent.live_signal_strength_handler of <services.button_led_mgr.CPButtonLEDEvent object at 0x75fd1c70>>
+Sat Oct 31 09:34:15 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:34:32 2020|INFO|kernel|[ 1798.385710] usb 1-1.1: new high-speed USB device number 11 using ehci-platform
+Sat Oct 31 09:34:34 2020|INFO|kernel|[ 1800.038130] usbcore: registered new interface driver cpusb9
+Sat Oct 31 09:34:49 2020|INFO|cp_stack_mgr|int1: QMI not ready yet, try again Error Code: 7
+Sat Oct 31 09:35:00 2020|INFO|cp_stack_mgr|int1: QMI not ready yet, try again Error Code: 7
+Sat Oct 31 09:35:02 2020|INFO|logsys|Last message repeated 47 times.
+Sat Oct 31 09:35:02 2020|DEBUG|link|Processing link/addr event: ('link', 'new', <cp.link.Link object pmip9:23 at 0x71b11b70>)
+Sat Oct 31 09:35:02 2020|DEBUG|cpevt|handle_ifc_event(), action: skip, event: PLUG
+Sat Oct 31 09:35:02 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: PLUG
+Sat Oct 31 09:35:02 2020|INFO|cpevt|ifc supported tech: lte/3g
+Sat Oct 31 09:35:03 2020|DEBUG|cpevt|clone_instance: 0
+Sat Oct 31 09:35:03 2020|DEBUG|link|Waiting for link: pmip9
+Sat Oct 31 09:35:03 2020|DEBUG|link|Found existing link: pmip9
+Sat Oct 31 09:35:03 2020|DEBUG|link|Processing link/addr event: ('link', 'change', <cp.link.Link object pmip9:23 at 0x71406da0>)
+Sat Oct 31 09:35:03 2020|DEBUG|link|Processing link/addr event: ('link', 'change', <cp.link.Link object pmip9:23 at 0x71406120>)
+Sat Oct 31 09:35:03 2020|INFO|WAN:36d1fd65|is_upgrading: False
+Sat Oct 31 09:35:03 2020|DEBUG|WAN:36d1fd65|Set default carriers: Module does not support multiple firmware images
+Sat Oct 31 09:35:03 2020|DEBUG|wanmgr|fireEvent device:add
+Sat Oct 31 09:35:03 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:35:03 2020|INFO|WAN:36d1fd65|Plug event: ok
+Sat Oct 31 09:35:03 2020|DEBUG|WAN:36d1fd65|Plug event: {'event': 'PLUG', 'ifc': 'pmip9', 'status': 'ok', 'proto': 'ip_dhcp', 'mtu': 1428, 'device': 'modem', 'port': 'int1', 'live_gps': True, 'gps': True, 'plug_id': 8, 'mdm_upgrade': True, 'mdm_remote_upgrade': True, 'mdm_carrier_switch': False, 'mdm_multi_firmware': False, 'dict': {'MDM_CONTROL_TYPE': 'NORMAL', 'SUPPORTED_TECH': 'lte/3g', 'CON_UID': '9', 'MFG': 'CradlePoint Inc.', 'PRD': 'Internal 10M-B', 'GSN': '351712090246708', 'MFG_MDL': 'WP7603-1-CP', 'CGSN': '351712090246708', 'VER_PREF_PKG': '02.28.03.01_ATT,002.071_000', 'MDL': 'Internal 10M-B', 'VER': 'SWI9X07Y_02.28.03.01 000000 jenkins 2019/04/17 03:08:11', 'VER_BOOT': 'SWI9X07Y_02.28.03.01 000000 jenkins 2019/04/17 03:08:11', 'PRI_ID': '9907507', 'PRI_VER': '001.007', 'MDN': '14384218374', 'DISP_IMEI': '351712090246708', 'VER_PKG': '02.28.03.01_ATT,002.071_000', 'VER_PKG_ACTIVE': '02.28.03.01_ATT,002.071_000', 'MDM_DR [1/2]
+Sat Oct 31 09:35:03 2020|DEBUG|WAN:36d1fd65|IVER_CAPABILITIES': '205689905', 'CFGAPNMASK': '65534', 'SELAPN': '1', 'SCRAPN': '16', 'FW_CARRIER_LOAD': 'ATT', 'DEFAPN': '1', 'DEFAPNTYPE': 'IPV4V6', 'CFUN': '1', 'MODEM_SUP_MODES': '1', 'MODEM_CUR_MODE': '0', 'CUR_GPS_SRC_ANT': 'AUX', 'VER_PRETTY': '2.28.3.1', 'CHIPSET': '9X07Y', 'MDM_MODE_CAPABILITIES': '21', 'CLONE_INSTANCE': '0', 'PDN_MAX': '2', 'MODEMTIME_IGNORETZ': 'True', 'NETIF_NAME_STR': 'pmip9', 'CP_END_DICT': None}, 'uid_alias': 'Internal 10M-B|CradlePoint Inc.|351712090246708||', 'uid': '36d1fd65'} [2/2]
+Sat Oct 31 09:35:03 2020|INFO|WAN:36d1fd65|plug_event, is_upgrading: False
+Sat Oct 31 09:35:03 2020|DEBUG|WAN:36d1fd65|Modem capabilities: ['auto', 'lte', '3gonly']
+Sat Oct 31 09:35:04 2020|INFO|WAN:36d1fd65|wandev plugged: mdm, uid: 36d1fd65, uptime: 2786
+Sat Oct 31 09:35:04 2020|DEBUG|wanmgr|fireEvent device:plug
+Sat Oct 31 09:35:04 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|Modem:preconfigure
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|Modem:preconfigure_cont
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:preconfigure
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|Preconfiguring
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|StandardModem : _handle_on_preconfigure
+Sat Oct 31 09:35:04 2020|INFO|WAN:36d1fd65|execute GET_ICCID
+Sat Oct 31 09:35:04 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:35:04 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: EXECUTE_DONE
+Sat Oct 31 09:35:04 2020|INFO|WAN:36d1fd65|Execute Event ok: 10
+Sat Oct 31 09:35:04 2020|DEBUG|firewall|Apply zone_id 3 to wan dev Network device: (type: mdm, link: <Link pmip9, ifindex: 23>, uid: 36d1fd65, net_mode: None)
+Sat Oct 31 09:35:04 2020|DEBUG|firewall|Apply zone_id 3 to dev Network device: (type: mdm, link: <Link pmip9, ifindex: 23>, uid: 36d1fd65, net_mode: None)
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|iccidResponseFinishPreconfigure result:ok, kwargs:{'event': 'EXECUTE_DONE', 'ifc': 'pmip9', 'op': '10', 'exec_data': {}}
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|Modem:onPreconfigure - 36d1fd65
+Sat Oct 31 09:35:04 2020|DEBUG|WAN:36d1fd65|PIN(sim_pin) <-
+Sat Oct 31 09:35:04 2020|WARN|workqueue|LoopedTask Task id: 2769, callback: services.wpcclient.FunctionEventTrigger.taskHandler still running on reschedule, checking again in 1s
+Sat Oct 31 09:35:05 2020|WARN|netcloud|Dropping Alert
+Sat Oct 31 09:35:05 2020|DEBUG|stats|wanStateChange:: state: plug
+Sat Oct 31 09:35:05 2020|DEBUG|stats|wanStateClearPending: name: mdm-36d1fd65
+Sat Oct 31 09:35:05 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:05 2020|DEBUG|stats|wanStateAddEvent: event: ['mdm-36d1fd65', 0, 1604158505, 'Plugged']
+Sat Oct 31 09:35:06 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:08 2020|INFO|logsys|Last message repeated 2 times.
+Sat Oct 31 09:35:08 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:35:08 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: PRECONFIGURED
+Sat Oct 31 09:35:08 2020|INFO|WAN:36d1fd65|Preconfigured Event: ok
+Sat Oct 31 09:35:08 2020|INFO|WAN:36d1fd65|wandev preconfigured type: mdm, uid: 36d1fd65, uptime: 2790
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:preconfigureDone
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|Modem:configure
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:configure
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|Configuring
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|StandardModem:onConfigure
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x7144c270
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x7144c270
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: destroy id: 0x7144c270
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: destroy_deinit_deref id: 0x7144c270
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|Modem:onConfigure
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|BAND(band) <- 0
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: done id: 0x7144c270
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x7144c270
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|DIAL(dial_script) <-
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|PIN(sim_pin) <-
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|WIMAX_REALM(wimax_realm) <- sprintpcs.com
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|MDM_AG_RST(aggressive_reset) <- True
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|CFG_FUNCTIONAL_MODE(functional_mode) <- ipt
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|MODEM_AUX_ENABLE(aux_antenna_enable) <- True
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|MODEM_GPS_ENABLE(mdm_gps_enable) <- True
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|EHRPD_ENABLED(ehrpd_enable) <- True
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|BAND_30(band_30) <- True
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|BAND_48(band_48) <- True
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|CARRIER_AGGREGATION_ENABLE(carrier_aggregation) <- True
+Sat Oct 31 09:35:08 2020|DEBUG|WAN:36d1fd65|CONFIG_SCRIPT(config_script) <-
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65|Modem connect mode: auto
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65|Modem gps ant settings initial: cur_gps: AUX, cfg_gps: , mdm_cap: 205689905
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65|Modem gps use cur_gps_src
+Sat Oct 31 09:35:09 2020|INFO|cp_stack_mgr|int1: wan_manager_parse_cb() - GPS_INTERVAL changed to 10
+Sat Oct 31 09:35:09 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:35:09 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:09 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:5.0(dB), RSRP:-104(dB), RSRQ:-11(dB), RFBAND: WCDMA 850, Service: Unknown
+Sat Oct 31 09:35:09 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: CONFIGURED
+Sat Oct 31 09:35:09 2020|INFO|WAN:36d1fd65|Configure Event: ok
+Sat Oct 31 09:35:09 2020|INFO|WAN:36d1fd65|is_upgrading: False
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65|Set default carriers: Module does not support multiple firmware images
+Sat Oct 31 09:35:09 2020|INFO|WAN:36d1fd65|configured_event: Device activation state: True
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65|Set default carriers: Module does not support multiple firmware images
+Sat Oct 31 09:35:09 2020|INFO|WAN:36d1fd65|wandev configured type: mdm, uid: 36d1fd65, uptime: 2792
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:configureDone
+Sat Oct 31 09:35:09 2020|INFO|WAN:36d1fd65|StandardModem::checkNIASession: NIA mode : disconnected session : None
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x7144c270
+Sat Oct 31 09:35:09 2020|INFO|WAN:36d1fd65|StandardModem::checkNIASession: connection state : disconnected
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x7144c270
+Sat Oct 31 09:35:09 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: create id: 0x7144c270
+Sat Oct 31 09:35:10 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|Adding device auto apn info: {'state': 'Initial', 'index': 0, 'plmn': '302690', 'mode': 'Normal', 'iccid': '89302690201012209790'}
+Sat Oct 31 09:35:10 2020|DEBUG|WAN:36d1fd65|connectorStatus - state:initialized, exception:None, id:0x76b752f0
+Sat Oct 31 09:35:10 2020|DEBUG|wanmgr|fireEvent device:configured
+Sat Oct 31 09:35:10 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:35:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: done id: 0x7144c270
+Sat Oct 31 09:35:10 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x7144c270
+Sat Oct 31 09:35:10 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: SMS_ACTION_DONE
+Sat Oct 31 09:35:10 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:10 2020|DEBUG|gpio|check_alerts pin=25 old_value=1 new_value=0
+Sat Oct 31 09:35:10 2020|DEBUG|gpio|check_alerts pin=26 old_value=1 new_value=0
+Sat Oct 31 09:35:10 2020|DEBUG|gpio|check_alerts pin=29 old_value=1 new_value=0
+Sat Oct 31 09:35:10 2020|DEBUG|gpio|check_alerts pin=30 old_value=1 new_value=0
+Sat Oct 31 09:35:10 2020|DEBUG|gpio|check_alerts pin=31 old_value=1 new_value=0
+Sat Oct 31 09:35:10 2020|DEBUG|gpio|check_alerts pin=32 old_value=1 new_value=0
+Sat Oct 31 09:35:10 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:35:11 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65|Modem:gps: {'fix': {'latitude': {'degree': '43.0', 'minute': '52.0', 'second': '45.069580'}, 'longitude': {'degree': '-79.0', 'minute': '18.0', 'second': '14.760017'}, 'time': 153511, 'satellites': 15}, 'nmea': '$GPGGA,153511.00,4352.751217,N,07918.246014,W,1,08,0.8,198.7,M,-41.0,M,,*56\r\n$PQXFI,153511.0,4352.751217,N,07918.246014,W,198.7,5.99,7.98,0.44*7E\r\n$GNGNS,153511.00,4352.751217,N,07918.246014,W,AAN,15,0.8,198.7,-41.0,,,V*5A\r\n$GPVTG,,T,7.9,M,0.4,N,0.8,K,A*0F\r\n$GPRMC,153511.00,A,4352.751217,N,07918.246014,W,0.4,,311020,7.9,W,A,V*6D\r\n$GPGSA,A,3,05,13,15,18,20,23,29,30,,,,,1.3,0.8,1.1,1*24\r\n$GNGSA,A,3,05,13,15,18,20,23,29,30,,,,,1.3,0.8,1.1,1*3A\r\n$GNGSA,A,3,66,82,76,83,81,67,68,,,,,,1.3,0.8,1.1,2*3E\r\n$GNGSA,A,3,,,,,,,,,,,,,1.3,0.8,1.1,3*39\r\n'}
+Sat Oct 31 09:35:11 2020|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:35:11 2020|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:35:11 2020|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-36d1fd65)
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65|WanDevMixIn:Starting
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65|disconnected -> connecting
+Sat Oct 31 09:35:11 2020|DEBUG|wanmgr|fireEvent device:connecting
+Sat Oct 31 09:35:11 2020|DEBUG|wanmgr|fireEvent any
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65|wandev connecting type: mdm, uid: 36d1fd65, uptime: 2793
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65|signal Internal 10M-B on port int1: SS: 94%, RSSI:-78(dBm), SINR:5.0(dB), RSRP:-104(dB), RSRQ:-11(dB), RFBAND: WCDMA 850, Service: Unknown
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65|WanDevMixIn:onStart
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: idle id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: connect id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|disconnected -> connecting
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.MultiSIMCritEnter|connecting -> connected
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Sat Oct 31 09:35:11 2020|DEBUG|gpio|check_alerts pin=26 old_value=0 new_value=1
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.MultiSIM|disconnected -> connecting
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.MultiSIM|connecting -> connected
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIM
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|disconnected -> connecting
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.MultiSIMCritExit|connecting -> connected
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.AutoSelect|disconnected -> connecting
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.AutoSelect|connecting -> connected
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoSelect
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|disconnected -> connecting
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.AutoAPNFront|connecting -> connected
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65.ConnectorMgr|connectSuccess....AutoAPNFront
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.CPPM|disconnected -> connecting
+Sat Oct 31 09:35:11 2020|INFO|WAN:36d1fd65.CPPM|Connecting device
+Sat Oct 31 09:35:11 2020|DEBUG|WAN:36d1fd65.ConnectorMgr|_executeOp state: wait_connect id: 0x7144c270
+Sat Oct 31 09:35:11 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: DIAG
+Sat Oct 31 09:35:12 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:35:12 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:13 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:35:13 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:14 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:35:14 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:15 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:35:15 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:16 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:35:16 2020|DEBUG|netcloud|Remote code exec triggered
+Sat Oct 31 09:35:17 2020|DEBUG|cpevt|handle_ifc_event(), action: process, event: GPS
+Sat Oct 31 09:35:17 2020|DEBUG|netcloud|Remote code exec triggered

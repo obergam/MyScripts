@@ -1,0 +1,1479 @@
+Firmware Type: FIELD[]
+Firmware Version: 7.1.60.05dbb99
+Firmware Build Date: Tue Dec  3 01:28:01 UTC 2019
+Product Name: AER2200-600M
+
+Wed Dec 31 18:00:07 1969|INFO|syslogd|started: BusyBox v1.30.1
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|klogd started: BusyBox v1.30.1 (2019-12-03 01:23:30 UTC)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Booting Linux on physical CPU 0x0
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] Linux version 4.4.100-coconut (@88fe4fb8bca6) (gcc version 6.3.1 20170109 (crosstool-NG crosstool-ng-1.23.0) ) #1 SMP PREEMPT Tue Dec 3 01:22:12 UTC 2019
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Machine model: AER22x0
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Memory policy: Data cache writealloc
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] PERCPU: Embedded 11 pages/cpu @dfbb5000 s14924 r8192 d21940 u45056
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Built 1 zonelists in Zone order, mobility grouping on. Total pages: 128768
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] Kernel command line: root=/dev/mmcblk0p2 rootfstype=squashfs rootwait clk_ignore_unused usbcore.autosuspend=-1 console=ttyMSM0
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Memory: 507544K/519168K available (4495K kernel code, 307K rwdata, 1476K rodata, 188K init, 340K bss, 11624K reserved, 0K cma-reserved, 0K highmem)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] Virtual kernel memory layout:
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] vector : 0xffff0000 - 0xffff1000 ( 4 kB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] fixmap : 0xffc00000 - 0xfff00000 (3072 kB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] vmalloc : 0xe0800000 - 0xff800000 ( 496 MB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] lowmem : 0xc0000000 - 0xe0000000 ( 512 MB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] pkmap : 0xbfe00000 - 0xc0000000 ( 2 MB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] modules : 0xbf000000 - 0xbfe00000 ( 14 MB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] .text : 0xc0208000 - 0xc07dce5c (5972 kB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] .init : 0xc07dd000 - 0xc080c000 ( 188 kB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] .data : 0xc080c000 - 0xc0858d68 ( 308 kB)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.000000] .bss : 0xc085b000 - 0xc08b0164 ( 341 kB)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Preemptible hierarchical RCU implementation.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] NR_IRQS:16 nr_irqs:16 16
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] Architected cp15 timer(s) running at 48.00MHz (virt).
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xb11fd3bfb, max_idle_ns: 440795203732 ns
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000006] sched_clock: 56 bits at 48MHz, resolution 20ns, wraps every 4398046511096ns
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000021] Switching to timer-based delay loop, resolution 20ns
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000278] Calibrating delay loop (skipped), value calculated using timer frequency.. 96.00 BogoMIPS (lpj=480000)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000295] pid_max: default: 32768 minimum: 301
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000416] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.000430] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.001035] CPU: Testing write buffer coherency: ok
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.001362] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.001456] Setting up static identity map for 0x80208240 - 0x80208298
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.050142] MSM Memory Dump base table set up
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.050184] MSM Memory Dump apps data table set up
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.090932] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.120966] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.151031] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.151122] Brought up 4 CPUs
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.151153] SMP: Total of 4 processors activated (384.00 BogoMIPS).
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.151163] CPU: All CPU(s) started in SVC mode.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.160588] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.161057] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.161093] futex hash table entries: 1024 (order: 4, 65536 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.161329] pinctrl core: initialized pinctrl subsystem
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.162914] NET: Registered protocol family 16
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.164524] DMA: preallocated 2048 KiB pool for atomic coherent allocations
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.190313] cpuidle: using governor ladder
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.220341] cpuidle: using governor menu
+Wed Dec 31 18:00:07 1969|ERR|kernel|[ 0.237503] IPC logging disabled
+Wed Dec 31 18:00:07 1969|ERR|kernel|[ 0.237516] IPC logging disabled
+Wed Dec 31 18:00:07 1969|ERR|kernel|[ 0.237525] IPC logging disabled
+Wed Dec 31 18:00:07 1969|ERR|kernel|[ 0.237531] IPC logging disabled
+Wed Dec 31 18:00:07 1969|ERR|kernel|[ 0.237537] IPC logging disabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.237788] sps:sps is ready.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.272995] usbcore: registered new interface driver usbfs
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.273097] usbcore: registered new interface driver hub
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.273232] usbcore: registered new device driver usb
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.276176] clocksource: Switched to clocksource arch_sys_counter
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.277911] NET: Registered protocol family 2
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.278884] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.278952] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.279041] TCP: Hash tables configured (established 4096 bind 4096)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.279107] UDP hash table entries: 256 (order: 1, 8192 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.279139] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.279394] NET: Registered protocol family 1
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.289023] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.293922] Key type asymmetric registered
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 0.293948] Asymmetric key parser 'x509' registered
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.293996] io scheduler noop registered (default)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.296724] cp_gpio soc:cp_gpio@0: garnet_gpio_probe
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.296747] cp_gpio soc:cp_gpio@0: of_node=dfbf58b4
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.296762] cp_gpio soc:cp_gpio@0: found a match name= type= compatible=cp,garnet-gpio
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.296810] cp_gpio soc:cp_gpio@0: child=gpio-pcie-conn-ovc has overcurrent-power node=0
+Wed Dec 31 18:00:07 1969|ERR|kernel|[ 0.296890] cp_gpio soc:cp_gpio@0: garnet_gpio_probe failed to get gpio-power idx=0 err=fffffdfb
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 0.297474] 40000000.pci supply vdda not found, using dummy regulator
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 0.297571] 40000000.pci supply vdda_phy not found, using dummy regulator
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 0.297625] 40000000.pci supply vdda_refclk not found, using dummy regulator
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.297933] PCI host bridge /soc/pci@40000000 ranges:
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.297965] IO 0x40200000..0x402fffff -> 0x40200000
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.297985] MEM 0x48000000..0x57ffffff -> 0x48000000
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.456190] qcom-pcie 40000000.pci: link up
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.456455] qcom-pcie 40000000.pci: PCI host bridge to bus 0000:00
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.456479] pci_bus 0000:00: root bus resource [bus 00-ff]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.456497] pci_bus 0000:00: root bus resource [io 0x0000-0xfffff] (bus address [0x40200000-0x402fffff])
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.456512] pci_bus 0000:00: root bus resource [mem 0x48000000-0x57ffffff]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.456977] PCI: bus0: Fast back to back transfers disabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458123] PCI: bus1: Fast back to back transfers disabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458268] pci 0000:00:00.0: BAR 8: assigned [mem 0x48000000-0x481fffff]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458287] pci 0000:00:00.0: BAR 0: assigned [mem 0x48200000-0x48200fff]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458313] pci 0000:01:00.0: BAR 0: assigned [mem 0x48000000-0x481fffff 64bit]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458373] pci 0000:00:00.0: PCI bridge to [bus 01]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458390] pci 0000:00:00.0: bridge window [mem 0x48000000-0x481fffff]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458704] pcieport 0000:00:00.0: Signaling PME through PCIe PME interrupt
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.458719] pci 0000:01:00.0: Signaling PME through PCIe PME interrupt
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.462401] tcsr 194b000.tcsr: setting usb hs phy mode select = e700e7
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.462475] tcsr 1953000.ess_tcsr: setting ess interface select = 0
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.462550] tcsr 1949000.tcsr: setting wifi_glb_cfg = 41000000
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.462608] tcsr 1957000.tcsr: setting wifi_noc_memtype_m0_m2 = 2222222
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.463255] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.464269] msm_serial: driver initialized
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.464585] msm_serial_hsl_probe: detected port #0 (ttyMSM0)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.464621] msm_serial_hsl_probe: Bus scaling is disabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.464754] 78af000.serial: ttyMSM0 at MMIO 0x78af000 (irq = 26, base_baud = 115200) is a MSM
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 0.464832] msm_hsl_console_setup: console setup on port #0
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.129230] console [ttyMSM0] enabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.133334] msm_serial_hsl_probe: detected port #1 (ttyMSM1)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.138527] msm_serial_hsl_probe: Bus scaling is disabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.143999] 78b0000.serial: ttyMSM1 at MMIO 0x78b0000 (irq = 27, base_baud = 115200) is a MSM
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.152892] msm_serial_hsl_init: driver initialized
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.158364] spi_qup 78b5000.spi: IN:block:16, fifo:64, OUT:block:16, fifo:64
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 1.166352] m25p80 spi0.0: found mx25l6405d, expected n25q128a11
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.171336] m25p80 spi0.0: mx25l6405d (8192 Kbytes)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.176284] 12 ofpart partitions found on MTD device spi0.0
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.181745] Creating 12 MTD partitions on "spi0.0":
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.186630] 0x000000000000-0x000000040000 : "0:SBL1"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.192670] 0x000000040000-0x000000060000 : "0:MIBIB"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.197802] 0x000000060000-0x0000000c0000 : "0:QSEE"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.202731] 0x0000000c0000-0x0000000d0000 : "0:CDT"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.207703] 0x0000000d0000-0x0000000e0000 : "0:DDRPARAMS"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.213132] 0x0000000e0000-0x0000000f0000 : "0:APPSBLENV"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.218651] 0x0000000f0000-0x000000170000 : "0:APPSBL"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.223832] 0x000000170000-0x000000180000 : "0:ART"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.228844] 0x000000180000-0x000000190000 : "0:CUSTDATA"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.234126] 0x000000190000-0x0000001d0000 : "Filemanager"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.239594] 0x0000001d0000-0x000000210000 : "2nd Filemanager"
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 1.245312] 0x000000210000-0x000000220000 : "2nd 0:CUSTDATA"
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.252913] ipq40xx-mdio 90000.mdio: Could not find phy-reset-gpio
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.258286] libphy: ipq40xx_mdio: probed
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.269528] ipq40xx-mdio 90000.mdio: ipq40xx-mdio driver was registered
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.275222] tun: Universal TUN/TAP device driver, 1.6
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.280227] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.286567] PPP generic driver version 2.4.2
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.798507] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.804014] ehci-pci: EHCI PCI platform driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.808555] ehci-platform: EHCI generic platform driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.813904] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.819856] ohci-platform: OHCI generic platform driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.825625] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.830545] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.838392] xhci-hcd xhci-hcd.0.auto: hcc params 0x0228f665 hci version 0x100 quirks 0x00010010
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.846888] xhci-hcd xhci-hcd.0.auto: irq 233, io mem 0x08a00000
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.853724] hub 1-0:1.0: USB hub found
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.856601] hub 1-0:1.0: 1 port detected
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.860911] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.865914] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.873681] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.882484] hub 2-0:1.0: USB hub found
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.885381] hub 2-0:1.0: 1 port detected
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.889814] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.894749] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 3
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.902617] xhci-hcd xhci-hcd.1.auto: hcc params 0x0220f665 hci version 0x100 quirks 0x00010010
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.911119] xhci-hcd xhci-hcd.1.auto: irq 234, io mem 0x06000000
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.917868] hub 3-0:1.0: USB hub found
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.920802] hub 3-0:1.0: 1 port detected
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.925091] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.930187] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 4
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.937882] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.946627] hub 4-0:1.0: USB hub found
+Wed Dec 31 18:00:07 1969|ERR|kernel|[ 1.949617] hub 4-0:1.0: config failed, hub doesn't have any ports! (err -19)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.957147] i2c /dev entries driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.970952] sdhci: Secure Digital Host Controller Interface driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.976101] sdhci: Copyright(c) Pierre Ossman
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.980503] sdhci-pltfm: SDHCI platform and OF driver helper
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 1.987337] sdhci_msm 7824900.sdhci: Got SD LDO GPIO #52
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.091658] sdhci_msm 7824900.sdhci: No vreg data found for vdd
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.096584] sdhci_msm 7824900.sdhci: No vreg data found for vdd-io
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.115545] sdhci_msm 7824900.sdhci: No vmmc regulator found
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.166412] mmc0: SDHCI controller on 7824900.sdhci [7824900.sdhci] using ADMA 64-bit
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.175468] cp_garnet_led: Inserting kernel module
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.179309] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.189139] cp_garnet_led_start of_find_compatible_node success!
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.196400] cp_garnet_led_start name=board_leds type=<NULL> full_name=/soc/board_leds@0
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.205438] cp_garnet_led_start num_leds=12
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.210674] cp_garnet_led_start led idx=0 name=LED_SS_0 gpio=232
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.217731] cp_garnet_led_start use default=0 for property led-active-low idx=0 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.226788] cp_garnet_led_start led idx=1 name=LED_SS_1 gpio=233
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.233825] cp_garnet_led_start use default=0 for property led-active-low idx=1 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.242878] cp_garnet_led_start led idx=2 name=LED_SS_2 gpio=234
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.249947] cp_garnet_led_start use default=0 for property led-active-low idx=2 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.259119] cp_garnet_led_start led idx=3 name=LED_SS_3 gpio=235
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.266337] cp_garnet_led_start use default=0 for property led-active-low idx=3 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.274617] cp_garnet_led_start led idx=4 name=ATTN_RED gpio=236
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.281773] cp_garnet_led_start use default=0 for property led-active-low idx=4 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.288788] cp_garnet_led_start led idx=5 name=VPN_GRN gpio=237
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.294644] cp_garnet_led_start use default=0 for property led-active-low idx=5 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.302651] cp_garnet_led_start led idx=6 name=LED_WIFI gpio=238
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.308685] cp_garnet_led_start use default=0 for property led-active-low idx=6 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.316750] cp_garnet_led_start led idx=7 name=MODEM_GRN gpio=246
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.322783] cp_garnet_led_start use default=0 for property led-active-low idx=7 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.330862] cp_garnet_led_start led idx=8 name=MODEM_RED gpio=247
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.346233] cp_garnet_led_start use default=0 for property led-active-low idx=8 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.356185] cp_garnet_led_start led idx=9 name=MC400_RED gpio=66
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.361158] cp_garnet_led_start use default=0 for property led-active-low idx=9 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.369159] cp_garnet_led_start led idx=10 name=MC400_GRN gpio=67
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.374578] mmc0: MAN_BKOPS_EN bit is not set
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.379601] cp_garnet_led_start use default=0 for property led-active-low idx=10 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.384910] mmc0: new HS200 MMC card at address 0001
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.385578] mmcblk0: mmc0:0001 8GME4R 7.28 GiB
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.385836] mmcblk0rpmb: mmc0:0001 8GME4R partition 3 512 KiB
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.387267] Alternate GPT is invalid, using primary GPT.
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 2.387293] GPT: device [179:2] (rootfs) set to be root filesystem
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.387309] mmcblk0: p1 p2 p3 p4
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.417611] cp_garnet_led_start led idx=11 name=WIFI5G_BLU gpio=68
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.423741] cp_garnet_led_start use default=0 for property led-active-low idx=11 err=-22
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.432086] led register success
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.450059] hub 1-1:1.0: USB hub found
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.453058] hub 1-1:1.0: 4 ports detected
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.466928]
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.466928] Version Rollback Feature Disabled
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.474513] nf_conntrack version 0.5.0 (7930 buckets, 31720 max)
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.480612] ip_conn_addr created successfully
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.484116] ip_conn_csv created successfully
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.488628] ip_tables: (C) 2000-2006 Netfilter Core Team
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.494878] NET: Registered protocol family 10
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.499636] ip6_tables: (C) 2000-2006 Netfilter Core Team
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.504279] NET: Registered protocol family 17
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.508540] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 2.521098] Bridge firewalling registered
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.525020] 8021q: 802.1Q VLAN Support v1.8
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 2.529348] Registering SWP/SWPB emulation handler
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.535312] cp_gpio soc:cp_gpio@0: garnet_gpio_probe
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.539330] cp_gpio soc:cp_gpio@0: of_node=dfbf58b4
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.544114] cp_gpio soc:cp_gpio@0: found a match name= type= compatible=cp,garnet-gpio
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.552103] cp_gpio soc:cp_gpio@0: child=gpio-pcie-conn-ovc has overcurrent-power node=0
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.560307] cp_gpio soc:cp_gpio@0: gpio irq domain=pca953x irq=12 base=232 event=10
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.568002] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.574344] cp_gpio soc:cp_gpio@0: child=gpio-pcie-pwr-ovc has overcurrent-power node=1
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.582394] cp_gpio soc:cp_gpio@0: gpio irq domain=pca953x irq=17 base=232 event=10
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.590253] cp_gpio soc:cp_gpio@0: gpio irq domain=msmgpio irq=59 base=0 event=2
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.597758] cp_gpio soc:cp_gpio@0: gpio irq domain=msmgpio irq=35 base=0 event=15
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.605156] cp_gpio soc:cp_gpio@0: gpio irq domain=pca953x irq=7 base=232 event=12
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.612955] cp_gpio soc:cp_gpio@0: gpio irq domain=msmgpio irq=19 base=0 event=12
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.621038] hctosys: unable to open rtc device (rtc0)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.626456] hub 2-1:1.0: USB hub found
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.629545] hub 2-1:1.0: 4 ports detected
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 2.629838] clk: Not disabling unused clocks
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.642970] VFS: Mounted root (squashfs filesystem) readonly on device 179:2.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 2.649412] Freeing unused kernel memory: 188K
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 4.341815] cpmodem_wrapper: module license 'Proprietary' taints kernel.
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 4.347531] Disabling lock debugging due to kernel taint
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 4.353580] cp_lkm_wrapper: Inserting kernel module
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 4.368963] cp_lkm: Product chipset IPQ4019
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 4.372140] cp_lkm: Product platform qcom_arm
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 4.376520] cp_lkm: Processor: IPQ4019, Max work: 64, NAPI budget: 64, QLEN: 64.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 4.384229] cp_lkm: Inserting kernel module
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 4.931752] random: cppython: uninitialized urandom read (24 bytes read, 14 bits of entropy available)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 10.545672] random: cppython: uninitialized urandom read (2496 bytes read, 19 bits of entropy available)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 10.555704] random: cppython: uninitialized urandom read (2496 bytes read, 19 bits of entropy available)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 15.346373] usb 2-1.4: new SuperSpeed USB device number 3 using xhci-hcd
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 18.888269] random: cppython: uninitialized urandom read (32 bytes read, 67 bits of entropy available)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 23.277908] Netfilter messages via NETLINK v0.30.
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 25.221237] ip_set: protocol 6
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 33.689758] random: cppython: uninitialized urandom read (2496 bytes read, 81 bits of entropy available)
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 33.699856] random: cppython: uninitialized urandom read (1 bytes read, 81 bits of entropy available)
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.219070] ess-switch DT exist!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.221306] switchreg_base_addr: 0xc000000
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.225351] switchreg_size: 0x80000
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.228870] switch_access_mode: local bus
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.232817] mac mode = 0x0
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.235508] mac mode1 doesn't exit!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.239005] mac mode2 doesn't exit!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.242489] ess-uniphy DT doesn't exist!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.246382] wan bmp:0x20
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.248888] ess-psgmii DT exist!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.252111] current dts led_source_num is 5
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.256356] mdio DT exist!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.258988] found slave s17c node!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.262380] ssdk_plat_init start
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.265723] enable ess clk
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.378585] reset ok in probe!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.380902] regi_init
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.382960] ssdk_phy_id_get dev_id 0
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.386903] PHY ID is 0x4dd0b1
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.449605] qca probe malibu phy driver succeeded!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 36.514969] done with ssdk_init
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.325816] qca_dess_hw_init
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.327682] qca_switch_init dev_id 0
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.332426] Chip version 0x1401
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.336355] Registered switch QCA AR8327 AR8337 (241:0)
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.340594] cannot find link-polling-required node
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.345321] polling is selected
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.349112] ssdk_phy_id_get dev_id 1
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.352344] PHY ID is 0x4dd036
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.507425] qca probe f1 phy driver succeeded!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 39.511450] ar8327 hw init!!!
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 40.551694] qca_switch_init dev_id 1
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 41.416180] ssdk_slave_special_hw_init
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 41.521465] Registered switch QCA AR8327 AR8337 (241:1)
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 41.525662] register_switch switch1 ok
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 41.529440] qca-ssdk module init succeeded!
+Wed Dec 31 18:00:07 1969|NOTICE|kernel|[ 52.698012] random: nonblocking pool is initialized
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 61.556783] Setting debug log level:0
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 61.883938] gre: GRE over IPv4 demultiplexor driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 61.908902] ip_gre: GRE over IPv4 tunneling driver
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 61.950442] ip6_tunnel: Unknown symbol xfrm6_tunnel_register (err 0)
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 61.955987] ip6_tunnel: Unknown symbol xfrm6_tunnel_deregister (err 0)
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 62.016774] ip6_tunnel: Unknown symbol xfrm6_tunnel_register (err 0)
+Wed Dec 31 18:00:07 1969|WARN|kernel|[ 62.022305] ip6_tunnel: Unknown symbol xfrm6_tunnel_deregister (err 0)
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 62.098690] ip6_gre: GRE over IPv6 tunneling driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 62.344294] IPv4 over IPsec tunneling driver
+Wed Dec 31 18:00:07 1969|INFO|kernel|[ 63.871703] usbcore: registered new interface driver cpusb3
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: qca-ssdk
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: shortcut-fe
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: shortcut-fe-ipv6
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: shortcut-fe-cm
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: essedma
+Wed Dec 31 18:00:07 1969|INFO|mountfilesystem|Running FSCK on Filesystem
+Wed Dec 31 18:00:07 1969|INFO|mountfilesystem|Filesystem FSCK passed
+Wed Dec 31 18:00:07 1969|INFO|mountfilesystem|Mounted f2fs Filesystem partition (total 6.5 GB, free 6.0 GB) on mmc flash /dev/mmcblk0p4
+Wed Dec 31 18:00:07 1969|INFO|root|Firmware Build Date: Tue Dec 3 01:28:01 UTC 2019
+Wed Dec 31 18:00:07 1969|INFO|root|Firmware Version: 7.1.60.05dbb99
+Wed Dec 31 18:00:07 1969|INFO|root|Firmware Type: FIELD[]
+Wed Dec 31 18:00:07 1969|INFO|policy.SwansEnginePolicy|None -> UpProcess (primary: None, next_dev: None)
+Wed Dec 31 18:00:07 1969|INFO|policy.SWANS|None -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:00:07 1969|INFO|policy.FailoverFailback|None -> start (primary: None, next_dev: None)
+Wed Dec 31 18:00:07 1969|INFO|policy.WanChange|None -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:00:07 1969|INFO|policy.FailoverFailback|start -> pick_next (primary: None, next_dev: None)
+Wed Dec 31 18:00:07 1969|WARN|lan|IPv6 LAN: No delegated prefixes
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Resuming network Primary LAN
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Uninhibiting device wireless0
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Setting radio 0 bss 0 inhibit to False
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Uninhibiting device wireless0_1
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Setting radio 1 bss 0 inhibit to False
+Wed Dec 31 18:00:07 1969|INFO|lan|Adding IP Network: (name: Primary LAN, ip: 192.168.0.1/255.255.255.0)
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Resuming network Guest LAN
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Uninhibiting device wireless1
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Setting radio 0 bss 1 inhibit to False
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Uninhibiting device wireless1_1
+Wed Dec 31 18:00:07 1969|INFO|scheduler|Setting radio 1 bss 1 inhibit to False
+Wed Dec 31 18:00:07 1969|INFO|lan|Adding IP Network: (name: Guest LAN, ip: 192.168.10.1/255.255.255.0)
+Wed Dec 31 18:00:07 1969|INFO|qxdmlog|logSetMode - val:usb
+Wed Dec 31 18:00:07 1969|INFO|qxdmlog|logEnableEvent - val:False
+Wed Dec 31 18:00:07 1969|INFO|qxdmlog|ramdumpEnableEvent - val:False
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 0
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 2
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 3
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 4
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 5
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 6
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 7
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Put dual SIM to default on port: 8
+Wed Dec 31 18:00:07 1969|INFO|cpevt|onMultiPDNEnable: path: None, value:
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 0 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 1 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 2 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 3 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 4 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 5 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 6 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 7 to 1
+Wed Dec 31 18:00:07 1969|INFO|cpevt|Initialize multiPDN on port: 8 to 1
+Wed Dec 31 18:00:07 1969|INFO|clock|System time set to: 01:00:00 01/01/70 UTC
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: nf_nat_proto_gre
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: nf_conntrack_proto_gre
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: ip_tunnel
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: gre
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: ip_gre
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: ip6_tunnel
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: ip6_gre
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: xfrm4_mode_tunnel
+Wed Dec 31 18:00:07 1969|INFO|kmod|Loading kernel module: ip_vti
+Wed Dec 31 18:00:07 1969|INFO|hotspot|No LAN ethernet device found, not setting rate
+Wed Dec 31 18:00:07 1969|INFO|cpevt|ifc supported tech: lte/3g
+Wed Dec 31 18:00:07 1969|INFO|WAN:4cf1faf8|is_upgrading: False
+Wed Dec 31 18:00:07 1969|INFO|WAN:4cf1faf8|evt: {'event': 'gps_interval', 'interval': '0'}
+Wed Dec 31 18:00:07 1969|INFO|WAN:4cf1faf8|Plug event: ok
+Wed Dec 31 18:00:07 1969|INFO|WAN:4cf1faf8|plug_event, is_upgrading: False
+Wed Dec 31 18:00:07 1969|INFO|WAN:4cf1faf8|wandev plugged: mdm, uid: 4cf1faf8, uptime: 67
+Wed Dec 31 18:00:07 1969|INFO|WAN:4cf1faf8|execute GET_ICCID
+Wed Dec 31 18:00:07 1969|INFO|cpevt|ifc supported tech: lte/3g
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|is_upgrading: False
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|evt: {'event': 'gps_interval', 'interval': '0'}
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|Plug event: ok
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|plug_event, is_upgrading: False
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|wandev plugged: mdm, uid: 4d1fc1af, uptime: 68
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|execute GET_ICCID
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|Execute Event user intervention required: 10
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|Preconfigured Event: user intervention required
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|wandev preconfigured type: mdm, uid: 4d1fc1af, uptime: 68
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|Configure Event: user intervention required
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|is_upgrading: False
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|configured_event: Device activation state: True
+Wed Dec 31 18:00:07 1969|WARN|WAN:4d1fc1af|SIM error: NOSIM
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|StandardModem::checkNIASession: NIA mode : disconnected session : None
+Wed Dec 31 18:00:07 1969|INFO|WAN:4d1fc1af|StandardModem::checkNIASession: connection state : disconnected
+Wed Dec 31 18:00:07 1969|INFO|WAN:4cf1faf8|Execute Event ok: 10
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone All with id 1
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone Router with id 2
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone WAN Zone with id 3
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone Primary LAN Zone with id 4
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone Guest LAN Zone with id 5
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added filter policy Default Allow All
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added filter policy Default Deny All
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone forwarding 00000002-695c-3d87-95cb-d0ee2029d0b5->00000003-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone forwarding 00000003-695c-3d87-95cb-d0ee2029d0b5->00000002-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone forwarding 00000002-695c-3d87-95cb-d0ee2029d0b5->00000004-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:07 1969|INFO|firewall|Added zone forwarding 00000004-695c-3d87-95cb-d0ee2029d0b5->00000002-695c-3d87-95cb-d0ee2029d0b5
+Wed Dec 31 18:00:07 1969|INFO|vlan|Plugging VLAN: 1
+Wed Dec 31 18:00:08 1969|INFO|vlan|Plugging VLAN: 2
+Wed Dec 31 18:00:08 1969|INFO|kernel|[ 70.032948] device eth0 entered promiscuous mode
+Wed Dec 31 18:00:10 1969|INFO|kernel|[ 71.870490] IPv6: ADDRCONF(NETDEV_UP): primarylan1: link is not ready
+Wed Dec 31 18:00:10 1969|INFO|kernel|[ 71.872805] device eth0.2 entered promiscuous mode
+Wed Dec 31 18:00:10 1969|INFO|kernel|[ 71.872977] primarylan1: port 1(eth0.2) entered forwarding state
+Wed Dec 31 18:00:10 1969|INFO|kernel|[ 71.873042] primarylan1: port 1(eth0.2) entered forwarding state
+Wed Dec 31 18:00:10 1969|INFO|kernel|[ 71.873281] IPv6: ADDRCONF(NETDEV_CHANGE): primarylan1: link becomes ready
+Wed Dec 31 18:00:10 1969|INFO|policyMgr.PolicyMgr|WAN ready state: True
+Wed Dec 31 18:00:10 1969|WARN|pam|PCI/DSS mode set. Ensure all user passwords are PCI/DSS compliant.
+Wed Dec 31 18:00:10 1969|INFO|cpmodem_remote_dispatch|CPModemRemoteDispatch onStart
+Wed Dec 31 18:00:10 1969|INFO|msft_iot|Connection to IoT Central is now: disconnected
+Wed Dec 31 18:00:10 1969|INFO|wlan|Random channel selection chose channel=6 for radio=0
+Wed Dec 31 18:00:10 1969|INFO|wlan|Random channel selection chose channel=153 for radio=1
+Wed Dec 31 18:00:10 1969|INFO|kmod|Loading kernel module: asf
+Wed Dec 31 18:00:10 1969|INFO|kmod|Loading kernel module: qdf
+Wed Dec 31 18:00:10 1969|INFO|kmod|Loading kernel module: ath_dfs
+Wed Dec 31 18:00:10 1969|INFO|kmod|Loading kernel module: pse
+Wed Dec 31 18:00:10 1969|INFO|kernel|[ 72.641825] ath_dfs: Version 2.0.0
+Wed Dec 31 18:00:10 1969|INFO|kernel|[ 72.641825] Copyright (c) 2005-2006 Atheros Communications, Inc. All Rights Reserved
+Wed Dec 31 18:00:11 1969|INFO|kmod|Loading kernel module: ltc4266
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.678706] ltc4266 0-002f: Client data passed at address ded26c00
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.678731] ltc4266 0-002f: I2C Address 2f
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.678743] ltc4266 0-002f: name: ltc4266
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.750043] ltc4266 0-002f: pse core: registered port 0 as port0 with priority 255
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.750069] ltc4266 0-002f: ltc4266_probe has registered port 0 on the LTC4266 as port0
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.750080] pse port0: Has been initialized
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.770756] ltc4266 0-002f: pse core: registered port 1 as port1 with priority 255
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.770781] ltc4266 0-002f: ltc4266_probe has registered port 1 on the LTC4266 as port1
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.770794] pse port1: Has been initialized
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.802929] ltc4266 0-002f: pse core: registered port 2 as port2 with priority 255
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.802953] ltc4266 0-002f: ltc4266_probe has registered port 2 on the LTC4266 as port2
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.802967] pse port2: Has been initialized
+Wed Dec 31 18:00:11 1969|INFO|kmod|Loading kernel module: ath_spectral
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.843344] ltc4266 0-002f: pse core: registered port 3 as port3 with priority 255
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.843368] ltc4266 0-002f: ltc4266_probe has registered port 3 on the LTC4266 as port3
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.843380] pse port3: Has been initialized
+Wed Dec 31 18:00:11 1969|INFO|kmod|Loading kernel module: umac
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.866704] ath_spectral: Version 2.0.0
+Wed Dec 31 18:00:11 1969|INFO|kernel|[ 72.866704] Copyright (c) 2005-2009 Atheros Communications, Inc. All Rights Reserved
+Wed Dec 31 18:00:11 1969|INFO|WAN:4cf1faf8|Preconfigured Event: ok
+Wed Dec 31 18:00:11 1969|INFO|WAN:4cf1faf8|wandev preconfigured type: mdm, uid: 4cf1faf8, uptime: 73
+Wed Dec 31 18:00:11 1969|INFO|cp_stack_mgr|int1: wan_manager_parse_cb() - GPS_INTERVAL changed to 0
+Wed Dec 31 18:00:11 1969|INFO|cp_stack_mgr|int1: LTE Modem Plugging - msg: Configuring GPS data - status:84
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 73.955049] umac: Unknown symbol __wifi_kmem_free (err 0)
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 73.955097] umac: Unknown symbol __wifi_kmem_allocation (err 0)
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.005543] umac: Unknown symbol __wifi_kmem_free (err 0)
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.005591] umac: Unknown symbol __wifi_kmem_allocation (err 0)
+Wed Dec 31 18:00:12 1969|INFO|kmod|Loading kernel module: ath_hal
+Wed Dec 31 18:00:12 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 0%, RSSI:-125(dBm)
+Wed Dec 31 18:00:12 1969|INFO|WAN:4cf1faf8|Configure Event: ok
+Wed Dec 31 18:00:12 1969|INFO|WAN:4cf1faf8|is_upgrading: False
+Wed Dec 31 18:00:12 1969|INFO|WAN:4cf1faf8|configured_event: Device activation state: True
+Wed Dec 31 18:00:12 1969|INFO|kmod|Loading kernel module: ath_rate_atheros
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.126896] ath_hal: 0.9.17.1 (AR5416, AR9380, WRITE_EEPROM, 11D)
+Wed Dec 31 18:00:12 1969|INFO|kmod|Loading kernel module: hst_tx99
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.151719] ath_rate_atheros: Copyright (c) 2001-2005 Atheros Communications, Inc, All Rights Reserved
+Wed Dec 31 18:00:12 1969|INFO|WAN:4cf1faf8|wandev configured type: mdm, uid: 4cf1faf8, uptime: 74
+Wed Dec 31 18:00:12 1969|INFO|WAN:4cf1faf8|StandardModem::checkNIASession: NIA mode : disconnected session : None
+Wed Dec 31 18:00:12 1969|INFO|WAN:4cf1faf8|StandardModem::checkNIASession: connection state : disconnected
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.172145] ath_tx99: Version 2.0
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.172145] Copyright (c) 2010 Atheros Communications, Inc, All Rights Reserved
+Wed Dec 31 18:00:12 1969|INFO|kmod|Loading kernel module: ath_dev
+Wed Dec 31 18:00:12 1969|INFO|kmod|Loading kernel module: qca_da
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.263530] ath_dev: Copyright (c) 2001-2007 Atheros Communications, Inc, All Rights Reserved
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.295297] ath_da_pci: (Atheros/multi-bss)
+Wed Dec 31 18:00:12 1969|INFO|kmod|Loading kernel module: qca_ol
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.443459] *********** IPQ4019 *************Wifi0 CPU frequency 250000000
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.464012] hif_target_sync_ahb: Got FW signal, retries = 1hif_ahb_enable_bus: X - hif_type = 0xd, target_type = 0xbhif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_pci_bus_configure: hif_set_hia donehif_configure_irq: Ehif_enable: X OKhif_napi_create: NAPI structures initializedhif_napi_create: NAPI id 6 created for pipe 5qca_napi_create: napi instance 32 created on pipe 4
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.470111] hif_napi_event: received evnt: CONF cmd; v = 1 (state=0x1)hif_napi_event: setting configuration to ON
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.470111] __ol_ath_attach() Allocated scn d9880500
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.470276] __ol_ath_attach: dev name wifi0
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.470295] ol_ath_attach interface_id 0
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.470570] ol_target_init() BMI inited.
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.470679] ol_target_init() BMI Get Target Info.
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.470693] Chip id: 0xb, chip version: 0x1000000
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.470701]
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.470701] CE WAR Disabled
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.470840] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.471018] ol_target_init() configure Target .
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471104]
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471104] Target Version is 1000000
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471118]
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471118] Flash Download Address c0000
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471129] ol_transfer_bin_file: flash data file defined
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471139] ol_transfer_bin_file[3769] Get Caldata for wifi0.
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471224] qdf_fs_read[59], Open File /tmp/wifi0.caldata SUCCESS!!file system magic:-2054924042super blocksize:4096inode 3218file size:12064qc98xx_verify_checksum: flash checksum passed: 0xab4b
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.471343] ol_transfer_bin_file 3830: Download Flash data len 12064
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.471734] Board extended Data download address: 0x0
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.491692]
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.491692] Board data initialized
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.491872] ol_ath_download_firmware: Download OTP, flash download ADDRESS 0xc0000
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.491885]
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.491885] Selecting OTP binary for CHIP Version -1080843736
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.549835] ol_transfer_bin_file 3650: downloading file 0, Download data len 4676
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.566436]
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.566436] First OTP send param 8000
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.571149] ol_ath_download_firmware :First OTP download and Execute is good address:0x5000 return param 4660
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.571167] ol_ath_download_firmware:##Board Id 20 , CHIP Id 0
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.571264] ol_ath_download_firmware: BOARDDATA DOWNLOAD TO address 0xc0000
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.571298]
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.571298] wifi0: Selecting board data file name boardData_1_0_IPQ4019_DK04_2G.bin
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.571315] ol_transfer_bin_file: Board Data File download to address=0xc0000 file name=IPQ4019/hw.1/boardData_1_0_IPQ4019_DK04_2G.bin
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.571590] ol_transfer_bin_file 3650: downloading file 3, Download data len 12064
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.571993] Board extended Data download address: 0x0
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.591747] ol_ath_download_firmware: Using 0x1234 for the remainder of init
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.591769]
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.591769] Selecting OTP binary for CHIP Version -1080843736
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.591949] ol_transfer_bin_file 3650: downloading file 0, Download data len 4676
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.608360]
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.608360] [Flash] : Ignore Module param
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.608387]
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.608387] Second otp download Param 10000
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.618663] ol_ath_download_firmware : Second OTP download and Execute is good, param=0x0
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.618682]
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.618682] Mission mode: Firmware CHIP Version -1080843736
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.619988] ol_swap_seg_alloc: Successfully allocated memory for SWAP size=262144
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.620453] ol_swap_wlan_memory_expansion: length:185067 size_left:185087 dma_size_left:262144 fw_temp:e2622004 fw_entry_size:185091
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.620472] ol_swap_wlan_memory_expansion: dma_virt_addr :e25e1000 fw_temp: e2622008 length: 185067
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.620756] Swap: bytes_left to copy: fw:16; dma_page:77077
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.620770] ol_swap_wlan_memory_expansion: length:0 size_left:12 dma_size_left:77077 fw_temp:e264f2f7 fw_entry_size:185091
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.620778] Swap: wrong length read:0
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.620789] ol_swap_wlan_memory_expansion: Swap total_bytes copied: 185067 Target address 4180b0
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.620916] scn=d9880500 target_write_addr=4180b0 seg_info=de6aa210
+Wed Dec 31 18:00:12 1969|INFO|kernel|[ 74.620935] ol_transfer_swap_struct:Code swap structure successfully downloaded for bin type =2
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.620946] bin_filename=IPQ4019/hw.1/athwlan.bin swap_filename=/lib/firmware/IPQ4019/hw.1/athwlan.codeswap.bin
+Wed Dec 31 18:00:12 1969|WARN|kernel|[ 74.621028] ol_transfer_bin_file: Downloading firmware file: IPQ4019/hw.1/athwlan.bin
+Wed Dec 31 18:00:13 1969|INFO|kernel|[ 74.773103] ol_transfer_bin_file 3650: downloading file 1, Download data len 378640
+Wed Dec 31 18:00:13 1969|INFO|gre|LAN change
+Wed Dec 31 18:00:13 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:00:13 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:00:13 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|WanDevMixIn:Starting
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|disconnected -> connecting
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|wandev connecting type: mdm, uid: 4cf1faf8, uptime: 74
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 0%, RSSI:-125(dBm)
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|Execute Event ok: 8
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initial
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initiate
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|Execute Event ok: 4
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Success
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initial
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initiate
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|autoCarrierSwitch att
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|Current carrier is correct. No switch needed.
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Success
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoCarrier
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8|Execute Event ok: 9
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.AutoAPNFront|auto apn state: Initial
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:00:13 1969|INFO|WAN:4cf1faf8.CPPM|Waiting for signal
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031026] ol_target_init() Download FW done.
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.031111] ERROR: No wifi_dump dts node available in the dts entry file
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031333] ol_ath_attach() WMI attached. wmi_handle db284000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.031351] wmi_unified_register_event_handler: Event id 62 is unavailable
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.031366] +htc_create .. HIF :dad88000-htc_create: (0xdb354000)
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031414] htc_wmi_init() HT Create . db354000
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031498] htc_wmi_init 7800 host_enable 0 nss_nwifi_offload 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031512] ol_ath_set_default_tgt_config : AC Minfree buffer allocation through module param (umac.ko)
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031520] OL_ACBKMinfree : 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031527] OL_ACBEMinfree : 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031534] OL_ACVIMinfree : 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.031541] OL_ACVOMinfree : 0
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.031550] hif_enable_fastpath, Enabling fastpath mode
+Wed Dec 31 18:00:14 1969|ALERT|kernel|[ 76.031556] +HWT
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.031571] hif_completion_thread_startup: pipe_num:0 pipe_info:0xdad8cb78hif_completion_thread_startup: pipe_num:3 pipe_info:0xdad8cc50hif_completion_thread_startup: pipe_num:4 pipe_info:0xdad8cc98
+Wed Dec 31 18:00:14 1969|ALERT|kernel|[ 76.041308] -HWT
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.041404] Startup Mode-0 set
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.041415]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.041415] <=== cfg max peer id 1056 ====>
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.042088] htt_peer_map_timer_init Enter pdev d9878000 hrtimer d987c948
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.042114]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.042114] htt_alloc_peer_map_mem : Alloc Success : host q vaddr d9924000 paddr 99924000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.042126]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.042126] htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.044271] ol_txrx_pdev_attach: 2500 tx desc's allocated ; range starts from d9d40000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047572] Firmware_Build_Number:50
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047593] FW wireless modes: 0x680c
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047607] num_rf_chain:0x00000002 ht_cap_info:0x0000085b vht_cap_info:0x339959b2 vht_supp_mcs:0x0000fffa
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047636] btcoex_support 0, wlan_prio_gpio 0, coex_gpio_pin 0 0 0
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047647] wmi_service_coex_gpio 1, wmi_service_4_wire_coex_support 1, coex_version 0
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047662]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047662] Sending Ext resource cfg: HOST PLATFORM as 0
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047662] fw_feature_bitmap as 50 to TGT
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.047734] ol_ath_service_ready_event: tt_support: 1
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.047746] ol_ath_service_ready_event: periodic_chan_stats: 1
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047755] ol_ath_service_ready_event: sw_cal_support_check_flag: 1
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.047767] Peer Caching Enabled ; num_peers = 530, num_active_peers = 52 num_tids = 104, num_vdevs = 17
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047823] EXT NSS Supported
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.047852] idx 1 req 2 num_units 1 num_unit_info 12 unit size 256 actual units 53
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.047911] ol_ath_alloc_host_mem_chunk req_id 2 idx 0 num_units 53 unit_len 256,
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.047925] idx 2 req 3 num_units 1 num_unit_info 12 unit size 1024 actual units 53
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.048000] ol_ath_alloc_host_mem_chunk req_id 3 idx 1 num_units 53 unit_len 1024,
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.048013] idx 3 req 4 num_units 1 num_unit_info 12 unit size 4096 actual units 53
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.048209] ol_ath_alloc_host_mem_chunk req_id 4 idx 2 num_units 53 unit_len 4096,
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.048222] idx 0 req 1 num_units 0 num_unit_info 2 unit size 744 actual units 531
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.048537] ol_ath_alloc_host_mem_chunk req_id 1 idx 3 num_units 531 unit_len 744,
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.048551] idx 4 req 6 num_units 35 num_unit_info 0 unit size 3072 actual units 35
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.048652] ol_ath_alloc_host_mem_chunk req_id 6 idx 4 num_units 35 unit_len 3072,
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.048665] idx 5 req 7 num_units 1 num_unit_info 0 unit size 6144 actual units 1
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.048693] ol_ath_alloc_host_mem_chunk req_id 7 idx 5 num_units 1 unit_len 6144,
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.048704] idx 6 req 5 num_units 0 num_unit_info 2 unit size 2052 actual units 531
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049659] ol_ath_alloc_host_mem_chunk req_id 5 idx 6 num_units 531 unit_len 2052,
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049671] Support not added yet for Service 91
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049679] Support not added yet for Service 92
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049686] No EXT_MSG send INIT now
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049707] chunk 0 len 13568 requested , ptr 0x9acec000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049717] chunk 1 len 54272 requested , ptr 0x99da0000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049726] chunk 2 len 217088 requested , ptr 0x99dc0000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049734] chunk 3 len 395064 requested , ptr 0x99e00000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049743] chunk 4 len 107520 requested , ptr 0x99e80000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049752] chunk 5 len 6144 requested , ptr 0x9ac88000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049761] chunk 6 len 1089612 requested , ptr 0x9a000000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049770] chunk 7 len 0 requested , ptr 0x0
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.049859] ol_ath_service_ready_event[4296] WAPI MBSSID 2
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.050023] smart_log_init: Smart logging Enabled buf=da140000 (size=65536)
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.092472] Version = 16777216 3 status = 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.092552] ol_ath_connect_htc() WMI is ready
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.092607] htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.092635] target uses HTT version 2.2; host uses 2.2
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097700] ol_ath_attach() connect HTC.
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097723] bypasswmi : 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097740] ol_regdmn_start: reg-domain param: regdmn=0, countryName=, wModeSelect=FFFFFFFF, netBand=FFFFFFFF, extendedChanMode=0.
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097768] ol_regdmn_init_channels: !avail mode 0x680c (0x2) flags 0x2150
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097781] ol_regdmn_init_channels: !avail mode 0x680c (0x1) flags 0x140
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097825] ol_regdmn_init_channels: !avail mode 0x680c (0x20) flags 0xd0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097835] ol_regdmn_init_channels: !avail mode 0x680c (0x40) flags 0x150
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097877] ol_regdmn_init_channels: !avail mode 0x680c (0x1000) flags 0x10100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097888] ol_regdmn_init_channels: !avail mode 0x680c (0x8000) flags 0x20100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097898] ol_regdmn_init_channels: !avail mode 0x680c (0x10000) flags 0x40100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097908] ol_regdmn_init_channels: !avail mode 0x680c (0x20000) flags 0x100100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097918] ol_regdmn_init_channels: !avail mode 0x680c (0x40000) flags 0x200100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097927] ol_regdmn_init_channels: !avail mode 0x680c (0x80000) flags 0x400100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097937] ol_regdmn_init_channels: !avail mode 0x680c (0x100000) flags 0x800100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097947] ol_regdmn_init_channels: !avail mode 0x680c (0x200000) flags 0x4000100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.097957] ol_regdmn_init_channels: !avail mode 0x680c (0x400000) flags 0x8000100
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098293] OL Resmgr Init-ed
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098480] ieee80211_bsteering_attach: Band steering initialized
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098521] acfg_attach: 3013: Netlink socket created:db2ab000
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098570] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098578] HAL_CAP_PHYDIAG : Capable
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098588] SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098598] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098606] HAL_CAP_RADAR : Capable
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098615] SPECTRAL : Need to fix the capablity check for SPECTRAL
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098615] (spectral_attach : 242)
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098626] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098632] HAL_CAP_SPECTRAL_SCAN : Capable
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098640] SPECTRAL : get_tsf64 not registered
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098677] Green-AP : Green-AP : Attached
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098677]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098688] Green-AP : Attached
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098698] rate power table override is only supported for AR98XX
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.098871] ol_ath_smart_ant_attach: Hardware doest not support Smart Antenna.
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.098945] ol_if_dfs_attach: called; ptr=da18198c, radar_info=daf23ba0
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.098958] dfs_attach: event log enabled by default
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.100025] >>>> CB Set (null)
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.100428] ol_ath_attach() UMAC attach .
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.100437]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.100437] BURSTING enabled by default
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.100605] ol_ath_attach: Set global_ic[1] ..ptr:bf6f0f9c
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.100681] ath_lowi_if_netlink_init LOWI Netlink successfully created
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.100716] osif_wrap_attach:444 osif wrap attached
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.100750] osif_wrap_devt_init:405 osif wrap dev table init done
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.100761] Wrap Attached: Wrap_com =db20be00 ic->ic_wrap_com=db20be00 &wrap_com->wc_devt=db20be00
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.100772] __ol_ath_attach: needed_headroom reservation 60
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.103028] ol_ath_thermal_mitigation_attach: --
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.103070] ol_ath_ahb_probe num_radios=0, wifi_radios[0].sc = d9880500 wifi_radio_type = 2
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.103126] ath_sysfs_diag_init: diag_fsattr
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.103730] *********** IPQ4019 *************Wifi1 CPU frequency 250000000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.127559] hif_target_sync_ahb: Got FW signal, retries = 1hif_ahb_enable_bus: X - hif_type = 0xd, target_type = 0xbhif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_pci_bus_configure: hif_set_hia donehif_configure_irq: Ehif_enable: X OKhif_napi_create: NAPI structures initializedhif_napi_create: NAPI id 6 created for pipe 5qca_napi_create: napi instance 32 created on pipe 4
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.131612] hif_napi_event: received evnt: CONF cmd; v = 1 (state=0x1)hif_napi_event: setting configuration to ON
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.131612] __ol_ath_attach() Allocated scn d9f00500
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.131755] __ol_ath_attach: dev name wifi1
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.131775] ol_ath_attach interface_id 1
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.142142] ol_target_init() BMI inited.
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.142278] ol_target_init() BMI Get Target Info.
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142292] Chip id: 0xb, chip version: 0x1000000
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.142300]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.142300] CE WAR Disabled
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.142474] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.142674] ol_target_init() configure Target .
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142761]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142761] Target Version is 1000000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142774]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142774] Flash Download Address c0000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142786] ol_transfer_bin_file: flash data file defined
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142796] ol_transfer_bin_file[3769] Get Caldata for wifi1.
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.142892] qdf_fs_read[59], Open File /tmp/wifi1.caldata SUCCESS!!file system magic:-2054924042super blocksize:4096inode 1917file size:12064qc98xx_verify_checksum: flash checksum passed: 0xef12
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.143018] ol_transfer_bin_file 3830: Download Flash data len 12064
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.143428] Board extended Data download address: 0x0
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.163095]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.163095] Board data initialized
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.163284] ol_ath_download_firmware: Download OTP, flash download ADDRESS 0xc0000
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.163297]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.163297] Selecting OTP binary for CHIP Version -1080843736
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.163480] ol_transfer_bin_file 3650: downloading file 0, Download data len 4676
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.182105]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.182105] First OTP send param 8000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.186837] ol_ath_download_firmware :First OTP download and Execute is good address:0x5400 return param 4660
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.186860] ol_ath_download_firmware:##Board Id 21 , CHIP Id 0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.186969] ol_ath_download_firmware: BOARDDATA DOWNLOAD TO address 0xc0000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.187007]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.187007] wifi1: Selecting board data file name boardData_1_0_IPQ4019_DK04_5G.bin
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.187024] ol_transfer_bin_file: Board Data File download to address=0xc0000 file name=IPQ4019/hw.1/boardData_1_0_IPQ4019_DK04_5G.bin
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.189458] ol_transfer_bin_file 3650: downloading file 3, Download data len 12064
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.189896] Board extended Data download address: 0x0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.216315] ol_ath_download_firmware: Using 0x1234 for the remainder of init
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.216341]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.216341] Selecting OTP binary for CHIP Version -1080843736
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.216544] ol_transfer_bin_file 3650: downloading file 0, Download data len 4676
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.233017]
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.233017] [Flash] : Ignore Module param
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.233047]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.233047] Second otp download Param 10000
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.243605] ol_ath_download_firmware : Second OTP download and Execute is good, param=0x0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.243629]
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.243629] Mission mode: Firmware CHIP Version -1080843736
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.244427] ol_swap_seg_alloc: Successfully allocated memory for SWAP size=262144
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.244868] ol_swap_wlan_memory_expansion: length:185067 size_left:185087 dma_size_left:262144 fw_temp:e2da2004 fw_entry_size:185091
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.244884] ol_swap_wlan_memory_expansion: dma_virt_addr :e2d61000 fw_temp: e2da2008 length: 185067
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.245141] Swap: bytes_left to copy: fw:16; dma_page:77077
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.245156] ol_swap_wlan_memory_expansion: length:0 size_left:12 dma_size_left:77077 fw_temp:e2dcf2f7 fw_entry_size:185091
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.245164] Swap: wrong length read:0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.245175] ol_swap_wlan_memory_expansion: Swap total_bytes copied: 185067 Target address 4180b0
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.245354] scn=d9f00500 target_write_addr=4180b0 seg_info=db30c610
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.245372] ol_transfer_swap_struct:Code swap structure successfully downloaded for bin type =2
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.245383] bin_filename=IPQ4019/hw.1/athwlan.bin swap_filename=/lib/firmware/IPQ4019/hw.1/athwlan.codeswap.bin
+Wed Dec 31 18:00:14 1969|WARN|kernel|[ 76.245430] ol_transfer_bin_file: Downloading firmware file: IPQ4019/hw.1/athwlan.bin
+Wed Dec 31 18:00:14 1969|INFO|kernel|[ 76.246481] ol_transfer_bin_file 3650: downloading file 1, Download data len 378640
+Wed Dec 31 18:00:14 1969|WARN|dns|No DNS Servers Configured! Some features may not function properly!
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.040426] [wifi0] FWLOG: [87013] WAL_DBGID_RST_STATS ( 0x1, 0x1, 0x96c, 0x0 )
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.040486] [wifi0] FWLOG: [87053] WAL_DBGID_TX_AC_BUFFER_SET ( 0x3, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.040520] [wifi0] FWLOG: [87053] WAL_DBGID_TX_AC_BUFFER_SET ( 0x12, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.040552] [wifi0] FWLOG: [87053] WAL_DBGID_TX_AC_BUFFER_SET ( 0x45, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.040583] [wifi0] FWLOG: [87053] WAL_DBGID_TX_AC_BUFFER_SET ( 0x67, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.040614] [wifi0] FWLOG: [87062] WAL_DBGID_PDEV_INFO_PRINT ( 0x16, 0xa10, 0x810, 0x0, 0x12 )
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.040657] [wifi0] FWLOG: [87062] WAL_DBGID_PDEV_INFO_PRINT ( 0x16, 0x0, 0x12, 0x10, 0x12 )
+Wed Dec 31 18:00:15 1969|WARN|root|Primary Device is not up yet. will wait for some more time
+Wed Dec 31 18:00:15 1969|WARN|IPS|IPS Feature has an expired license. Not Starting.
+Wed Dec 31 18:00:15 1969|WARN|root|No snmp user accounts were found.
+Wed Dec 31 18:00:15 1969|WARN|ipverify|Not running tests - IPVerify is not licensed
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527002] ol_target_init() Download FW done.
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.527082] ERROR: No wifi_dump dts node available in the dts entry file
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527312] ol_ath_attach() WMI attached. wmi_handle db290000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.527327] wmi_unified_register_event_handler: Event id 62 is unavailable
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.527339] +htc_create .. HIF :d9ec8000-htc_create: (0xdb205800)
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527388] htc_wmi_init() HT Create . db205800
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527489] htc_wmi_init 7800 host_enable 0 nss_nwifi_offload 0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527503] ol_ath_set_default_tgt_config : AC Minfree buffer allocation through module param (umac.ko)
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527512] OL_ACBKMinfree : 0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527519] OL_ACBEMinfree : 0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527526] OL_ACVIMinfree : 0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.527533] OL_ACVOMinfree : 0
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.527544] hif_enable_fastpath, Enabling fastpath mode
+Wed Dec 31 18:00:15 1969|ALERT|kernel|[ 77.527550] +HWT
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.527563] hif_completion_thread_startup: pipe_num:0 pipe_info:0xd9eccb78hif_completion_thread_startup: pipe_num:3 pipe_info:0xd9eccc50hif_completion_thread_startup: pipe_num:4 pipe_info:0xd9eccc98
+Wed Dec 31 18:00:15 1969|ALERT|kernel|[ 77.540069] -HWT
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.540158] Startup Mode-0 set
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.540170]
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.540170] <=== cfg max peer id 1056 ====>
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.540804] htt_peer_map_timer_init Enter pdev da380000 hrtimer da384948
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.540831]
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.540831] htt_alloc_peer_map_mem : Alloc Success : host q vaddr da3b0000 paddr 9a3b0000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.540843]
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.540843] htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.542948] ol_txrx_pdev_attach: 2500 tx desc's allocated ; range starts from da640000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545128] Firmware_Build_Number:50
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545148] FW wireless modes: 0x1f9001
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545162] num_rf_chain:0x00000002 ht_cap_info:0x0000085b vht_cap_info:0x339959b2 vht_supp_mcs:0x0000fffa
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545185] wmi_service_coex_gpio 0, wmi_service_4_wire_coex_support 0, coex_version 0
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545201]
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545201] Sending Ext resource cfg: HOST PLATFORM as 0
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545201] fw_feature_bitmap as 50 to TGT
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.545268] ol_ath_service_ready_event: tt_support: 1
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.545279] ol_ath_service_ready_event: periodic_chan_stats: 1
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545288] ol_ath_service_ready_event: sw_cal_support_check_flag: 1
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.545300] Peer Caching Enabled ; num_peers = 530, num_active_peers = 52 num_tids = 104, num_vdevs = 17
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545348] EXT NSS Supported
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.545375] idx 1 req 2 num_units 1 num_unit_info 12 unit size 256 actual units 53
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545435] ol_ath_alloc_host_mem_chunk req_id 2 idx 0 num_units 53 unit_len 256,
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.545449] idx 2 req 3 num_units 1 num_unit_info 12 unit size 1024 actual units 53
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545515] ol_ath_alloc_host_mem_chunk req_id 3 idx 1 num_units 53 unit_len 1024,
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.545528] idx 3 req 4 num_units 1 num_unit_info 12 unit size 4096 actual units 53
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.545704] ol_ath_alloc_host_mem_chunk req_id 4 idx 2 num_units 53 unit_len 4096,
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.545718] idx 0 req 1 num_units 0 num_unit_info 2 unit size 744 actual units 531
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.546023] ol_ath_alloc_host_mem_chunk req_id 1 idx 3 num_units 531 unit_len 744,
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.546035] idx 4 req 6 num_units 35 num_unit_info 0 unit size 3072 actual units 35
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.546132] ol_ath_alloc_host_mem_chunk req_id 6 idx 4 num_units 35 unit_len 3072,
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.546145] idx 5 req 7 num_units 1 num_unit_info 0 unit size 6144 actual units 1
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.546274] ol_ath_alloc_host_mem_chunk req_id 7 idx 5 num_units 1 unit_len 6144,
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.546309] idx 6 req 5 num_units 0 num_unit_info 2 unit size 2052 actual units 531
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548720] ol_ath_alloc_host_mem_chunk req_id 5 idx 6 num_units 531 unit_len 2052,
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548738] Support not added yet for Service 91
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548746] Support not added yet for Service 92
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548753] No EXT_MSG send INIT now
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548772] chunk 0 len 13568 requested , ptr 0x9a1d0000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548782] chunk 1 len 54272 requested , ptr 0x9a630000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548791] chunk 2 len 217088 requested , ptr 0x9a6c0000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548799] chunk 3 len 395064 requested , ptr 0x9a700000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548808] chunk 4 len 107520 requested , ptr 0x9a6a0000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548817] chunk 5 len 6144 requested , ptr 0x9a1ae000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548836] chunk 6 len 1089612 requested , ptr 0x9a800000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548845] chunk 7 len 0 requested , ptr 0x0
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.548924] ol_ath_service_ready_event[4296] WAPI MBSSID 2
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.549076] smart_log_init: Smart logging Enabled buf=da910000 (size=65536)
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.591537] Version = 16777216 3 status = 0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.591589] ol_ath_connect_htc() WMI is ready
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.591650] target uses HTT version 2.2; host uses 2.2
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.591670] htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 1
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596706] ol_ath_attach() connect HTC.
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596720] bypasswmi : 0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596737] ol_regdmn_start: reg-domain param: regdmn=0, countryName=, wModeSelect=FFFFFFFF, netBand=FFFFFFFF, extendedChanMode=0.
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596761] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596804] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596815] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596825] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596846] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596858] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596868] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596878] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596984] Add VHT80 channel: 5210
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.596992] Add VHT80 channel: 5290
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597000] Add VHT80 channel: 5530
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597007] Add VHT80 channel: 5610
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597014] Add VHT80 channel: 5690
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597022] Add VHT80 channel: 5775
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597053] Skipping VHT80 channel 5825
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597066] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x200000) flags 0x4000100
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597076] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x400000) flags 0x8000100
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.597936] freq=58
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.597946] freq=106
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.597953] freq=122
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.597959] freq=138
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.597997] OL Resmgr Init-ed
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598162] ieee80211_bsteering_attach: Band steering initialized
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.598178] acfg_attach: Offload using existing sock db2ab000
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598222] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598230] HAL_CAP_PHYDIAG : Capable
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598240] SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598250] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598257] HAL_CAP_RADAR : Capable
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598266] SPECTRAL : Need to fix the capablity check for SPECTRAL
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598266] (spectral_attach : 242)
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598276] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598283] HAL_CAP_SPECTRAL_SCAN : Capable
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598290] SPECTRAL : get_tsf64 not registered
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598316] Green-AP : Green-AP : Attached
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598316]
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598326] Green-AP : Attached
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598334] rate power table override is only supported for AR98XX
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.598389] ol_ath_smart_ant_attach: Hardware doest not support Smart Antenna.
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.598451] ol_if_dfs_attach: called; ptr=da94198c, radar_info=daf23ba0
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.598460] dfs_attach: event log enabled by default
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.599465] >>>> CB Set (null)
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.600276] ol_ath_attach() UMAC attach .
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.600283]
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.600283] BURSTING enabled by default
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.600435] ol_ath_attach: Set global_ic[2] ..ptr:bf6f0f9c
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.600455] ath_lowi_if_netlink_init Incremented LOWI netlink ref count: 2
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.600475] osif_wrap_attach:444 osif wrap attached
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.600507] osif_wrap_devt_init:405 osif wrap dev table init done
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.600518] Wrap Attached: Wrap_com =d9ec5200 ic->ic_wrap_com=d9ec5200 &wrap_com->wc_devt=d9ec5200
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.600529] __ol_ath_attach: needed_headroom reservation 60
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.602081] ol_ath_thermal_mitigation_attach: --
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.602115] ol_ath_ahb_probe num_radios=1, wifi_radios[1].sc = d9f00500 wifi_radio_type = 2
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.602151] ath_sysfs_diag_init: diag_fsattr
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.602417] ath_ol_pci: (Atheros/multi-bss)
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.602891] hif_pci_enable_bus: con_mode = 0x0, device_id = 0x46
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.602968] ath_ol_pci 0000:01:00.0: enabling device (0140 -> 0142)
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.603107] hif_pci_enable_bus: hif_enable_pci done *********** QCA9984 *************hif_pci_enable_bus: hif_type = 0xc, target_type = 0xahif_pci_enable_bus: hif_pci_probe_tgt_wakeup donehif_target_sync: Loop checking FW signalhif_target_sync: Got FW signal, retries = 0hif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_set_hia_extnd: E
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.614046] chip_id 0xa chip_revision 0x0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.614061]
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.614061] CLOCK PLL skipped
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.614078] hif_set_hia_extnd: setting the target pll frac ffffffff intval ffffffff
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.614086] hif_set_hia_extnd: no frac provided, skipping pre-configuring PLL
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.614095] hif_set_hia_extnd: targ_clk is not provided, skipping pre-configuring PLL
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.616265] hif_pci_bus_configure: hif_set_hia donehif_configure_irq: Ehif_pci_configure_legacy_irq: Ehif_pci_configure_legacy_irq: X, ret = 0hif_enable: X OKhif_napi_create: NAPI structures initializedhif_napi_create: NAPI id 6 created for pipe 5qca_napi_create: napi instance 32 created on pipe 4
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.616771] hif_napi_event: received evnt: CONF cmd; v = 1 (state=0x1)hif_napi_event: setting configuration to ON
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.616771] __ol_ath_attach() Allocated scn daa00500
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.616926] __ol_ath_attach: dev name wifi2
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.616944] ol_ath_attach interface_id 2
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.617196] ol_target_init() BMI inited.
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.617316] ol_target_init() BMI Get Target Info.
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617330] Chip id: 0xa, chip version: 0x1000000
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.617338]
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.617338] CE WAR Disabled
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.617487] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.617683] ol_target_init() configure Target .
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617769]
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617769] Target Version is 1000000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617781]
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617781] Flash Download Address c0000
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617793] ol_transfer_bin_file: flash data file defined
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617803] ol_transfer_bin_file[3769] Get Caldata for wifi2.
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617872] qdf_fs_read[59], Open File /tmp/wifi2.caldata SUCCESS!!file system magic:-2054924042super blocksize:4096inode 199file size:12064qc98xx_verify_checksum: flash checksum passed: 0xf385
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.617985] ol_transfer_bin_file 3830: Download Flash data len 12064
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.618388] Board extended Data download address: 0x0
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.640724]
+Wed Dec 31 18:00:15 1969|WARN|kernel|[ 77.640724] Board data initialized
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.640899] ol_ath_download_firmware: Download OTP, flash download ADDRESS 0xc0000
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.640910]
+Wed Dec 31 18:00:15 1969|INFO|kernel|[ 77.640910] Selecting OTP binary for CHIP Version 0
+Wed Dec 31 18:00:16 1969|INFO|kernel|[ 77.710776] ol_transfer_bin_file 3650: downloading file 0, Download data len 9204
+Wed Dec 31 18:00:16 1969|INFO|kernel|[ 77.743171]
+Wed Dec 31 18:00:16 1969|INFO|kernel|[ 77.743171] First OTP send param 8000
+Wed Dec 31 18:00:16 1969|WARN|kernel|[ 78.539424] [wifi1] FWLOG: [88549] WAL_DBGID_RST_STATS ( 0x1, 0x1, 0x1464, 0x0 )
+Wed Dec 31 18:00:16 1969|WARN|kernel|[ 78.539475] [wifi1] FWLOG: [88589] WAL_DBGID_TX_AC_BUFFER_SET ( 0x3, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:16 1969|WARN|kernel|[ 78.539508] [wifi1] FWLOG: [88589] WAL_DBGID_TX_AC_BUFFER_SET ( 0x12, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:16 1969|WARN|kernel|[ 78.539540] [wifi1] FWLOG: [88589] WAL_DBGID_TX_AC_BUFFER_SET ( 0x45, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:16 1969|WARN|kernel|[ 78.539571] [wifi1] FWLOG: [88589] WAL_DBGID_TX_AC_BUFFER_SET ( 0x67, 0x1e, 0x94c, 0x94c, 0x0 )
+Wed Dec 31 18:00:16 1969|WARN|kernel|[ 78.539603] [wifi1] FWLOG: [88599] WAL_DBGID_PDEV_INFO_PRINT ( 0x16, 0xa10, 0x810, 0x10, 0x0 )
+Wed Dec 31 18:00:16 1969|WARN|kernel|[ 78.539636] [wifi1] FWLOG: [88599] WAL_DBGID_PDEV_INFO_PRINT ( 0x16, 0x10, 0x0, 0x10, 0x12 )
+Wed Dec 31 18:00:17 1969|WARN|kernel|[ 79.087271] Switching to Tx Mode-1 Threshold 280
+Wed Dec 31 18:00:18 1969|WARN|kernel|[ 79.955142] ol_ath_download_firmware :First OTP download and Execute is good address:0x400 return param 4660
+Wed Dec 31 18:00:18 1969|WARN|kernel|[ 79.955165] ol_ath_download_firmware:##Board Id 1 , CHIP Id 0
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 79.955283] ol_ath_download_firmware: BOARDDATA DOWNLOAD TO address 0xc0000
+Wed Dec 31 18:00:18 1969|WARN|kernel|[ 80.127968] ol_transfer_bin_file: Board Data File download to address=0xc0000 file name=QCA9984/hw.1/boardData_QCA9984_CUS239_5G_v1_001.bin
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.128250] ol_transfer_bin_file 3650: downloading file 3, Download data len 12064
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.128651] Board extended Data download address: 0x0
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.148140] ol_ath_download_firmware: Using 0x1234 for the remainder of init
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.148158]
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.148158] Selecting OTP binary for CHIP Version 0
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.148337] ol_transfer_bin_file 3650: downloading file 0, Download data len 9204
+Wed Dec 31 18:00:18 1969|WARN|kernel|[ 80.178318]
+Wed Dec 31 18:00:18 1969|WARN|kernel|[ 80.178318] [Flash] : Ignore Module param
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.178338]
+Wed Dec 31 18:00:18 1969|INFO|kernel|[ 80.178338] Second otp download Param 10000
+Wed Dec 31 18:00:18 1969|WARN|kernel|[ 80.586560] Switching to Tx Mode-1 Threshold 280
+Wed Dec 31 18:00:20 1969|WARN|kernel|[ 82.397803] ol_ath_download_firmware : Second OTP download and Execute is good, param=0x0
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.397826]
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.397826] Mission mode: Firmware CHIP Version 0
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.399397] ol_swap_seg_alloc: Successfully allocated memory for SWAP size=262144
+Wed Dec 31 18:00:20 1969|WARN|kernel|[ 82.399997] ol_swap_wlan_memory_expansion: length:249029 size_left:249049 dma_size_left:262144 fw_temp:e33ea004 fw_entry_size:249053
+Wed Dec 31 18:00:20 1969|WARN|kernel|[ 82.400017] ol_swap_wlan_memory_expansion: dma_virt_addr :e33a9000 fw_temp: e33ea008 length: 249029
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.400338] Swap: bytes_left to copy: fw:16; dma_page:13115
+Wed Dec 31 18:00:20 1969|WARN|kernel|[ 82.400353] ol_swap_wlan_memory_expansion: length:0 size_left:12 dma_size_left:13115 fw_temp:e3426cd1 fw_entry_size:249053
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.400361] Swap: wrong length read:0
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.400373] ol_swap_wlan_memory_expansion: Swap total_bytes copied: 249029 Target address 4231f0
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.400515] scn=daa00500 target_write_addr=4231f0 seg_info=de6aa110
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.400531] ol_transfer_swap_struct:Code swap structure successfully downloaded for bin type =2
+Wed Dec 31 18:00:20 1969|WARN|kernel|[ 82.400541] bin_filename=QCA9984/hw.1/athwlan.bin swap_filename=/lib/firmware/QCA9984/hw.1/athwlan.codeswap.bin
+Wed Dec 31 18:00:20 1969|WARN|kernel|[ 82.400621] ol_transfer_bin_file: Downloading firmware file: QCA9984/hw.1/athwlan.bin
+Wed Dec 31 18:00:20 1969|INFO|kernel|[ 82.553429] ol_transfer_bin_file 3650: downloading file 1, Download data len 388892
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.791863] ol_target_init() Download FW done.
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.791941] ERROR: No wifi_dump dts node available in the dts entry file
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792159] ol_ath_attach() WMI attached. wmi_handle db2d8000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.792176] wmi_unified_register_event_handler: Event id 62 is unavailable
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.792188] +htc_create .. HIF :da7d0000-htc_create: (0xdb054800)
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792242] htc_wmi_init() HT Create . db054800
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792319] htc_wmi_init 7800 host_enable 0 nss_nwifi_offload 0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792332] ol_ath_set_default_tgt_config : AC Minfree buffer allocation through module param (umac.ko)
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792339] OL_ACBKMinfree : 0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792346] OL_ACBEMinfree : 0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792353] OL_ACVIMinfree : 0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.792360] OL_ACVOMinfree : 0
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.792370] hif_enable_fastpath, Enabling fastpath mode
+Wed Dec 31 18:00:22 1969|ALERT|kernel|[ 83.792375] +HWT
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.792389] hif_completion_thread_startup: pipe_num:0 pipe_info:0xda7d4b78hif_completion_thread_startup: pipe_num:3 pipe_info:0xda7d4c50hif_completion_thread_startup: pipe_num:4 pipe_info:0xda7d4c98
+Wed Dec 31 18:00:22 1969|ALERT|kernel|[ 83.801493] -HWT
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.801579] Startup Mode-0 set
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.801590]
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.801590] <=== cfg max peer id 1056 ====>
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.802237] htt_peer_map_timer_init Enter pdev d8c48000 hrtimer d8c4c948
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.802263]
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.802263] htt_alloc_peer_map_mem : Alloc Success : host q vaddr daad4000 paddr 9aad4000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.802276]
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.802276] htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.804393] ol_txrx_pdev_attach: 2500 tx desc's allocated ; range starts from d8f00000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806615] Firmware_Build_Number:50
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806632] FW wireless modes: 0x7f9001
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806646] num_rf_chain:0x00000004 ht_cap_info:0x0000185b vht_cap_info:0x339b79fa vht_supp_mcs:0x0000ffaa
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806668] wmi_service_coex_gpio 0, wmi_service_4_wire_coex_support 0, coex_version 0
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806684]
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806684] Sending Ext resource cfg: HOST PLATFORM as 0
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806684] fw_feature_bitmap as 50 to TGT
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.806721] ol_ath_service_ready_event: tt_support: 1
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.806786] ol_ath_service_ready_event: periodic_chan_stats: 1
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806815] ol_ath_service_ready_event: sw_cal_support_check_flag: 1
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.806840] Peer Caching Enabled ; num_peers = 530, num_active_peers = 52 num_tids = 104, num_vdevs = 17
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806867] EXT NSS Supported
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.806924] idx 1 req 2 num_units 1 num_unit_info 12 unit size 256 actual units 53
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.806987] ol_ath_alloc_host_mem_chunk req_id 2 idx 0 num_units 53 unit_len 256,
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.807000] idx 2 req 3 num_units 1 num_unit_info 12 unit size 1024 actual units 53
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.807068] ol_ath_alloc_host_mem_chunk req_id 3 idx 1 num_units 53 unit_len 1024,
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.807083] idx 3 req 4 num_units 1 num_unit_info 12 unit size 4096 actual units 53
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.807286] ol_ath_alloc_host_mem_chunk req_id 4 idx 2 num_units 53 unit_len 4096,
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.807299] idx 0 req 1 num_units 0 num_unit_info 2 unit size 2216 actual units 531
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.808304] ol_ath_alloc_host_mem_chunk req_id 1 idx 3 num_units 531 unit_len 2216,
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.808319] idx 4 req 6 num_units 35 num_unit_info 0 unit size 3072 actual units 35
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.808424] ol_ath_alloc_host_mem_chunk req_id 6 idx 4 num_units 35 unit_len 3072,
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.808436] idx 5 req 7 num_units 1 num_unit_info 0 unit size 12288 actual units 1
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.808468] ol_ath_alloc_host_mem_chunk req_id 7 idx 5 num_units 1 unit_len 12288,
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.808480] idx 6 req 5 num_units 0 num_unit_info 2 unit size 2092 actual units 531
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809437] ol_ath_alloc_host_mem_chunk req_id 5 idx 6 num_units 531 unit_len 2092,
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809448] Support not added yet for Service 91
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809455] Support not added yet for Service 92
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809462] No EXT_MSG send INIT now
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809479] chunk 0 len 13568 requested , ptr 0x98ef0000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809489] chunk 1 len 54272 requested , ptr 0x98f60000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809498] chunk 2 len 217088 requested , ptr 0x98f80000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809507] chunk 3 len 1176696 requested , ptr 0x98800000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809516] chunk 4 len 107520 requested , ptr 0x98920000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809524] chunk 5 len 12288 requested , ptr 0x9a96c000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809533] chunk 6 len 1110852 requested , ptr 0x98a00000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809542] chunk 7 len 0 requested , ptr 0x0
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809574] ol_ath_service_ready_event[4296] WAPI MBSSID 2
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.809778] smart_log_init: Smart logging Enabled buf=d8b10000 (size=65536)
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.884945] Version = 16777216 3 status = 0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.884994] ol_ath_connect_htc() WMI is ready
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.885053] htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 2
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.885065] target uses HTT version 2.2; host uses 2.2
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890109] ol_ath_attach() connect HTC.
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890130] bypasswmi : 0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890147] ol_regdmn_start: reg-domain param: regdmn=0, countryName=, wModeSelect=FFFFFFFF, netBand=FFFFFFFF, extendedChanMode=0.
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890171] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x2) flags 0x2150
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890219] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x4) flags 0xa0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890230] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x8) flags 0xc0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890240] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x20) flags 0xd0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890251] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x40) flags 0x150
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890269] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x800) flags 0x10080
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890279] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x2000) flags 0x20080
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890289] ol_regdmn_init_channels: !avail mode 0x7f9001 (0x4000) flags 0x40080
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890395] Add VHT80 channel: 5210
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890404] Add VHT80 channel: 5290
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890412] Add VHT80 channel: 5530
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890419] Add VHT80 channel: 5610
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890426] Add VHT80 channel: 5690
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890433] Add VHT80 channel: 5775
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.890464] Skipping VHT80 channel 5825
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.893218] freq=58
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.893228] freq=106
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.893235] freq=122
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.893241] freq=138
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893286] OL Resmgr Init-ed
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893451] ieee80211_bsteering_attach: Band steering initialized
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.893466] acfg_attach: Offload using existing sock db2ab000
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893511] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893518] HAL_CAP_PHYDIAG : Capable
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893528] SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893536] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893543] HAL_CAP_RADAR : Capable
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893553] SPECTRAL : Need to fix the capablity check for SPECTRAL
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893553] (spectral_attach : 242)
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893563] SPECTRAL : get_capability not registered
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893570] HAL_CAP_SPECTRAL_SCAN : Capable
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893579] SPECTRAL : get_tsf64 not registered
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893602] Green-AP : Green-AP : Attached
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893602]
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893613] Green-AP : Attached
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893620] rate power table override is only supported for AR98XX
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.893735] ol_if_dfs_attach: called; ptr=da9e198c, radar_info=daf23b80
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.893745] dfs_attach: event log enabled by default
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.894670] >>>> CB Set (null)
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.895917] ol_ath_attach() UMAC attach .
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.895931]
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.895931] BURSTING enabled by default
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.895983] ol_ath_attach: Set global_ic[3] ..ptr:bf6f0f9c
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.896005] ath_lowi_if_netlink_init Incremented LOWI netlink ref count: 3
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.896026] osif_wrap_attach:444 osif wrap attached
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.896057] osif_wrap_devt_init:405 osif wrap dev table init done
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.896069] Wrap Attached: Wrap_com =dada3400 ic->ic_wrap_com=dada3400 &wrap_com->wc_devt=dada3400
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.896079] __ol_ath_attach: needed_headroom reservation 60
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.902363] ol_ath_thermal_mitigation_attach: --
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.902402] ol_ath_pci_probe num_radios=2, wifi_radios[2].sc = daa00500 wifi_radio_type = 2
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.902440] ath_sysfs_diag_init: diag_fsattr
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.904805] isCountryCodeValid: EEPROM regdomain 0x16
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904849] ol_regdmn_init_channels: !avail mode 0x680c (0x2) flags 0x2150
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904862] ol_regdmn_init_channels: !avail mode 0x680c (0x1) flags 0x140
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904906] ol_regdmn_init_channels: !avail mode 0x680c (0x20) flags 0xd0
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904917] ol_regdmn_init_channels: !avail mode 0x680c (0x40) flags 0x150
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904959] ol_regdmn_init_channels: !avail mode 0x680c (0x1000) flags 0x10100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904971] ol_regdmn_init_channels: !avail mode 0x680c (0x8000) flags 0x20100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904981] ol_regdmn_init_channels: !avail mode 0x680c (0x10000) flags 0x40100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.904991] ol_regdmn_init_channels: !avail mode 0x680c (0x20000) flags 0x100100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.905002] ol_regdmn_init_channels: !avail mode 0x680c (0x40000) flags 0x200100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.905012] ol_regdmn_init_channels: !avail mode 0x680c (0x80000) flags 0x400100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.905021] ol_regdmn_init_channels: !avail mode 0x680c (0x100000) flags 0x800100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.905031] ol_regdmn_init_channels: !avail mode 0x680c (0x200000) flags 0x4000100
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.905041] ol_regdmn_init_channels: !avail mode 0x680c (0x400000) flags 0x8000100
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.905601] set TXBF_SND_PERIOD: value 100 wmi_status 0
+Wed Dec 31 18:00:22 1969|INFO|kmod|Loading kernel module: usbserial
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.914544] wmi_dbg_cfg_send: mod[0]00000000 dbgcfg40000000 cfgvalid[0] 00000000 cfgvalid[1] 00000000, cfgvalid[2] 70000000
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.921416] The driver is compiled without TXRX prints enabled.
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 83.921416] To enable them, recompile with TXRX_PRINT_ENABLE defined.
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 83.945923] usbcore: registered new interface driver usbserial
+Wed Dec 31 18:00:22 1969|INFO|kmod|Loading kernel module: ftdi_sio
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.010283] wlan_vap_create : enter. devhandle=0xd9880500, opmode=IEEE80211_M_HOSTAP, flags=0x1
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.010640] wlan_vap_create : exit. devhandle=0xd9880500, vap=0xd8b68000, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.010656] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.076689] [DEBUG] vap-0(ath00):set SIOC80211NWID, 11 characters
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 84.177815] usbcore: registered new interface driver ftdi_sio
+Wed Dec 31 18:00:22 1969|INFO|kernel|[ 84.177963] usbserial: USB Serial support registered for FTDI USB Serial Device
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.213438] dfs_control enable detects, ignore_dfs 1
+Wed Dec 31 18:00:22 1969|INFO|devicedisc|Device discovery agent started
+Wed Dec 31 18:00:22 1969|INFO|apdisc|AP discovery agent starting
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.368590] wlan_vap_create : enter. devhandle=0xdaa00500, opmode=IEEE80211_M_HOSTAP, flags=0x1
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.369169] wlan_vap_create : exit. devhandle=0xdaa00500, vap=0xd8b70000, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.369188] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:22 1969|INFO|devicedisc|Registered for read events on <services.discovery.device_discovery.DevDiscEndpoint object at 0xb0ef50b0>
+Wed Dec 31 18:00:22 1969|INFO|devicedisc|Registered for read events on <services.discovery.device_discovery.DevDiscEndpoint object at 0xb135bdb0>
+Wed Dec 31 18:00:22 1969|INFO|devicedisc|Registered for read events on wan device wan
+Wed Dec 31 18:00:22 1969|WARN|kernel|[ 84.460387] [DEBUG] vap-0(ath20):set SIOC80211NWID, 14 characters
+Wed Dec 31 18:00:23 1969|WARN|kernel|[ 84.745470] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 84.756547] 8021q: adding VLAN 0 to HW filter on device ath00
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 84.763576] device ath00 entered promiscuous mode
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 84.763672] primarylan1: port 2(ath00) entered forwarding state
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 84.763708] primarylan1: port 2(ath00) entered forwarding state
+Wed Dec 31 18:00:23 1969|WARN|kernel|[ 85.088341] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 85.096762] 8021q: adding VLAN 0 to HW filter on device ath20
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 85.116595] device ath20 entered promiscuous mode
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 85.116705] primarylan1: port 3(ath20) entered forwarding state
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 85.116744] primarylan1: port 3(ath20) entered forwarding state
+Wed Dec 31 18:00:23 1969|NOTICE|hostapd|Configuration file: /var/run/hostapd-ath00.conf (phy ath00) --> new PHY
+Wed Dec 31 18:00:23 1969|INFO|kernel|[ 85.448507] primarylan1: port 2(ath00) entered disabled state
+Wed Dec 31 18:00:23 1969|WARN|hostapd|ath00: Could not connect to kernel driver
+Wed Dec 31 18:00:23 1969|ERR|hostapd|Using interface ath00 with hwaddr 00:30:44:31:01:ce and ssid "AER2200-1cd"
+Wed Dec 31 18:00:24 1969|INFO|ipverify|EEL is now valid
+Wed Dec 31 18:00:24 1969|ERR|IPS|IPS Rules not found. Sending a request to NetCloud to get the latest.
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|random: Only 12/20 bytes of strong random data available from /dev/random
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|random: Not enough entropy pool available for secure operations
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|WPA: Not enough entropy in random pool for secure operations - update keys later when the first station connects
+Wed Dec 31 18:00:24 1969|WARN|kernel|[ 85.986897] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|ath00: interface state UNINITIALIZED->ENABLED
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|ath00: AP-ENABLED
+Wed Dec 31 18:00:24 1969|INFO|kernel|[ 86.007018] primarylan1: port 2(ath00) entered forwarding state
+Wed Dec 31 18:00:24 1969|INFO|kernel|[ 86.007077] primarylan1: port 2(ath00) entered forwarding state
+Wed Dec 31 18:00:24 1969|INFO|kernel|[ 86.007121] 8021q: adding VLAN 0 to HW filter on device ath00
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|Configuration file: /var/run/hostapd-ath20.conf (phy ath20) --> new PHY
+Wed Dec 31 18:00:24 1969|INFO|kernel|[ 86.128125] primarylan1: port 3(ath20) entered disabled state
+Wed Dec 31 18:00:24 1969|WARN|hostapd|ath20: Could not connect to kernel driver
+Wed Dec 31 18:00:24 1969|ERR|hostapd|Using interface ath20 with hwaddr 00:30:44:31:01:cf and ssid "AER2200-1cd-5g"
+Wed Dec 31 18:00:24 1969|ERR|hostapd|random: Cannot read from /dev/random: Resource temporarily unavailable
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|random: Only 12/20 bytes of strong random data available from /dev/random
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|random: Not enough entropy pool available for secure operations
+Wed Dec 31 18:00:24 1969|NOTICE|hostapd|WPA: Not enough entropy in random pool for secure operations - update keys later when the first station connects
+Wed Dec 31 18:00:25 1969|WARN|kernel|[ 86.656784] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath20: interface state UNINITIALIZED->ENABLED
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath20: AP-ENABLED
+Wed Dec 31 18:00:25 1969|INFO|kernel|[ 86.676825] primarylan1: port 3(ath20) entered forwarding state
+Wed Dec 31 18:00:25 1969|INFO|kernel|[ 86.676883] primarylan1: port 3(ath20) entered forwarding state
+Wed Dec 31 18:00:25 1969|INFO|kernel|[ 86.676930] 8021q: adding VLAN 0 to HW filter on device ath20
+Wed Dec 31 18:00:25 1969|WARN|dns|No DNS Servers Configured! Some features may not function properly!
+Wed Dec 31 18:00:25 1969|INFO|kernel|[ 86.886177] primarylan1: port 1(eth0.2) entered forwarding state
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|Remove interface 'ath00'
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath00: interface state ENABLED->DISABLED
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath00: AP-DISABLED
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath00: CTRL-EVENT-TERMINATING
+Wed Dec 31 18:00:25 1969|WARN|kernel|[ 87.386841] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:25 1969|INFO|kernel|[ 87.487769] primarylan1: port 2(ath00) entered disabled state
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|Remove interface 'ath20'
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath20: interface state ENABLED->DISABLED
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath20: AP-DISABLED
+Wed Dec 31 18:00:25 1969|NOTICE|hostapd|ath20: CTRL-EVENT-TERMINATING
+Wed Dec 31 18:00:25 1969|WARN|kernel|[ 87.616826] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:26 1969|INFO|kernel|[ 87.688074] primarylan1: port 3(ath20) entered disabled state
+Wed Dec 31 18:00:26 1969|NOTICE|hostapd|Configuration file: /var/run/hostapd-ath00.conf (phy ath00) --> new PHY
+Wed Dec 31 18:00:26 1969|WARN|hostapd|ath00: Could not connect to kernel driver
+Wed Dec 31 18:00:26 1969|ERR|hostapd|Using interface ath00 with hwaddr 00:30:44:31:01:ce and ssid "AER2200-1cd"
+Wed Dec 31 18:00:26 1969|ERR|hostapd|random: Cannot read from /dev/random: Resource temporarily unavailable
+Wed Dec 31 18:00:26 1969|NOTICE|hostapd|random: Only 12/20 bytes of strong random data available from /dev/random
+Wed Dec 31 18:00:26 1969|NOTICE|hostapd|random: Not enough entropy pool available for secure operations
+Wed Dec 31 18:00:26 1969|NOTICE|hostapd|WPA: Not enough entropy in random pool for secure operations - update keys later when the first station connects
+Wed Dec 31 18:00:26 1969|INFO|logsys|Last message repeated 1 times.
+Wed Dec 31 18:00:26 1969|INFO|gre|LAN change
+Wed Dec 31 18:00:26 1969|WARN|kernel|[ 88.386931] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:26 1969|NOTICE|hostapd|ath00: interface state UNINITIALIZED->ENABLED
+Wed Dec 31 18:00:26 1969|NOTICE|hostapd|ath00: AP-ENABLED
+Wed Dec 31 18:00:26 1969|INFO|kernel|[ 88.406611] primarylan1: port 2(ath00) entered forwarding state
+Wed Dec 31 18:00:26 1969|INFO|kernel|[ 88.406664] primarylan1: port 2(ath00) entered forwarding state
+Wed Dec 31 18:00:26 1969|INFO|kernel|[ 88.406708] 8021q: adding VLAN 0 to HW filter on device ath00
+Wed Dec 31 18:00:26 1969|NOTICE|hostapd|Configuration file: /var/run/hostapd-ath20.conf (phy ath20) --> new PHY
+Wed Dec 31 18:00:26 1969|INFO|devicedisc|Registered for read events on <services.discovery.device_discovery.DevDiscEndpoint object at 0xb0ef5410>
+Wed Dec 31 18:00:26 1969|INFO|devicedisc|Registered for read events on <services.discovery.device_discovery.DevDiscEndpoint object at 0xb0ef56d0>
+Wed Dec 31 18:00:26 1969|INFO|devicedisc|Registered for read events on wan device wan
+Wed Dec 31 18:00:26 1969|WARN|hostapd|ath20: Could not connect to kernel driver
+Wed Dec 31 18:00:26 1969|ERR|hostapd|Using interface ath20 with hwaddr 00:30:44:31:01:cf and ssid "AER2200-1cd-5g"
+Wed Dec 31 18:00:27 1969|ERR|hostapd|random: Cannot read from /dev/random: Resource temporarily unavailable
+Wed Dec 31 18:00:27 1969|NOTICE|hostapd|random: Only 12/20 bytes of strong random data available from /dev/random
+Wed Dec 31 18:00:27 1969|NOTICE|hostapd|random: Not enough entropy pool available for secure operations
+Wed Dec 31 18:00:27 1969|NOTICE|hostapd|WPA: Not enough entropy in random pool for secure operations - update keys later when the first station connects
+Wed Dec 31 18:00:27 1969|WARN|kernel|[ 89.026785] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:00:27 1969|NOTICE|hostapd|ath20: interface state UNINITIALIZED->ENABLED
+Wed Dec 31 18:00:27 1969|NOTICE|hostapd|ath20: AP-ENABLED
+Wed Dec 31 18:00:27 1969|INFO|kernel|[ 89.047588] primarylan1: port 3(ath20) entered forwarding state
+Wed Dec 31 18:00:27 1969|INFO|kernel|[ 89.047662] primarylan1: port 3(ath20) entered forwarding state
+Wed Dec 31 18:00:27 1969|INFO|kernel|[ 89.047772] 8021q: adding VLAN 0 to HW filter on device ath20
+Wed Dec 31 18:00:41 1969|INFO|kernel|[ 103.446186] primarylan1: port 2(ath00) entered forwarding state
+Wed Dec 31 18:00:42 1969|INFO|kernel|[ 104.086172] primarylan1: port 3(ath20) entered forwarding state
+Wed Dec 31 18:00:55 1969|WARN|wlan|Scan timed out for radio 0
+Wed Dec 31 18:00:55 1969|WARN|kernel|[ 117.006690] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:01:02 1969|WARN|kernel|[ 123.790195] __ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectError....CPPM
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....SignalVerify
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....DHCP
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNBack
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....CPPM
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNFront
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoSelect
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoCarrier
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIM
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStartDoneContCheck
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStabilityCheck
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8|connecting -> disconnecting
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8|disconnecting -> disconnected, Reason: Failover
+Wed Dec 31 18:01:14 1969|INFO|WAN:4cf1faf8|NO CARRIER - adjust back off timer to re-attempt sooner
+Wed Dec 31 18:01:14 1969|ERR|WAN:4cf1faf8|connector failed: CPPM failed: no carrier
+Wed Dec 31 18:01:14 1969|WARN|WAN:4cf1faf8.ConnectorMgr|already reset
+Wed Dec 31 18:01:14 1969|INFO|policy.WanChange|connect_wait -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:01:16 1969|INFO|policy.FailoverFailback|wait_for_next -> pick_next (primary: None, next_dev: None)
+Wed Dec 31 18:01:24 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:01:24 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:01:24 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|WanDevMixIn:Starting
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|disconnected -> connecting
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|wandev connecting type: mdm, uid: 4cf1faf8, uptime: 146
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 0%, RSSI:-125(dBm)
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|Execute Event ok: 8
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initial
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initiate
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|Execute Event ok: 4
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Success
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initial
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initiate
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|autoCarrierSwitch att
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|Current carrier is correct. No switch needed.
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Success
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoCarrier
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8|Execute Event ok: 9
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.AutoAPNFront|auto apn state: Initial
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:01:24 1969|INFO|WAN:4cf1faf8.CPPM|Waiting for signal
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectError....CPPM
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....SignalVerify
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....DHCP
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNBack
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....CPPM
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNFront
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoSelect
+Wed Dec 31 18:02:24 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Wed Dec 31 18:02:25 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoCarrier
+Wed Dec 31 18:02:25 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIM
+Wed Dec 31 18:02:25 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Wed Dec 31 18:02:25 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStartDoneContCheck
+Wed Dec 31 18:02:25 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStabilityCheck
+Wed Dec 31 18:02:25 1969|INFO|WAN:4cf1faf8|connecting -> disconnecting
+Wed Dec 31 18:02:25 1969|INFO|WAN:4cf1faf8|disconnecting -> disconnected, Reason: Failover
+Wed Dec 31 18:02:25 1969|ERR|WAN:4cf1faf8|connector failed: CPPM failed: no carrier
+Wed Dec 31 18:02:25 1969|WARN|WAN:4cf1faf8.ConnectorMgr|already reset
+Wed Dec 31 18:02:25 1969|INFO|policy.WanChange|connect_wait -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:02:27 1969|INFO|policy.FailoverFailback|wait_for_next -> pick_next (primary: None, next_dev: None)
+Wed Dec 31 18:02:35 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:02:35 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:02:35 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|WanDevMixIn:Starting
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|disconnected -> connecting
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|wandev connecting type: mdm, uid: 4cf1faf8, uptime: 217
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 0%, RSSI:-125(dBm)
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|Execute Event ok: 8
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initial
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initiate
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|Execute Event ok: 4
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Success
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initial
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initiate
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|autoCarrierSwitch att
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|Current carrier is correct. No switch needed.
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Success
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoCarrier
+Wed Dec 31 18:02:35 1969|INFO|WAN:4cf1faf8|Execute Event ok: 9
+Wed Dec 31 18:02:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:02:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:02:36 1969|INFO|WAN:4cf1faf8.AutoAPNFront|auto apn state: Initial
+Wed Dec 31 18:02:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:02:36 1969|INFO|WAN:4cf1faf8.CPPM|Waiting for signal
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectError....CPPM
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....SignalVerify
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....DHCP
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNBack
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....CPPM
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNFront
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoSelect
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoCarrier
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIM
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStartDoneContCheck
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStabilityCheck
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8|connecting -> disconnecting
+Wed Dec 31 18:03:36 1969|INFO|WAN:4cf1faf8|disconnecting -> disconnected, Reason: Failover
+Wed Dec 31 18:03:36 1969|ERR|WAN:4cf1faf8|connector failed: CPPM failed: no carrier
+Wed Dec 31 18:03:36 1969|WARN|WAN:4cf1faf8.ConnectorMgr|already reset
+Wed Dec 31 18:03:37 1969|INFO|policy.WanChange|connect_wait -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:03:39 1969|INFO|policy.FailoverFailback|wait_for_next -> pick_next (primary: None, next_dev: None)
+Wed Dec 31 18:03:47 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:03:47 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:03:47 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|WanDevMixIn:Starting
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|disconnected -> connecting
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|wandev connecting type: mdm, uid: 4cf1faf8, uptime: 288
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 0%, RSSI:-125(dBm)
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|Execute Event ok: 8
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initial
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initiate
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|Execute Event ok: 4
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Success
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initial
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initiate
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|autoCarrierSwitch att
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|Current carrier is correct. No switch needed.
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Success
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoCarrier
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8|Execute Event ok: 9
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.AutoAPNFront|auto apn state: Initial
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:03:47 1969|INFO|WAN:4cf1faf8.CPPM|Waiting for signal
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectError....CPPM
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....SignalVerify
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....DHCP
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNBack
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....CPPM
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNFront
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoSelect
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoCarrier
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIM
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStartDoneContCheck
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStabilityCheck
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8|connecting -> disconnecting
+Wed Dec 31 18:04:47 1969|INFO|WAN:4cf1faf8|disconnecting -> disconnected, Reason: Failover
+Wed Dec 31 18:04:47 1969|ERR|WAN:4cf1faf8|connector failed: CPPM failed: no carrier
+Wed Dec 31 18:04:47 1969|WARN|WAN:4cf1faf8.ConnectorMgr|already reset
+Wed Dec 31 18:04:48 1969|INFO|policy.WanChange|connect_wait -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:04:50 1969|INFO|policy.FailoverFailback|wait_for_next -> pick_next (primary: None, next_dev: None)
+Wed Dec 31 18:04:58 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:04:58 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:04:58 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|WanDevMixIn:Starting
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|disconnected -> connecting
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|wandev connecting type: mdm, uid: 4cf1faf8, uptime: 359
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 0%, RSSI:-125(dBm)
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|Execute Event ok: 8
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initial
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initiate
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|Execute Event ok: 4
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Success
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initial
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initiate
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|autoCarrierSwitch att
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|Current carrier is correct. No switch needed.
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Success
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoCarrier
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8|Execute Event ok: 9
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.AutoAPNFront|auto apn state: Initial
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:04:58 1969|INFO|WAN:4cf1faf8.CPPM|Waiting for signal
+Wed Dec 31 18:05:06 1969|INFO|upgrade|Checking upgrade server for pkg: 24.01.513_Generic,1016, fw_info path: ['status', 'wan', 'devices', 'mdm-4cf1faf8', 'ob_upgrade', 'fw_info_generic']
+Wed Dec 31 18:05:06 1969|INFO|upgrade|Checking upgrade server for pkg: 24.01.513_Generic,1016, fw_info path: ['status', 'wan', 'devices', 'mdm-4d1fc1af', 'ob_upgrade', 'fw_info_generic']
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectError....CPPM
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....SignalVerify
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....DHCP
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNBack
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....CPPM
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoAPNFront
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoSelect
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritExit
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....AutoCarrier
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIM
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8.ConnectorMgr|disconnectDone....MultiSIMCritEnter
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStartDoneContCheck
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8|WanDevMixIn:stopStabilityCheck
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8|connecting -> disconnecting
+Wed Dec 31 18:05:58 1969|INFO|WAN:4cf1faf8|disconnecting -> disconnected, Reason: Failover
+Wed Dec 31 18:05:58 1969|ERR|WAN:4cf1faf8|connector failed: CPPM failed: no carrier
+Wed Dec 31 18:05:58 1969|WARN|WAN:4cf1faf8.ConnectorMgr|already reset
+Wed Dec 31 18:05:59 1969|INFO|policy.WanChange|connect_wait -> idle (primary: None, next_dev: None)
+Wed Dec 31 18:06:01 1969|INFO|policy.FailoverFailback|wait_for_next -> pick_next (primary: None, next_dev: None)
+Wed Dec 31 18:06:09 1969|INFO|policy.FailoverFailback|pick_next -> wait_for_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:06:09 1969|INFO|policy.WanChange|idle -> connect_next (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:06:09 1969|INFO|policy.WanChange|connect_next -> connect_wait (primary: None, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|WanDevMixIn:Starting
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|disconnected -> connecting
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|wandev connecting type: mdm, uid: 4cf1faf8, uptime: 431
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 0%, RSSI:-125(dBm)
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|Execute Event ok: 8
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritEnter
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initial
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Initiate
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|Execute Event ok: 4
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.MultiSIM|MSIM state: Success
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIM
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initial
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Initiate
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|autoCarrierSwitch att
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|Current carrier is correct. No switch needed.
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.AutoCarrier|CARSWITCHstate: Success
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoCarrier
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8|Execute Event ok: 9
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....MultiSIMCritExit
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoSelect
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.AutoAPNFront|auto apn state: Initial
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoAPNFront
+Wed Dec 31 18:06:09 1969|INFO|WAN:4cf1faf8.CPPM|Waiting for signal
+Wed Dec 31 18:06:48 1969|INFO|WAN:4cf1faf8|signal Internal 600M (SIM1) on port int1: 100%, RSSI:-68(dBm), SINR:5.2(dB), RSRP:-95(dB), RSRQ:-10(dB), RFBAND: Band 12
+Wed Dec 31 18:06:48 1969|INFO|WAN:4cf1faf8.CPPM|Connecting device
+Wed Dec 31 18:06:48 1969|INFO|WAN:4cf1faf8|Connect Event: processing - kwargs: {'event': 'CONNECT', 'ifc': 'pmip3', 'port': 'int1'}, state: connecting
+Wed Dec 31 18:06:49 1969|INFO|cp_stack_mgr|int1: Module operating mode.: Online
+Wed Dec 31 18:06:53 1969|INFO|cp_stack_mgr|int1: Active APN: broadband
+Wed Dec 31 18:06:53 1969|INFO|WAN:4cf1faf8|Service Change : None -> LTE, 100%, RSSI: -68(dBm), SINR: 5.2, RSRP: -95, RSRQ: -10, RFBAND: Band 12
+Wed Dec 31 18:06:53 1969|INFO|WAN:4cf1faf8|Connect Event: ok - kwargs: {'event': 'CONNECT', 'ifc': 'pmip3', 'port': 'int1'}, state: connecting
+Wed Dec 31 18:06:53 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....CPPM
+Wed Dec 31 18:06:53 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....AutoAPNBack
+Wed Dec 31 18:06:53 1969|INFO|udhcpc[1070]|started, v1.30.1
+Wed Dec 31 18:06:54 1969|INFO|udhcpc[1070]|sending discover
+Wed Dec 31 18:06:54 1969|INFO|udhcpc[1070]|sending select for 10.14.39.205
+Wed Dec 31 18:06:54 1969|INFO|udhcpc[1070]|lease of 10.14.39.205 obtained, lease time 7200
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8.DHCP|ipinfo={'gateway': '10.14.39.206', 'ip_address': '10.14.39.205', 'netmask': '255.255.255.252', 'dnslist': ['172.26.38.1']}
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....DHCP
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8.ConnectorMgr|connectSuccess....SignalVerify
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|WanDevMixIn:startStabilityCheck
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|WanDevMixIn:startDoneContCheck
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|onStartSuccess, restoring backed up schedule
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|onStartSuccess, restoring suspend multiplier to 60
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|connecting -> connected, Reason: Failover
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|wandev connected type: mdm, uid: 4cf1faf8, uptime: 475
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|Connection Type: LTE
+Wed Dec 31 18:06:54 1969|INFO|policy.WanChange|connect_wait -> idle (primary: mdm-4cf1faf8, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:06:54 1969|INFO|WAN:4cf1faf8|The cell id for the Internal 600M (SIM1) on port int1 is 110601232 (0x697a410)
+Wed Dec 31 18:06:55 1969|INFO|policy.FailoverFailback|wait_for_next -> disconnect_prev (primary: mdm-4cf1faf8, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:06:55 1969|INFO|policy.FailoverFailback|disconnect_prev -> connected (primary: mdm-4cf1faf8, next_dev: mdm-4cf1faf8)
+Wed Dec 31 18:07:02 1969|INFO|kernel|[ 484.212349] ctnetlink v0.93: registering with nfnetlink.
+Thu Jun 18 15:09:47 2020|INFO|clock|System time set to: 21:09:47 06/18/20 UTC
+Thu Jun 18 15:09:52 2020|INFO|netcloud|Connecting to NetCloud
+Thu Jun 18 15:10:13 2020|INFO|IPS|New IPS Signatures, version 1_135, is available for upgrade
+Thu Jun 18 15:10:13 2020|WARN|IPS|Required IPS Signature upgrade being installed
+Thu Jun 18 15:10:14 2020|INFO|filemgr|Rebuilding flash sector: id: 3, allocated: 228, remaining: 6714, total: 58822, erase_count: 201, inodes: 6, files: 1
+Thu Jun 18 15:10:15 2020|INFO|kmod|Removing kernel module: shortcut-fe-cm
+Thu Jun 18 15:10:15 2020|INFO|kmod|Loading kernel module: tdts
+Thu Jun 18 15:10:16 2020|INFO|kmod|Loading kernel module: tdts_nffw
+Thu Jun 18 15:10:16 2020|INFO|kernel|[ 518.912943] Init chrdev /dev/detector with major 190
+Thu Jun 18 15:10:16 2020|INFO|kernel|[ 518.934306] tdts_nffw: tdts_nffw is ready
+Thu Jun 18 15:10:19 2020|INFO|IPS|Engine version 2.0.1047 loaded
+Thu Jun 18 15:10:19 2020|INFO|IPS|Rule Set version 1.135 loaded
+Thu Jun 18 15:10:52 2020|WARN|netcloud|Connection Dropped (timed out)
+Thu Jun 18 15:10:52 2020|INFO|netcloud|Connecting to NetCloud
+Thu Jun 18 15:11:52 2020|INFO|httpserver|Accepted web login from local address 192.168.0.5, user: admin
+Thu Jun 18 15:11:52 2020|WARN|netcloud|Connection Dropped (timed out)
