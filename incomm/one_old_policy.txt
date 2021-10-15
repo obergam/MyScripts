@@ -1,0 +1,21 @@
+{
+            "name": "checksyncvanycom",
+            "policyId": "babd1cc4-dc35-40f7-b436-aa14817e147f",
+            "conditions": [
+                {
+                    "factId": "ae80e14e-2e57-4725-aa0c-864a7fe8edc7",
+                    "comparator": "eq",
+                    "value": "checksyncvanycom"
+                }
+            ],
+            "profiles": [
+                "61010f91-1595-45be-894c-e68bb3423989"
+            ],
+            "guidance": "Challenge",
+            "creationDate": "2020-11-25T02:59:38.468Z",
+            "lastUpdateDate": "2020-11-25T02:59:38.468Z",
+            "tags": [
+                "5126b3d9-e7a5-4ab8-a5a7-ca40272a5a9d"
+            ],
+            "serviceName": "ATO"
+        },
